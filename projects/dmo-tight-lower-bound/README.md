@@ -1,8 +1,8 @@
-# Equalization lower bound for discrete minimax optimization
+# Tight lower bound for discrete minimax optimization
 
 ## Status
 
-**Checked; not yet written up.** We have checked the deterministic lower-bound argument developed in the [*LB for DMO* discussion](https://chatgpt.com/share/6a95504d-6904-83ea-b9fe-36b17e67918f), but it has not yet been turned into a paper or a self-contained formal proof. The shared discussion remains the most complete source.
+**Verified draft; not yet written up.** We have checked the deterministic lower-bound argument developed in the [*LB for DMO* discussion](https://chatgpt.com/share/6a95504d-6904-83ea-b9fe-36b17e67918f), but it has not yet been turned into a paper or a self-contained formal proof. The shared discussion remains the most complete source.
 
 The checked claim is the deterministic $\Omega(N\Delta L\epsilon^{-2})$ component-oracle lower bound. The later stochastic constructions in the same discussion are exploratory and are **not** included in the checked status.
 
