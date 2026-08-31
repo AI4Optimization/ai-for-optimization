@@ -109,15 +109,6 @@ $$
 
 These bounds apply to the paper's deterministic first-order and HVP-based algorithm classes on nonconvex--quadratic bilevel problems.
 
-## Verification record
-
-- [x] Nested-chain exact-reduction identity checked
-- [x] Full-gradient to outer-gradient stationarity transfer checked
-- [x] Smoothness/gap calibration and final single-level rates checked
-- [x] Comparison with the first block-chain result checked against arXiv:2606.05438
-- [x] Single-level construction incorporated into arXiv:2511.22331, Section 3.3/Theorem 3.1
-- [x] Bilevel extension incorporated into arXiv:2511.22331, Section 4.2/Theorem 4.2
-- [ ] Independent reproduction by researchers outside the author team recorded
 
 ## Limitations
 
