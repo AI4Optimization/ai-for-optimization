@@ -15,9 +15,7 @@ The result was subsequently written into [Chen, Ji, and Zhang, *On the Condition
 Consider the unconstrained bilevel problem
 
 $$
-\min_{x\in\mathbb R^{d_x}} F(x)=f(x,y^*(x)),
-\qquad
-y^*(x)=\arg\min_{y\in\mathbb R^{d_y}}g(x,y).
+\min_{x\in\mathbb R^{d_x}} F(x)=f(x,y^\ast(x)), y^\ast(x)=\arg\min_{y\in\mathbb R^{d_y}}g(x,y).
 $$
 
 For the main lower bound, $f$ is smooth and may be nonconvex, while $g$ is a jointly quadratic function whose Hessian in $y$ is positive definite. The relevant parameters are:
@@ -82,14 +80,6 @@ The same framework also yields:
 - The $\kappa_y$ in the lower bound is the lower-level condition number. The paper distinguishes it from a global condition number $\bar\kappa_y$, which may be larger and appears in general NC--SC upper bounds.
 - Higher-order and stochastic statements use their own smoothness and oracle definitions; they should not be read as consequences of the first-order theorem without those additional constructions.
 
-## Verification record
-
-- [x] Theorem statement and parameter dependence checked against Theorem 4.1 of arXiv v4
-- [x] First-order and HVP oracle scope checked against Definitions 2.6--2.7 and Lemma 2.1
-- [x] Endpoint-amplification identities checked against Lemma 4.1
-- [x] Comparison with the NC--Q upper bound checked against Table 1 and Appendix F of the paper
-- [ ] Independent lemma-by-lemma reproduction of the complete paper proof
-- [ ] Names and scope of human verification recorded in this repository
 
 ## References
 
