@@ -2,7 +2,7 @@
 
 ## Status
 
-**Checked; public preprint.** We checked the nested-chain construction developed in the [*Highly-Smooth NC Optimization* discussion](https://chatgpt.com/share/6a954295-d7e8-83ee-9e41-e67c81d533ea). A cleaned version appears in Section 3.3 and Theorem 3.1 of [*On the Condition Number Dependency in Bilevel Optimization*](https://arxiv.org/abs/2511.22331); Section 4.2 then nests this construction with a strongly-convex quadratic lower-level chain to obtain highly-smooth bilevel lower bounds.
+**Checked; public preprint; sharp bounds first discovered in [arXiv:2606.05438](https://arxiv.org/abs/2606.05438).** Zhou's block-chain work first discovered and proved the sharp lower bounds. We subsequently checked the simpler nested-chain construction developed in the [*Highly-Smooth NC Optimization* discussion](https://chatgpt.com/share/6a954295-d7e8-83ee-9e41-e67c81d533ea). A cleaned version appears in Section 3.3 and Theorem 3.1 of [*On the Condition Number Dependency in Bilevel Optimization*](https://arxiv.org/abs/2511.22331); Section 4.2 then nests this construction with a strongly-convex quadratic lower-level chain to obtain highly-smooth bilevel lower bounds.
 
 This construction is a simpler nested-chain reformulation of the sharp lower-bound mechanism first discovered by Zhou in [*Sharp First-Order Lower Bounds for Higher-Order Smooth Nonconvex Optimization*](https://arxiv.org/abs/2606.05438). Zhou's work introduced the block-chain and first proved the sharp exponents. The present project does not claim priority for those exponents.
 
