@@ -14,6 +14,14 @@ The repository is organized by project rather than by model or chat. Each projec
 | [Tight lower bounds for highly-smooth non-convex optimization](projects/highly-smooth-nc-lower-bound/) | Deterministic first-order nonconvex optimization under higher-order smoothness | $\Omega(\epsilon^{-7/4})$ for $p=2$ and $\Omega(\epsilon^{-5/3})$ for $p\geq3$, with full parameter dependence | Public preprint, first discovered in [arXiv:2606.05438](https://arxiv.org/abs/2606.05438). |
 | [Tight lower bound for discrete minimax optimization](projects/dmo-tight-lower-bound/) | Deterministic first-order discrete minimax optimization | $\Omega(N\Delta L/\epsilon^2)$ component-oracle calls | Verified draft; not yet written up |
 
+## Open problems not yet solved by AI
+
+The following problems are recorded as open research questions. They have not been solved by the AI-assisted proof searches documented in this repository.
+
+| Open problem | Setting and conjectured bound | Main unresolved step | Source | Status |
+| --- | --- | --- | --- | --- |
+| Tight lower bound for fully first-order stochastic bilevel optimization | For standard globally unbiased stochastic first-order oracles ($r=\infty$), prove that finding an $\epsilon$-stationary point still requires $\Omega(\epsilon^{-6})$ oracle calls without stochastic smoothness and $\Omega(\epsilon^{-4})$ with stochastic smoothness. | Construct a globally valid hard instance in which $g(x,\cdot)$ is strongly convex for every $(x,y)$ and $\|\nabla_x g(x,y)\|_\infty$ remains globally of the same order as $\|\nabla_x g(x,y^*(x))\|_\infty$. Existing lower bounds establish these rates only for a $y^*(x)$-aware oracle with reliability radius $r_\epsilon=\Theta(\epsilon)$. | [Kwon, Kwon, and Lyu, Conjecture 1](https://arxiv.org/abs/2402.07101) | **Open; not solved by AI** |
+
 ## Repository conventions
 
 Every project should contain a `README.md` with:
