@@ -1,8 +1,42 @@
 # AI Optimization Theory
 
-An organized record of new optimization-theory bounds discovered with AI assistance and checked by human researchers.
+An organized record of open problems and new bounds in optimization theory that may be solved with AI assistance and checked by human researchers.
 
 The repository is organized by project rather than by model or chat. Each project records the mathematical claim, assumptions, oracle model, proof status, provenance, and the best available write-up. AI output is treated as proof-search material: a result is listed as proved only after verification.
+
+## Cite this repository
+
+A repository-level BibTeX entry is provided early so that problem curators, AI contributors, verifiers, and maintainers can receive timely credit. Update the access date to the version you used:
+
+```bibtex
+@misc{zhang2026aioptimizationtheory,
+  author       = {Zhang, Jingzhao and {AI Optimization Theory Contributors}},
+  title        = {AI Optimization Theory: Open Problems and AI-Assisted Bounds},
+  year         = {2026},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/ZhangJingzhao/ai-optimization-theory},
+  note         = {Accessed: YYYY-MM-DD}
+}
+```
+
+The same entry is available as [`CITATION.bib`](CITATION.bib). When citing a particular result, please also cite its project README, original contributor, and associated paper or AI-response record.
+
+## Background and curation criteria
+
+This repository lists research-level open problems in optimization that may be solvable by AI. The organizers filter both proposed problems and claimed AI solutions according to three principles:
+
+1. **Established setup.** A problem must concern an existing, interesting, and well-studied optimization setting with an open gap between upper and lower bounds. The benchmark is not intended for manufacturing new setups solely to create solvable questions.
+2. **Standalone significance.** Closing or materially improving the stated gap should, through the improved bound alone, be capable of supporting a top-conference- or journal-level research contribution.
+3. **Sanity-checked solutions.** Before a claimed AI response or clean write-up is listed as likely correct, the organizers check that the rate is significant, addresses the original problem, and does not obtain the improvement by adding new assumptions or changing the oracle or solution model. This check is a research sanity check, not a substitute for a full proof audit or peer review.
+
+## Purpose
+
+The repository is intended to serve several complementary roles:
+
+1. **A home for standalone theory results.** A clean write-up should be assessable and citable for its mathematical result, independently of how the proof was discovered.
+2. **A research benchmark for AI.** The open-problem list provides a changing but documented benchmark for tracking progress in AI systems' ability to solve research-level optimization problems.
+3. **A path from promising AI output to papers.** An AI response that is likely correct but not yet cleaned up is open for the community to claim, verify fully, and develop into a paper. Any resulting work must properly attribute the original contributor who released the initial AI response, as well as subsequent contributors.
+4. **Timely contribution records.** Commit history and maintenance records provide a flexible, timely way to document contributions to mathematical theory in an AI-assisted research era.
 
 ## Projects
 
@@ -54,4 +88,3 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the project checklist and [projects/_
 ## Scope and caution
 
 The repository documents research results and their provenance; it is not itself a peer-review venue. Complexity claims are meaningful only together with their assumptions, solution criterion, allowed primitive operations, and hidden logarithmic or parameter-dependent factors.
-
