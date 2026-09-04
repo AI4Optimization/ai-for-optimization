@@ -1,20 +1,24 @@
-# AI Optimization Theory
+# AI for Optimization
 
 An organized record of open problems and new bounds in optimization theory that may be solved with AI assistance and checked by human researchers.
 
 The repository is organized by project rather than by model or chat. Each project records the mathematical claim, assumptions, oracle model, proof status, provenance, and the best available write-up. AI output is treated as proof-search material: a result is listed as proved only after verification.
+
+## Organizers
+
+Lesi Chen, Jiajin Li, Jianhao Ma, Suvrit Sra, Jingzhao Zhang, Peiyuan Zhang, and Xinliang Zhang.
 
 ## Cite this repository
 
 A repository-level BibTeX entry is provided early so that problem curators, AI contributors, verifiers, and maintainers can receive timely credit. Update the access date to the version you used:
 
 ```bibtex
-@misc{zhang2026aioptimizationtheory,
-  author       = {Zhang, Jingzhao and {AI Optimization Theory Contributors}},
-  title        = {AI Optimization Theory: Open Problems and AI-Assisted Bounds},
+@misc{chen2026aiforoptimization,
+  author       = {Chen, Lesi and Li, Jiajin and Ma, Jianhao and Sra, Suvrit and Zhang, Jingzhao and Zhang, Peiyuan and Zhang, Xinliang},
+  title        = {AI for Optimization: Open Problems and AI-Assisted Bounds},
   year         = {2026},
   howpublished = {GitHub repository},
-  url          = {https://github.com/ZhangJingzhao/ai-optimization-theory},
+  url          = {https://github.com/AI4Optimization/ai-for-optimization},
   note         = {Accessed: YYYY-MM-DD}
 }
 ```
@@ -35,8 +39,9 @@ The repository is intended to serve several complementary roles:
 
 1. **A home for standalone theory results.** A clean write-up should be assessable and citable for its mathematical result, independently of how the proof was discovered.
 2. **A research benchmark for AI.** The open-problem list provides a changing but documented benchmark for tracking progress in AI systems' ability to solve research-level optimization problems.
-3. **A path from promising AI output to papers.** An AI response that is likely correct but not yet cleaned up is open for the community to claim, verify fully, and develop into a paper. Any resulting work must properly attribute the original contributor who released the initial AI response, as well as subsequent contributors.
-4. **Timely contribution records.** Commit history and maintenance records provide a flexible, timely way to document contributions to mathematical theory in an AI-assisted research era.
+3. **Reevaluating Optimization theory research.** We hope that the success and failure pattern in AI can provide insight so that we can reevaluate novelty and challenges of optimization theory study in AI-era.
+4. **A path from promising AI output to papers.** An AI response that is likely correct but not yet cleaned up is open for the community to claim, verify fully, and develop into a paper. Any resulting work must properly attribute the original contributor who released the initial AI response, as well as subsequent contributors.
+5. **Timely contribution records.** Commit history and maintenance records provide a flexible, timely way to document contributions to mathematical theory in an AI-assisted research era.
 
 ## Projects
 
