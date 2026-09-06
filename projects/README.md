@@ -33,6 +33,7 @@ The following problems are recorded as open research questions. They have not be
 | [Deterministic first-order nonsmooth nonconvex optimization](../open-problems/deterministic-nonsmooth-nonconvex/) | Noiseless first-order oracle; $(\delta,\epsilon)$ stationarity | $\Omega(\delta^{-1}\epsilon^{-3})$ | **Open; not solved by AI** |
 | [Stochastic bandit convex optimization](../open-problems/bandit-convex-regret/) | Lipschitz losses; bandit feedback | Close $d^{4/3}$ versus $d^{3/2}$ regret gap | **Open; not solved by AI** |
 | [Exact-value zeroth-order smooth convex optimization](../open-problems/zeroth-order-smooth-convex/) | Smooth convex; exact function values | $\Omega(d\epsilon^{-1/2})$ in the normalized setting | **Open; not solved by AI** |
+| [Exact-value zeroth-order smooth nonconvex optimization](../open-problems/zeroth-order-smooth-nonconvex/) | Smooth nonconvex; exact function values | $\Omega(d\epsilon^{-2})$ in the normalized setting | **Open; not solved by AI** |
 
 See [`open-problems/`](../open-problems/) for precise definitions, oracle models, solution criteria, known bounds, and references.
 

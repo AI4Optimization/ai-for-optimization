@@ -12,5 +12,6 @@ These questions have not been solved by the AI-assisted proof searches recorded 
 | [`deterministic-nonsmooth-nonconvex`](deterministic-nonsmooth-nonconvex/) | Deterministic O2NC lower bound | Open |
 | [`bandit-convex-regret`](bandit-convex-regret/) | Tight dimension dependence in bandit convex regret | Open |
 | [`zeroth-order-smooth-convex`](zeroth-order-smooth-convex/) | Smooth exact-value zeroth-order lower bound | Open |
+| [`zeroth-order-smooth-nonconvex`](zeroth-order-smooth-nonconvex/) | Smooth nonconvex exact-value zeroth-order lower bound | Open |
 
 An open-problem page should specify the objective class, domain and regularity assumptions, oracle, admissible algorithms, output criterion, cost convention, known upper and lower bounds, and the exact gap to close.
