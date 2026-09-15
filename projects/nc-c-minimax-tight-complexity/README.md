@@ -7,7 +7,7 @@
 - **Pan, Zheng, and Li (PZL):** [arXiv:2609.14235v1](https://arxiv.org/abs/2609.14235v1), matching deterministic lower and upper bounds without logarithmic factors.
 - **Wu, Gu, and Yang (WGY):** [arXiv:2609.14233v1](https://arxiv.org/abs/2609.14233v1), deterministic and stochastic lower bounds for zero-respecting methods.
 
-PZL resolves the repository's [unconstrained-primal NC--C open problem](../../open-problems/nonconvex-concave-minimax/). WGY gives a complementary result with a constrained primal domain and a narrower algorithm class. The [source-review record](notes/source-review.md) documents the comparison; this repository has not independently audited every proof or rebuilt the Lean developments.
+PZL resolves the repository's [unconstrained-primal NC--C open problem](../../open-problems/nonconvex-concave-minimax/). WGY gives a complementary result with a constrained primal domain and a narrower algorithm class. This repository has not independently audited every proof or rebuilt the Lean developments.
 
 ## Result
 
@@ -40,7 +40,7 @@ $$
 
 calls. Thus the optimal complexity in the lower-bound regime is $\Theta(L^2D_{\mathcal Y}\Delta/\epsilon^3)$. These bounds hide only universal constants, with no logarithmic, dimension, or additional initialization factors.
 
-For comparison, Lin, Jin, and Jordan's Minimax-PPA has a $\widetilde O(\epsilon^{-3})$ guarantee for this envelope criterion, and PZL reports that Perturbed Smoothed FOAM improves the earlier squared logarithm to a single logarithm. These accuracy-only comparisons fix all other parameters; the [review notes](notes/source-review.md) record the earlier parameter dependence. Tracked-FOAM removes the remaining logarithmic overhead.
+For comparison, Lin, Jin, and Jordan's Minimax-PPA has a $\widetilde O(\epsilon^{-3})$ guarantee for this envelope criterion, and PZL reports that Perturbed Smoothed FOAM improves the earlier squared logarithm to a single logarithm. These accuracy-only comparisons fix all other parameters. Tracked-FOAM removes the remaining logarithmic overhead.
 
 ### Deterministic and stochastic zero-respecting lower bounds
 
