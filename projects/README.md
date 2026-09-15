@@ -6,6 +6,7 @@ This catalog contains both AI-assisted optimization-theory results and the open 
 
 | Project | Setting | Bound | Status |
 | --- | --- | --- | --- |
+| [Tight complexity for nonconvex--concave minimax optimization](nc-c-minimax-tight-complexity/) | Smooth NC--C minimax; arbitrary deterministic methods; additional constrained-primal stochastic zero-respecting result | $\Theta(L^2D_{\mathcal Y}\Delta/\epsilon^3)$ deterministic calls in the small-accuracy regime; stochastic lower bound in project | Public preprints [(Pan, Zheng, and Li, 2026)](https://arxiv.org/abs/2609.14235v1) and [(Wu, Gu, and Yang, 2026)](https://arxiv.org/abs/2609.14233v1); AI-assisted; author-reported human verification and Lean formalizations |
 | [Optimal upper bound for nonconvex-strongly-concave minimax optimization](nc-sc-minimax-log-factors/) | Deterministic first-order nonconvex-strongly-concave minimax optimization | Main term $O(\sqrt{\kappa}L\Delta/\epsilon^2)$, plus one-time logarithmic costs | Verified draft; cleanup needed |
 | [Tight lower bound for stochastic nonconvex-strongly-concave minimax optimization](stochastic-nc-sc-tight-lower-bound/) | Bounded-variance stochastic first-order NC-SC minimax optimization for zero-respecting algorithms | $\Omega\!\left(L\Delta[\sqrt{\kappa}/\epsilon^2+\kappa\sigma^2/\epsilon^4]\right)$ oracle calls | Verified draft; cleanup needed |
 | [Halpern acceleration for high-order monotone VIs](halpern-high-order-mvi/) | $p$th-order methods for smooth monotone variational inequalities | $\widetilde O_p\!\left(1+(L_pR^p/\epsilon)^{1/p}\right)$ oracle calls | Public preprint [(Chen et al., 2026)](https://arxiv.org/abs/2608.08463) |
@@ -24,11 +25,12 @@ This catalog contains both AI-assisted optimization-theory results and the open 
 
 The following problems are recorded as open research questions. They have not been solved by the AI-assisted proof searches documented in this repository.
 
+The [nonconvex--concave minimax problem](../open-problems/nonconvex-concave-minimax/) is now resolved for deterministic methods by the [project above](nc-c-minimax-tight-complexity/); its original problem page is retained as a historical record.
+
 | Open problem | Setting | Target | Status |
 | --- | --- | --- | --- |
 | [Fully first-order stochastic bilevel optimization](../open-problems/stochastic-bilevel/) | Stochastic bilevel; globally unbiased first-order oracle | $\Omega(\epsilon^{-6})$ or $\Omega(\epsilon^{-4})$, depending on stochastic smoothness | **Open; not solved by AI** |
 | [Finite-sum nonconvex optimization](../open-problems/finite-sum-nonconvex/) | Individually smooth finite sum | $\Omega(n^\delta\epsilon^{-2})$, ideally $\delta=1/2$ | **Open; not solved by AI** |
-| [Nonconvex--concave minimax optimization](../open-problems/nonconvex-concave-minimax/) | Smooth NC--C minimax | $\Omega(\epsilon^{-2-\delta})$, ideally $\Omega(\epsilon^{-3})$ | **Open; not solved by AI** |
 | [Minimax optimization under two-sided PL conditions](../open-problems/pl-minimax/) | Deterministic two-sided PL--PL minimax | Match the $\widetilde O(\kappa_x\kappa_y)$ upper bound | **Open; not solved by AI** |
 | [Zero-order nonsmooth nonconvex stochastic optimization](../open-problems/zeroth-order-nonsmooth-nonconvex/) | Noisy function-value oracle; $(\delta,\epsilon)$ stationarity | $\Omega(d\delta^{-1}\epsilon^{-3})$ | **Open; not solved by AI** |
 | [Deterministic first-order nonsmooth nonconvex optimization](../open-problems/deterministic-nonsmooth-nonconvex/) | Noiseless first-order oracle; $(\delta,\epsilon)$ stationarity | $\Omega(\delta^{-1}\epsilon^{-3})$ | **Open; not solved by AI** |
