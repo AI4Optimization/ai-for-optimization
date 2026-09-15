@@ -6,7 +6,7 @@ This directory records the open-problem benchmark and preserves resolved questio
 | --- | --- | --- |
 | [`stochastic-bilevel`](stochastic-bilevel/) | Tight lower bounds for fully first-order stochastic bilevel optimization | Open |
 | [`finite-sum-nonconvex`](finite-sum-nonconvex/) | Polynomial finite-sum dependence in nonconvex lower bounds | Open |
-| [`nonconvex-concave-minimax`](nonconvex-concave-minimax/) | Tight NC--C minimax complexity | Resolved for deterministic methods by AI-assisted public preprints; [project](../projects/nc-c-minimax-tight-complexity/) |
+| [`nonconvex-concave-minimax`](nonconvex-concave-minimax/) | Tight NC--C minimax complexity | Resolved for by AI-assisted public preprints; [project](../projects/nc-c-minimax-tight-complexity/) |
 | [`pl-minimax`](pl-minimax/) | Tight two-sided PL--PL minimax complexity | Open |
 | [`zeroth-order-nonsmooth-nonconvex`](zeroth-order-nonsmooth-nonconvex/) | Joint $d,\delta,\epsilon$ lower bound with noisy values | Open |
 | [`deterministic-nonsmooth-nonconvex`](deterministic-nonsmooth-nonconvex/) | Deterministic O2NC lower bound | Open |
