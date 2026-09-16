@@ -1,11 +1,12 @@
 # Project catalog
 
-This catalog contains both AI-assisted optimization-theory results and the open problems used as a research benchmark. Each completed-project entry links to a self-contained directory with its assumptions, bound, proof status, provenance, and references.
+This catalog records AI-assisted optimization-theory results, external resolutions of benchmark questions, and the remaining open problems. Each result links to a self-contained directory with its assumptions, bound, proof status, provenance, and references. Mathematical status, AI provenance, and benchmark eligibility are distinct: an external resolution is attributed to its authors, and a solution predating public listing is excluded from benchmark success/failure counts.
 
 ## Projects
 
 | Project | Setting | Bound | Status |
 | --- | --- | --- | --- |
+| [Tight complexity for finite-sum nonconvex optimization](finite-sum-nonconvex-tight-complexity/) | Individually smooth finite sum; randomized adaptive IFO algorithms | $\Theta(n+\sqrt n\,L\Delta/\epsilon^2)$ in the small-accuracy regime | External public preprint [(Peng, Tang, and Jia, 2026)](https://arxiv.org/abs/2609.00045v2); author-disclosed AI assistance; solution predates benchmark entry; proof not independently audited |
 | [Tight complexity for nonconvex--concave minimax optimization](nc-c-minimax-tight-complexity/) | Smooth NC--C minimax; arbitrary deterministic methods; additional constrained-primal stochastic zero-respecting result | $\Theta(L^2D_{\mathcal Y}\Delta/\epsilon^3)$ deterministic calls in the small-accuracy regime; stochastic lower bound in project | Public preprints [(Pan, Zheng, and Li, 2026)](https://arxiv.org/abs/2609.14235v1) and [(Wu, Gu, and Yang, 2026)](https://arxiv.org/abs/2609.14233v1); AI-assisted; author-reported human verification and Lean formalizations |
 | [Optimal upper bound for nonconvex-strongly-concave minimax optimization](nc-sc-minimax-log-factors/) | Deterministic first-order nonconvex-strongly-concave minimax optimization | Main term $O(\sqrt{\kappa}L\Delta/\epsilon^2)$, plus one-time logarithmic costs | Verified draft; cleanup needed |
 | [Tight lower bound for stochastic nonconvex-strongly-concave minimax optimization](stochastic-nc-sc-tight-lower-bound/) | Bounded-variance stochastic first-order NC-SC minimax optimization for zero-respecting algorithms | $\Omega\!\left(L\Delta[\sqrt{\kappa}/\epsilon^2+\kappa\sigma^2/\epsilon^4]\right)$ oracle calls | Verified draft; cleanup needed |
@@ -21,16 +22,17 @@ This catalog contains both AI-assisted optimization-theory results and the open 
 | [Tight lower bound for nonconvex--PL minimax optimization](nonconvex-pl-minimax-lower-bound/) | Deterministic first-order NC--PL minimax optimization | $\Omega(\ell\Delta\kappa/\epsilon^2)$ oracle calls | Public preprint [(Pan and Li, 2026)](https://arxiv.org/abs/2608.26799) |
 | [Point convergence of Nesterov's accelerated gradient method](nag-point-convergence/) | Smooth convex minimization with classical NAG at the critical acceleration schedule | $x_k\to x_\infty$, $y_k\to x_\infty$, with $x_\infty\in\arg\min f$ | Public preprint [(Jang and Ryu, 2026)](https://arxiv.org/abs/2510.23513); AI-assisted proof |
 
-## Open problems not yet solved by AI
+## Open problems
 
 The following problems are recorded as open research questions. They have not been solved by the AI-assisted proof searches documented in this repository.
 
 The [nonconvex--concave minimax problem](../open-problems/nonconvex-concave-minimax/) is now resolved for deterministic methods by the [project above](nc-c-minimax-tight-complexity/); its original problem page is retained as a historical record.
 
+The [finite-sum nonconvex problem](../open-problems/finite-sum-nonconvex/) is resolved by [Peng, Tang, and Jia's external work](finite-sum-nonconvex-tight-complexity/), whose authors disclose AI assistance. Its public solution predates the benchmark entry, so it is retained for historical reference and excluded from benchmark success/failure counts.
+
 | Open problem | Setting | Target | Status |
 | --- | --- | --- | --- |
 | [Fully first-order stochastic bilevel optimization](../open-problems/stochastic-bilevel/) | Stochastic bilevel; globally unbiased first-order oracle | $\Omega(\epsilon^{-6})$ or $\Omega(\epsilon^{-4})$, depending on stochastic smoothness | **Open; not solved by AI** |
-| [Finite-sum nonconvex optimization](../open-problems/finite-sum-nonconvex/) | Individually smooth finite sum | $\Omega(n^\delta\epsilon^{-2})$, ideally $\delta=1/2$ | **Open; not solved by AI** |
 | [Minimax optimization under two-sided PL conditions](../open-problems/pl-minimax/) | Deterministic two-sided PL--PL minimax | Match the $\widetilde O(\kappa_x\kappa_y)$ upper bound | **Open; not solved by AI** |
 | [Zero-order nonsmooth nonconvex stochastic optimization](../open-problems/zeroth-order-nonsmooth-nonconvex/) | Noisy function-value oracle; $(\delta,\epsilon)$ stationarity | $\Omega(d\delta^{-1}\epsilon^{-3})$ | **Open; not solved by AI** |
 | [Deterministic first-order nonsmooth nonconvex optimization](../open-problems/deterministic-nonsmooth-nonconvex/) | Noiseless first-order oracle; $(\delta,\epsilon)$ stationarity | $\Omega(\delta^{-1}\epsilon^{-3})$ | **Open; not solved by AI** |

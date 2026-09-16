@@ -47,8 +47,8 @@ The repository is intended to serve several complementary roles:
 
 Browse the [project catalog and open-problem benchmark](projects/README.md) for:
 
-- AI-assisted results with their bounds, status, and detailed project write-ups;
-- research-level open problems not yet solved by AI;
+- AI-assisted results and external resolutions, with their bounds, status, provenance, and detailed project write-ups;
+- research-level open problems and historical records of resolved benchmark questions;
 - the reusable template for proposing a new project.
 
 ## Repository conventions
