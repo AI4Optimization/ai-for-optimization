@@ -48,7 +48,7 @@ again in dimension at most $T+1$ and for the same class of predetermined schedul
 
 The improvement adds a sharp $S_2(N)=O(\sqrt{N})$ local estimate and compresses each retention block into one virtual checkpoint, removing the logarithmic loss and improving the polynomial exponent. It does not cover gradient-adaptive schedules and does not itself prove a matching upper bound.
 
-He and Zhang (2026) give an $O(T^{-3/2})$ expected and almost-sure last-iterate upper bound using randomized schedules with randomized time boundaries. That is a different schedule model from a fixed deterministic schedule.
+The separate [He and Zhang project](../heavy-ball-randomized-schedules/) records an $O(T^{-3/2})$ expected and almost-sure last-iterate upper bound using randomized schedules with randomized time boundaries. That is a different schedule model from a fixed deterministic schedule.
 
 ## References
 
