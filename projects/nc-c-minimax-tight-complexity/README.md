@@ -21,7 +21,7 @@ Use $L$ for joint smoothness, $D_{\mathcal Y}$ for the dual-diameter bound, and 
 PZL, Theorem 3.2: there exist universal constants $c_0,c_1>0$ such that, for every $L,D_{\mathcal Y},\Delta>0$ and
 
 $$
-0<\epsilon\leq c_0\min\{LD_{\mathcal Y},\sqrt{L\Delta}\},
+0<\epsilon\leq c_0\min\left\lbrace LD_{\mathcal Y},\sqrt{L\Delta}\right\rbrace,
 $$
 
 every deterministic adaptive first-order method has a finite-dimensional instance requiring at least
@@ -35,9 +35,9 @@ joint oracle calls in the worst case to return an $\epsilon$-optimization-statio
 PZL, Theorem 3.3: for every $L,D_{\mathcal Y},\Delta>0$, every admissible instance, and every $\epsilon>0$, **Tracked-FOAM** returns such a point using
 
 $$
-O\!\left(
+O\left(
 \left(\frac{L\Delta}{\epsilon^2}+1\right)
-\max\left\{1,\frac{LD_{\mathcal Y}}{\epsilon}\right\}
+\max\left\lbrace 1,\frac{LD_{\mathcal Y}}{\epsilon}\right\rbrace
 \right)
 $$
 
@@ -49,7 +49,7 @@ For comparison, Lin, Jin, and Jordan's Minimax-PPA has a $\widetilde O(\epsilon^
 
 WGY, Theorem 4.1, proves $\Omega(L^2D_{\mathcal Y}\Delta/\epsilon^3)$ for deterministic zero-respecting algorithms in the same accuracy regime, with its own universal constants. Zero-respecting methods can activate only coordinates revealed by previous gradient responses, subject to the allowed projections.
 
-WGY, Theorem 5.5, states that there exist universal constants $c_0,c_d,c_n>0$ such that, for every $L,D_{\mathcal Y},\Delta>0$, $\sigma\geq0$, and $0<\epsilon\leq c_0\min\{LD_{\mathcal Y},\sqrt{L\Delta}\}$, an admissible instance and unbiased stochastic oracle of variance at most $\sigma^2$ force every adaptive stochastic zero-respecting method to use at least
+WGY, Theorem 5.5, states that there exist universal constants $c_0,c_d,c_n>0$ such that, for every $L,D_{\mathcal Y},\Delta>0$, $\sigma\geq0$, and $0<\epsilon\leq c_0\min\left\lbrace LD_{\mathcal Y},\sqrt{L\Delta}\right\rbrace$, an admissible instance and unbiased stochastic oracle of variance at most $\sigma^2$ force every adaptive stochastic zero-respecting method to use at least
 
 $$
 c_d\frac{L^2D_{\mathcal Y}\Delta}{\epsilon^3}
@@ -65,7 +65,7 @@ WGY compares the noise-dominated $\epsilon^{-6}$ rate with SAPD+ (Zhang, Aybat, 
 ZX, Theorem 5.1, proves
 
 $$
-\Omega\!\left(\frac{L^2D_{\mathcal Y}\Delta_\phi}{\epsilon^3}\right)
+\Omega\left(\frac{L^2D_{\mathcal Y}\Delta_\phi}{\epsilon^3}\right)
 $$
 
 for projected zero-respecting first-order methods, including randomized output rules at a fixed query budget. Its lower bound matches the leading warm-started optimization-stationarity complexity of its single-loop algorithm. The same paper also gives the best-known $O(L^{3/2}D_{\mathcal Y}^{1/2}\Delta_\phi/\epsilon^{5/2})$ single-loop upper bound for game stationarity; it does not claim a matching game-stationarity lower bound.
