@@ -1,8 +1,8 @@
-# Log-free lower bound for Heavy Ball on smooth convex functions
+# Lower bounds for Heavy Ball on smooth convex functions
 
 ## Status
 
-**AI-assisted technical note; improvement over Ma and Zhang (2026).** The proof is attributed in the note to GPT-6 Astra, prompted by Wenzhi Gao. It builds on the static-chain construction and momentum-removal lemma of Ma and Zhang and strengthens their Heavy Ball lower bound.
+**Public preprint by Ma and Zhang (2026), with a subsequent AI-assisted improvement.** Ma and Zhang established the original lower bound recorded here. A later technical note attributed to GPT-6 Astra, prompted by Wenzhi Gao, strengthens their rate using the same static-chain framework and momentum-removal lemma.
 
 ## Setting
 
@@ -20,36 +20,38 @@ $$
 \qquad 0\leq\beta_t<1.
 $$
 
-The schedule may depend on $T$, $L$, and $R$, but may not adapt to observed gradients. The output is the actual last iterate $x_T$.
+The schedule may depend on $T$, $L$, and $R$, but may not adapt to observed gradients. The objective is convex and $L$-smooth, the initial distance to a minimizer is at most $R$, and performance is measured at the actual last iterate $x_T$.
 
-## Main result
+## Ma and Zhang lower bound
 
-For every such predetermined schedule, there is a differentiable convex $L$-smooth function in dimension at most $T+1$, with a minimizer $x^\star$ and initialization $\|x_0-x^\star\|\leq R$, such that
+Ma and Zhang (2026) prove that every such predetermined schedule has a worst-case instance satisfying
 
 $$
 f(x_T)-f(x^\star)
 \geq
-c\frac{LR^2}{T^{3/2}}
+c\frac{LR^2}{T^{(1+\sqrt{5})/2}\log T}
 $$
 
-for a universal constant $c>0$. The hard objective is a scaled and translated static one-sided Huber chain.
+for a universal constant $c>0$. Thus arbitrary nonstationary, horizon-dependent tuning cannot guarantee Nesterov's $O(T^{-2})$ rate for classical Heavy Ball on all smooth convex objectives.
 
-## Improvement over Ma and Zhang
+## Subsequent improvement
 
-Ma and Zhang (2026) proved the lower bound
+The later note *An $\Omega(T^{-3/2})$ lower bound for heavy ball* improves the Ma--Zhang result to
 
 $$
-\Omega\left(
-\frac{LR^2}{T^{(1+\sqrt{5})/2}\log T}
-\right)
+f(x_T)-f(x^\star)
+\geq
+c'\frac{LR^2}{T^{3/2}},
 $$
 
-for the same broad class of predetermined nonnegative Heavy Ball schedules. The new note improves the polynomial exponent to $3/2$ and removes the logarithmic loss. It reuses Ma and Zhang's static-chain construction and momentum-removal lemma, while adding a sharp $S_2(N)=O(\sqrt{N})$ local estimate and a compression of every retention block into a single virtual checkpoint.
+again in dimension at most $T+1$ and for the same class of predetermined schedules. The note is attributed to GPT-6 Astra, prompted by Wenzhi Gao, and explicitly builds on Ma and Zhang's static one-sided Huber chain and momentum-removal lemma.
 
-The result does not cover gradient-adaptive schedules and does not itself prove a matching upper bound. He and Zhang (2026) give an $O(T^{-3/2})$ expected and almost-sure last-iterate upper bound using randomized schedules with randomized time boundaries, which is a different schedule model.
+The improvement adds a sharp $S_2(N)=O(\sqrt{N})$ local estimate and compresses each retention block into one virtual checkpoint, removing the logarithmic loss and improving the polynomial exponent. It does not cover gradient-adaptive schedules and does not itself prove a matching upper bound.
+
+He and Zhang (2026) give an $O(T^{-3/2})$ expected and almost-sure last-iterate upper bound using randomized schedules with randomized time boundaries. That is a different schedule model from a fixed deterministic schedule.
 
 ## References
 
-- GPT-6 Astra, prompted by Wenzhi Gao, [*An $\Omega(T^{-3/2})$ lower bound for heavy ball*](https://web.stanford.edu/~gwz/blogs/gpt_1/heavy_ball_logfree_lower_bound.pdf), September 9, 2026.
 - Jianhao Ma and Jingzhao Zhang, [*A Lower Bound for the Heavy-Ball Method on Smooth Convex Functions*](https://arxiv.org/abs/2609.08656), 2026.
+- GPT-6 Astra, prompted by Wenzhi Gao, [*An $\Omega(T^{-3/2})$ lower bound for heavy ball*](https://web.stanford.edu/~gwz/blogs/gpt_1/heavy_ball_logfree_lower_bound.pdf), September 9, 2026. Subsequent improvement of Ma and Zhang.
 - Chang He and Shuzhong Zhang, [*Heavy-Ball Method under Randomized Schedules*](https://arxiv.org/abs/2609.09743), 2026.

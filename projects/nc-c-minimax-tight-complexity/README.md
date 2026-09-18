@@ -75,7 +75,7 @@ for projected zero-respecting first-order methods, including randomized output r
 The dual-diameter convention is
 
 $$
-\operatorname{diam}\left(\mathcal{Y}\right)\leq D_Y.
+\mathrm{diam}\left(\mathcal{Y}\right)\leq D_Y.
 $$
 
 - **Problem class:** $\min_{x\in\mathcal{X}}\max_{y\in\mathcal{Y}}f(x,y)$, jointly $L$-smooth on $\mathcal{X}\times\mathcal{Y}$, with $f(x,\cdot)$ concave and no convexity assumption in $x$. No fixed positive dual strong-concavity modulus is assumed.
