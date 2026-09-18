@@ -21,6 +21,7 @@ This catalog records AI-assisted optimization-theory results, external resolutio
 | [Optimal polynomial exponents for stepsize-based acceleration of gradient descent](stepsize-accelerated-gd-optimal-exponents/) | Smooth convex GD with predetermined nonnegative stepsizes; last iterate; non-anytime and anytime | Optimal lower bounds with exponents $p_{\mathrm{sil}}=\log_2(1+\sqrt2)\approx1.271553$ for non-anytime and $2p_{\mathrm{sil}}/(1+p_{\mathrm{sil}})\approx1.119545$ for anytime; | Public preprint [(Ye and Liu, 2026)](https://arxiv.org/abs/2609.09152v2); AI-assisted proof; [earlier blog](https://yeyuhanyyh.github.io/gd-silver-rate/) |
 | [Tight lower bound for nonconvex--PL minimax optimization](nonconvex-pl-minimax-lower-bound/) | Deterministic first-order NC--PL minimax optimization | $\Omega(\ell\Delta\kappa/\epsilon^2)$ oracle calls | Public preprint [(Pan and Li, 2026)](https://arxiv.org/abs/2608.26799) |
 | [Point convergence of Nesterov's accelerated gradient method](nag-point-convergence/) | Smooth convex minimization with classical NAG at the critical acceleration schedule | $x_k\to x_\infty$, $y_k\to x_\infty$, with $x_\infty\in\arg\min f$ | Public preprint [(Jang and Ryu, 2026)](https://arxiv.org/abs/2510.23513); AI-assisted proof |
+| [Tight complexity of nonsmooth nonconvex stationarity](nonsmooth-nonconvex-stationarity/) | Lipschitz nonconvex optimization; randomized zero-respecting first-order algorithms | $\Theta(\Delta L^2/(\delta\epsilon^3))$ for Goldstein stationarity | External public preprint [(Kornowski, 2026)](https://arxiv.org/abs/2609.17780); resolves a recorded open problem; AI involvement unknown |
 
 ## Open problems
 
@@ -31,7 +32,6 @@ The following problems are recorded as open research questions. They have not be
 | [Fully first-order stochastic bilevel optimization](../open-problems/stochastic-bilevel/) | Stochastic bilevel; globally unbiased first-order oracle | $\Omega(\epsilon^{-6})$ or $\Omega(\epsilon^{-4})$, depending on stochastic smoothness | **Open; not solved by AI** |
 | [Minimax optimization under two-sided PL conditions](../open-problems/pl-minimax/) | Deterministic two-sided PL--PL minimax | Match the $\widetilde O(\kappa_x\kappa_y)$ upper bound | **Open; not solved by AI** |
 | [Zero-order nonsmooth nonconvex stochastic optimization](../open-problems/zeroth-order-nonsmooth-nonconvex/) | Noisy function-value oracle; $(\delta,\epsilon)$ stationarity | $\Omega(d\delta^{-1}\epsilon^{-3})$ | **Open; not solved by AI** |
-| [Deterministic first-order nonsmooth nonconvex optimization](../open-problems/deterministic-nonsmooth-nonconvex/) | Noiseless first-order oracle; $(\delta,\epsilon)$ stationarity | $\Omega(\delta^{-1}\epsilon^{-3})$ | **Open; not solved by AI** |
 | [Stochastic bandit convex optimization](../open-problems/bandit-convex-regret/) | Lipschitz losses; bandit feedback | Close $d^{4/3}$ versus $d^{3/2}$ regret gap | **Open; not solved by AI** |
 | [Exact-value zeroth-order smooth convex optimization](../open-problems/zeroth-order-smooth-convex/) | Smooth convex; exact function values | $\Omega(d\epsilon^{-1/2})$ in the normalized setting | **Open; not solved by AI** |
 | [Exact-value zeroth-order smooth nonconvex optimization](../open-problems/zeroth-order-smooth-nonconvex/) | Smooth nonconvex; exact function values | $\Omega(d\epsilon^{-2})$ in the normalized setting | **Open; not solved by AI** |
@@ -42,6 +42,7 @@ The [nonconvex--concave minimax problem](../open-problems/nonconvex-concave-mini
 
 The [finite-sum nonconvex problem](../open-problems/finite-sum-nonconvex/) is resolved by [Peng, Tang, and Jia's external work](finite-sum-nonconvex-tight-complexity/), whose authors disclose AI assistance. Its public solution predates the benchmark entry, so it is retained for historical reference and excluded from benchmark success/failure counts.
 
+The [deterministic/noiseless nonsmooth nonconvex problem](../open-problems/deterministic-nonsmooth-nonconvex/) is now resolved in the zero-respecting first-order framework by [Kornowski's external work](nonsmooth-nonconvex-stationarity/); its original problem page is retained as a historical record. AI involvement in that work is unknown.
 
 ## Starting a new project
 
