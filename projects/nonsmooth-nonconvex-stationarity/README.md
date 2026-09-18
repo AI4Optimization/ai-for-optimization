@@ -2,7 +2,7 @@
 
 ## Status
 
-**External public preprint; resolves a recorded open problem; AI involvement unknown.** Kornowski (2026) proves a matching first-order lower bound for Goldstein stationarity with noiseless oracle responses. This repository does not infer AI provenance without an author disclosure.
+**External public preprint; AI-assisted proof; resolves a recorded open problem.** Kornowski (2026) proves a matching first-order lower bound for Goldstein stationarity with noiseless oracle responses.
 
 ## Problem setting
 

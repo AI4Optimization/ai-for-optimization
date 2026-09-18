@@ -11,7 +11,7 @@ Mathematical status, AI provenance, and benchmark eligibility are recorded separ
 | [`nonconvex-concave-minimax`](nonconvex-concave-minimax/) | Tight NC--C minimax complexity | Resolved by AI-assisted public preprints; [project](../projects/nc-c-minimax-tight-complexity/) |
 | [`pl-minimax`](pl-minimax/) | Tight two-sided PL--PL minimax complexity | Open |
 | [`zeroth-order-nonsmooth-nonconvex`](zeroth-order-nonsmooth-nonconvex/) | Joint $d,\delta,\epsilon$ lower bound with noisy values | Open |
-| [`deterministic-nonsmooth-nonconvex`](deterministic-nonsmooth-nonconvex/) | Deterministic/noiseless Goldstein-stationarity lower bound | Resolved by [Kornowski (2026)](https://arxiv.org/abs/2609.17780) |
+| [`deterministic-nonsmooth-nonconvex`](deterministic-nonsmooth-nonconvex/) | Deterministic/noiseless Goldstein-stationarity lower bound | Resolved by the AI-assisted proof of [Kornowski (2026)](https://arxiv.org/abs/2609.17780) |
 | [`bandit-convex-regret`](bandit-convex-regret/) | Tight dimension dependence in bandit convex regret | Open |
 | [`zeroth-order-smooth-convex`](zeroth-order-smooth-convex/) | Smooth exact-value zeroth-order lower bound | Open |
 | [`zeroth-order-smooth-nonconvex`](zeroth-order-smooth-nonconvex/) | Smooth nonconvex exact-value zeroth-order lower bound | Open |

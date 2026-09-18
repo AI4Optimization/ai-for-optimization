@@ -2,12 +2,15 @@
 
 ## Status
 
-**Public preprints; AI-assisted; author-reported human verification and Lean formalizations.** This project records two works submitted to arXiv on September 13, 2026:
+**Public preprints; multiple independent resolutions.** This project records three works submitted to arXiv in September 2026:
 
 - **Pan, Zheng, and Li (PZL):** [arXiv:2609.14235v1](https://arxiv.org/abs/2609.14235v1), matching deterministic lower and upper bounds without logarithmic factors.
 - **Wu, Gu, and Yang (WGY):** [arXiv:2609.14233v1](https://arxiv.org/abs/2609.14233v1), deterministic and stochastic lower bounds for zero-respecting methods.
+- **Zhang and Xu (ZX):** [arXiv:2609.17973v1](https://arxiv.org/abs/2609.17973v1), a matching projected zero-respecting lower bound and a matching single-loop upper bound for optimization stationarity.
 
 PZL resolves the repository's [unconstrained-primal NC--C open problem](../../open-problems/nonconvex-concave-minimax/). WGY gives a complementary result with a constrained primal domain and a narrower algorithm class. This repository has not independently audited every proof or rebuilt the Lean developments.
+
+ZX independently proves the same $\epsilon^{-3}$ lower-bound exponent within its projected zero-respecting oracle class. Its warm-started projected damped extragradient method also attains the matching leading upper bound $O(L^2D_{\mathcal Y}\Delta_\phi/\epsilon^3)$, up to an additive lower-order warm-up cost.
 
 ## Result
 
@@ -57,6 +60,16 @@ calls to return a point satisfying expected envelope-gradient norm at most $\eps
 
 WGY compares the noise-dominated $\epsilon^{-6}$ rate with SAPD+ (Zhang, Aybat, and Gürbüzbalaban, 2022). That comparison uses a primal-dual-gap budget and a bounded-variance oracle; it does not supply a stochastic upper bound for unrestricted primal-value-gap instances.
 
+### Independent projected zero-respecting result
+
+ZX, Theorem 5.1, proves
+
+$$
+\Omega\!\left(\frac{L^2D_{\mathcal Y}\Delta_\phi}{\epsilon^3}\right)
+$$
+
+for projected zero-respecting first-order methods, including randomized output rules at a fixed query budget. Its lower bound matches the leading warm-started optimization-stationarity complexity of its single-loop algorithm. The same paper also gives the best-known $O(L^{3/2}D_{\mathcal Y}^{1/2}\Delta_\phi/\epsilon^{5/2})$ single-loop upper bound for game stationarity; it does not claim a matching game-stationarity lower bound.
+
 ## Setting and assumptions
 
 - **Problem class:** $\min_{x\in\mathcal X}\max_{y\in\mathcal Y}f(x,y)$, jointly $L$-smooth on $\mathcal X\times\mathcal Y$, with $f(x,\cdot)$ concave and no convexity assumption in $x$. No fixed positive dual strong-concavity modulus is assumed.
@@ -80,7 +93,8 @@ WGY compares the noise-dominated $\epsilon^{-6}$ rate with SAPD+ (Zhang, Aybat, 
 - [x] The v1 theorem statements, domains, stationarity criteria, oracle models, and accuracy regimes were compared with the benchmark on 2026-09-15.
 - [x] The arbitrary-deterministic versus zero-respecting distinction and constrained-primal restriction are recorded.
 - [x] The parameter scaling and the simplification of Tracked-FOAM's full bound were checked at the theorem-comparison level.
-- [x] Both papers' AI disclosures and author-reported human verification are attributed below.
+- [x] PZL's and WGY's AI disclosures and author-reported human verification are attributed below.
+- [x] ZX's v1 optimization-stationarity lower bound, oracle class, and matching leading upper bound were added on 2026-09-18.
 - [ ] Independent lemma-by-lemma proof audit, including imported results and constants.
 - [ ] Independent rebuild and paper-to-Lean correspondence audit of the linked formalizations.
 - [ ] Repository human reviewer names and sign-off.
@@ -99,6 +113,7 @@ The authors report checking their mathematical arguments: **Siyu Pan, Taoli Zhen
 
 - **PZL manuscript:** Siyu Pan, Taoli Zheng, and Jiajin Li, [*Optimal Deterministic First-Order Oracle Complexity for Nonconvex-Concave Minimax Optimization*](https://arxiv.org/abs/2609.14235v1), 2026. [Author-linked Lean development](https://github.com/SiyuPan04/ncc-lean).
 - **WGY manuscript:** Qilong Wu, Zhihao Gu, and Junchi Yang, [*Lower Bounds for Nonconvex-Concave Minimax Optimization*](https://arxiv.org/abs/2609.14233v1), 2026. [Author-linked Lean development](https://github.com/Wu-Qilong/Lower-Bounds-for-Nonconvex-Concave-Minimax-Optimization).
+- **ZX manuscript:** Minghao Zhang and Zi Xu, [*Matching Multi-Loop Complexities with a Single Loop: Optimal Optimization Stationarity and Best-Known Game Stationarity in Nonconvex--Concave Minimax Optimization*](https://arxiv.org/abs/2609.17973v1), 2026.
 - **AI systems, PZL disclosure:** GPT-5.5 Pro contributed to the hard-instance construction; GPT-5.6 Sol Ultra helped simplify it, design Algorithm 1, and improve the proof presentation; Codex assisted the Lean formalization.
 - **AI systems, WGY disclosure:** the authors supplied their own proof draft, central dual chain, auxiliary-variable constraint, and deterministic scaling argument to GPT-5.6 Sol Ultra. The model helped refine the primal construction and technical arguments. The authors introduced the stochastic dual-chain mechanism; model assistance included parts of the clipping construction. Codex assisted the Lean formalization.
 - **Original AI traces:** no prompt/response archive is linked in the reviewed v1 disclosures. The manuscripts and formalizations are the available public records; this curation does not substitute for a trace archive.

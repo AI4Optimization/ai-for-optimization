@@ -2,7 +2,7 @@
 
 ## Status
 
-**Resolved for deterministic first-order methods by AI-assisted public preprints (September 2026).** Pan, Zheng, and Li establish matching lower and upper bounds, including removal of logarithmic factors. Wu, Gu, and Yang establish the same deterministic lower-bound rate for zero-respecting methods in a constrained-primal setting, together with a stochastic lower bound.
+**Resolved for deterministic first-order methods by public preprints (September 2026).** Pan, Zheng, and Li establish matching lower and upper bounds, including removal of logarithmic factors. Wu, Gu, and Yang establish the same deterministic lower-bound rate for zero-respecting methods in a constrained-primal setting, together with a stochastic lower bound. Zhang and Xu independently obtain the matching lower bound and a matching single-loop upper bound for optimization stationarity in the projected zero-respecting framework.
 
 See the [joint project record](../../projects/nc-c-minimax-tight-complexity/) for theorem statements, provenance, and verification scope. This status records the results of the v1 preprints; an independent repository proof audit has not been completed.
 
@@ -53,6 +53,14 @@ $$
 
 **Wu, Gu, and Yang, Theorem 4.1.** They obtain $\Omega(L^2D_{\mathcal Y}\Delta/\epsilon^3)$ in the same small-accuracy regime for deterministic zero-respecting methods. Their hard instance constrains auxiliary primal variables; this result alone is not a lower bound for the original unconstrained-primal, arbitrary-deterministic model. Their Theorem 5.5 additionally proves an additive deterministic-plus-stochastic lower bound with an $\epsilon^{-6}$ noise term; see the [project](../../projects/nc-c-minimax-tight-complexity/).
 
+**Zhang and Xu, Theorem 5.1.** They prove
+
+$$
+\Omega\!\left(\frac{L^2D_{\mathcal Y}\Delta_\phi}{\epsilon^3}\right)
+$$
+
+for optimization stationarity over projected zero-respecting first-order methods, allowing randomized output rules at a fixed query budget. Their warm-started projected damped extragradient method achieves a matching leading upper bound, up to an additive lower-order warm-up cost. Thus this work independently certifies the $\epsilon^{-3}$ exponent in its stated oracle class; unlike Pan, Zheng, and Li, it does not extend the lower bound to arbitrary deterministic methods.
+
 ## Remaining scope
 
 - Lower bounds for unrestricted randomized first-order methods remain open in these preprints.
@@ -63,6 +71,7 @@ $$
 
 - [Pan, Zheng, and Li, *Optimal Deterministic First-Order Oracle Complexity for Nonconvex-Concave Minimax Optimization*, arXiv:2609.14235v1](https://arxiv.org/abs/2609.14235v1)
 - [Wu, Gu, and Yang, *Lower Bounds for Nonconvex-Concave Minimax Optimization*, arXiv:2609.14233v1](https://arxiv.org/abs/2609.14233v1)
+- [Zhang and Xu, *Matching Multi-Loop Complexities with a Single Loop: Optimal Optimization Stationarity and Best-Known Game Stationarity in Nonconvex--Concave Minimax Optimization*, arXiv:2609.17973v1](https://arxiv.org/abs/2609.17973v1)
 - [Lin, Jin, and Jordan, *Near-Optimal Algorithms for Minimax Optimization*, COLT 2020](https://arxiv.org/abs/2002.02417)
 - [Zhang, Hong, and Zhang, convex--concave lower bounds](https://arxiv.org/abs/1912.07481)
 - [Ouyang and Xu, bilinear saddle-point lower bounds](https://arxiv.org/abs/1808.02901)

@@ -2,7 +2,7 @@
 
 ## Status
 
-**Resolved by [Kornowski (2026)](https://arxiv.org/abs/2609.17780).** The paper proves the matching lower bound for randomized zero-respecting first-order algorithms, even when each oracle response reveals the entire Clarke subdifferential.
+**Resolved by the AI-assisted proof of [Kornowski (2026)](https://arxiv.org/abs/2609.17780).** The paper proves the matching lower bound for randomized zero-respecting first-order algorithms, even when each oracle response reveals the entire Clarke subdifferential.
 
 ## Problem definition
 
