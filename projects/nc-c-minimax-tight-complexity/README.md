@@ -72,14 +72,14 @@ for projected zero-respecting first-order methods, including randomized output r
 
 ## Setting and assumptions
 
+The dual-diameter convention is
+
+$$
+\operatorname{diam}\left(\mathcal{Y}\right)\leq D_Y.
+$$
+
 - **Problem class:** $\min_{x\in\mathcal{X}}\max_{y\in\mathcal{Y}}f(x,y)$, jointly $L$-smooth on $\mathcal{X}\times\mathcal{Y}$, with $f(x,\cdot)$ concave and no convexity assumption in $x$. No fixed positive dual strong-concavity modulus is assumed.
-- **Domains:** $\mathcal{X}$ is nonempty, closed, and convex; $\mathcal{Y}$ is compact and convex, contains the origin, and has diameter at most $D_Y$. Equivalently,
-
-  $$
-  \operatorname{diam}\left(\mathcal{Y}\right)\leq D_Y.
-  $$
-
-  PZL's lower bound already holds for $\mathcal{X}=\mathbb{R}^{d_x}$; its upper bound allows general such $\mathcal{X}$. WGY uses a product of an unconstrained state space and a ball constraining auxiliary primal variables.
+- **Domains:** $\mathcal{X}$ is nonempty, closed, and convex; $\mathcal{Y}$ is compact and convex, contains the origin, and satisfies the displayed diameter convention. PZL's lower bound already holds for $\mathcal{X}=\mathbb{R}^{d_x}$; its upper bound allows general such $\mathcal{X}$. WGY uses a product of an unconstrained state space and a ball constraining auxiliary primal variables.
 - **Initialization:** $(x^0,y^0)=(0,0)$ and $\Phi(0)-\inf_{\mathcal{X}}\Phi\leq\Delta$, where $\Phi(x)=\max_y f(x,y)$. No initial dual optimality is required for PZL's upper bound.
 - **Stationarity:** write $\varphi=\Phi+\iota_{\mathcal{X}}$, with $\iota_{\mathcal{X}}$ zero on $\mathcal{X}$ and $+\infty$ outside. An output must satisfy $\|\nabla\varphi_{1/(2L)}(x)\|\leq\epsilon$. WGY's stochastic criterion is $\mathbb{E}\|\nabla\varphi_{1/(2L)}(x)\|\leq\epsilon$, not an assertion about every realization.
 - **Oracle:** one feasible query returns $(f,\nabla_x f,\nabla_y f)$. WGY's stochastic oracle returns the exact value and an unbiased joint gradient estimate with $\mathbb E\|\widehat\nabla f-\nabla f\|^2\leq\sigma^2$. No mean-square smoothness of the sample gradients is assumed.
