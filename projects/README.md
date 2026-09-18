@@ -26,10 +26,6 @@ This catalog records AI-assisted optimization-theory results, external resolutio
 
 The following problems are recorded as open research questions. They have not been solved by the AI-assisted proof searches documented in this repository.
 
-The [nonconvex--concave minimax problem](../open-problems/nonconvex-concave-minimax/) is now resolved for deterministic methods by the [project above](nc-c-minimax-tight-complexity/); its original problem page is retained as a historical record.
-
-The [finite-sum nonconvex problem](../open-problems/finite-sum-nonconvex/) is resolved by [Peng, Tang, and Jia's external work](finite-sum-nonconvex-tight-complexity/), whose authors disclose AI assistance. Its public solution predates the benchmark entry, so it is retained for historical reference and excluded from benchmark success/failure counts.
-
 | Open problem | Setting | Target | Status |
 | --- | --- | --- | --- |
 | [Fully first-order stochastic bilevel optimization](../open-problems/stochastic-bilevel/) | Stochastic bilevel; globally unbiased first-order oracle | $\Omega(\epsilon^{-6})$ or $\Omega(\epsilon^{-4})$, depending on stochastic smoothness | **Open; not solved by AI** |
@@ -41,6 +37,11 @@ The [finite-sum nonconvex problem](../open-problems/finite-sum-nonconvex/) is re
 | [Exact-value zeroth-order smooth nonconvex optimization](../open-problems/zeroth-order-smooth-nonconvex/) | Smooth nonconvex; exact function values | $\Omega(d\epsilon^{-2})$ in the normalized setting | **Open; not solved by AI** |
 
 See [`open-problems/`](../open-problems/) for precise definitions, oracle models, solution criteria, known bounds, and references.
+
+The [nonconvex--concave minimax problem](../open-problems/nonconvex-concave-minimax/) is now resolved for deterministic methods by the [project above](nc-c-minimax-tight-complexity/); its original problem page is retained as a historical record.
+
+The [finite-sum nonconvex problem](../open-problems/finite-sum-nonconvex/) is resolved by [Peng, Tang, and Jia's external work](finite-sum-nonconvex-tight-complexity/), whose authors disclose AI assistance. Its public solution predates the benchmark entry, so it is retained for historical reference and excluded from benchmark success/failure counts.
+
 
 ## Starting a new project
 
