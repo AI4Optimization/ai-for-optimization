@@ -75,12 +75,25 @@ The amortized outer analysis removes the logarithm from the leading $\sqrt\kappa
 - Lower-bound comparisons must retain the algorithm-class restrictions in the cited lower-bound papers.
 - Constants, edge cases, and all FOAM lemma mappings should be restated carefully in the cleaned manuscript.
 
+## Related pure single-loop SC--SC result (Zhang and Xu, 2026)
+
+[Zhang and Xu, arXiv:2609.20327](https://arxiv.org/abs/2609.20327) give a fully specified pure single-loop damped extragradient method for **strongly convex--strongly concave (SC--SC)** minimax optimization with general nonlinear coupling. Their deterministic, unconstrained setting assumes an $L$-Lipschitz full gradient, $\mu_x$-strong convexity in $x$, and $\mu_y$-strong concavity in $y$. With $\kappa_x=L/\mu_x$ and $\kappa_y=L/\mu_y$, Theorem 3 gives a last-iterate guarantee: reducing the squared distance to the unique saddle point by a factor $\varepsilon$ takes
+
+$$
+O\left(\sqrt{\kappa_x\kappa_y}\log\frac{2\kappa_x\kappa_y}{\varepsilon}\right)
+$$
+
+full-gradient queries. The method uses fixed parameters, one initialization query and two new full-gradient evaluations per iteration, with no inner solves, accuracy schedule, or staged restarts. The paper supplies the explicit updates, Lyapunov contraction proof, and numerical experiments; its condition-number order matches the known SC--SC lower-bound scale up to logarithmic factors.
+
+This is relevant to the **SC--SC subproblems** discussed above, but it is **not** a pure single-loop implementation or a complete proof of this project's **NC--SC** log-free main-term claim. In particular, the paper assumes strong convexity in the primal variable and measures relative saddle-point distance, whereas this project allows a nonconvex primal objective and targets stationarity of $\Phi$. Substituting this SC--SC solver into the NC--SC outer construction and preserving the claimed oracle bound would require a separate analysis.
+
 ## Next cleanup steps
 
 - [ ] Transcribe the theorem and algorithm with stable notation.
 - [ ] State the definition of $B_0$ and the initialization routine precisely.
 - [ ] Isolate and prove the center-change lemma for the tracked potential.
 - [ ] Map the transformed variables and output iterates to the exact FOAM theorem/lemmas.
+- [ ] Check whether the Zhang--Xu SC--SC single-loop solver can replace the inner routine without changing the NC--SC outer complexity or its logarithmic terms.
 - [ ] Audit constants in the joint-potential descent.
 - [ ] Add complete bibliographic entries and exact lower-bound qualifications.
 - [ ] Record the names and scope of the human verification.
@@ -89,4 +102,5 @@ The amortized outer analysis removes the logarithm from the leading $\sqrt\kappa
 
 - [Original AI-assisted proof discussion](https://chatgpt.com/share/6a93a36e-05d4-83ee-9116-ef55c43f95d6)
 - Starting point: Lin, Jin, and Jordan, [*Near-Optimal Algorithms for Minimax Optimization*](https://arxiv.org/abs/2002.02417)
+- Related SC--SC single-loop solver: Minhao Zhang and Zi Xu, [*Near-Optimal Pure Single-Loop Extragradient Method for Strongly Convex--Strongly Concave Minimax Optimization*](https://arxiv.org/abs/2609.20327), 2026.
 - Project bibliography: [`references.bib`](references.bib)
