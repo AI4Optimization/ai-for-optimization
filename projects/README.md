@@ -1,6 +1,6 @@
 # Project catalog
 
-This catalog records AI-assisted optimization-theory results, external resolutions of benchmark questions, and the remaining open problems. Each result links to a self-contained directory with its assumptions, bound, proof status, provenance, and references. Mathematical status, AI provenance, and benchmark eligibility are distinct: an external resolution is attributed to its authors, and a solution predating public listing is excluded from benchmark success/failure counts.
+This catalog records AI-assisted optimization-theory results, external resolutions of benchmark questions, related external methods, and the remaining open problems. Each project links to a self-contained directory with its assumptions, bound, proof status, provenance, and references; related external methods may be recorded by a PDF reference with a scope note. Mathematical status, AI provenance, and benchmark eligibility are distinct: an external resolution is attributed to its authors, and a solution predating public listing is excluded from benchmark success/failure counts.
 
 ## Projects
 
@@ -27,6 +27,14 @@ This catalog records AI-assisted optimization-theory results, external resolutio
 | [Point convergence of Nesterov's accelerated gradient method](nag-point-convergence/) | Smooth convex minimization with classical NAG at the critical acceleration schedule | $x_k\to x_\infty$, $y_k\to x_\infty$, with $x_\infty\in\arg\min f$ | Public preprint [(Jang and Ryu, 2026)](https://arxiv.org/abs/2510.23513); AI-assisted proof |
 | [Tight complexity of nonsmooth nonconvex stationarity](nonsmooth-nonconvex-stationarity/) | Lipschitz nonconvex optimization; randomized zero-respecting first-order algorithms | $\Theta(\Delta L^2/(\delta\epsilon^3))$ for Goldstein stationarity | External public preprint [(Kornowski, 2026)](https://arxiv.org/abs/2609.17780); AI-assisted proof; resolves a recorded open problem |
 
+## Related external methods
+
+These references record methods relevant to the benchmark without creating a separate project. Inclusion does not establish AI involvement, independent proof verification, or resolution of a benchmark question.
+
+| Method reference | Setting and scope | Status |
+| --- | --- | --- |
+| [SPDE and VR-SPDE (Huiling Zhang, Minhao Zhang, and Zi Xu, 2026; PDF)](https://arxiv.org/pdf/2609.21747v1) | Single-loop stochastic NC--C and NC--SC minimax; [bounds, oracle assumptions, and stationarity criteria](../open-problems/nonconvex-concave-minimax/#related-stochastic-methods) | External public preprint; AI involvement unknown; proof not independently audited; recorded separately from the deterministic benchmark resolution |
+
 ## Open problems
 
 The following problems are recorded as open research questions. They have not been solved by the AI-assisted proof searches documented in this repository.
@@ -42,7 +50,7 @@ The following problems are recorded as open research questions. They have not be
 
 See [`open-problems/`](../open-problems/) for precise definitions, oracle models, solution criteria, known bounds, and references.
 
-The [nonconvex--concave minimax problem](../open-problems/nonconvex-concave-minimax/) is now resolved for deterministic methods by the [project above](nc-c-minimax-tight-complexity/); its original problem page is retained as a historical record.
+The [nonconvex--concave minimax problem](../open-problems/nonconvex-concave-minimax/) is now resolved for deterministic methods by the [project above](nc-c-minimax-tight-complexity/); its original problem page is retained as a historical record and also links to [related stochastic methods](../open-problems/nonconvex-concave-minimax/#related-stochastic-methods), whose scope and AI provenance are recorded separately.
 
 The [finite-sum nonconvex problem](../open-problems/finite-sum-nonconvex/) is resolved by [Peng, Tang, and Jia's external work](finite-sum-nonconvex-tight-complexity/), whose authors disclose AI assistance. Its public solution predates the benchmark entry, so it is retained for historical reference and excluded from benchmark success/failure counts.
 

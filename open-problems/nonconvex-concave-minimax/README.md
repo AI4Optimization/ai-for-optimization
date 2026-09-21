@@ -6,6 +6,8 @@
 
 See the [joint project record](../../projects/nc-c-minimax-tight-complexity/) for theorem statements, provenance, and verification scope. This status records the results of the v1 preprints; an independent repository proof audit has not been completed.
 
+[Related stochastic methods](#related-stochastic-methods) are recorded below as external literature, separately from this deterministic benchmark resolution.
+
 ## Problem definition
 
 Consider $\min_{x\in\mathbb R^{d_x}}\max_{y\in\mathcal Y} f(x,y)$, where $f$ is jointly $L$-smooth, may be nonconvex in $x$, is concave in $y$ with no positive strong-concavity parameter assumed, and $\mathcal Y$ is nonempty, compact, and convex. Write
@@ -60,6 +62,23 @@ $$
 $$
 
 for optimization stationarity over projected zero-respecting first-order methods, allowing randomized output rules at a fixed query budget. Their warm-started projected damped extragradient method achieves a matching leading upper bound, up to an additive lower-order warm-up cost. Thus this work independently certifies the $\epsilon^{-3}$ exponent in its stated oracle class; unlike Pan, Zheng, and Li, it does not extend the lower bound to arbitrary deterministic methods.
+
+## Related stochastic methods
+
+**External public preprint; AI involvement unknown.** Huiling Zhang, Minhao Zhang, and Zi Xu's [SPDE and VR-SPDE paper (arXiv:2609.21747v1; PDF)](https://arxiv.org/pdf/2609.21747v1) records single-loop stochastic methods for NC--C and NC--SC minimax optimization. The PDF is the method record; no separate project or AI benchmark success is assigned. This repository has not independently audited the proofs.
+
+The population objective is smooth, with a closed convex primal domain and a compact convex dual domain. SPDE assumes unbiased gradients with uniformly bounded variance. VR-SPDE additionally requires common-sample paired evaluations and mean-square Lipschitz gradients (Assumption 4).
+
+| Method | Setting | Game stationarity (GS) | Optimization stationarity (OS) |
+| --- | --- | --- | --- |
+| SPDE | Stochastic NC--C | $O(\epsilon^{-5})$ | $O(\epsilon^{-6})$ |
+| VR-SPDE | Stochastic NC--C | $O(\epsilon^{-9/2})$ | $O(\epsilon^{-6})$ |
+| SPDE | Stochastic NC--SC | $O(\kappa\epsilon^{-4})$ | $O(\kappa\epsilon^{-4})$ |
+| VR-SPDE | Stochastic NC--SC | $O(\kappa^{3/2}\epsilon^{-3})$ | $O(\kappa^{3/2}\epsilon^{-3})$ |
+
+These are small-$\epsilon$ stochastic first-order oracle bounds, with $\kappa=L/\mu$ and other data fixed, including positive noise, initialization budget $B$, and the VR smoothness ratio. One sample-gradient evaluation costs one call; a paired difference costs two. See Table 1 and Theorems 2--7 for full bounds; $B$ also depends on initial gradients, beyond the benchmark's value gap (equation (29)).
+
+GS uses the joint normal-cone residual; OS uses the Moreau-envelope gradient of the constrained value function. Each guarantee bounds the expected squared measure by $\epsilon^2$ (Section 2). The faster NC--C GS rates therefore do not improve the OS rate. Comparisons with the [recorded stochastic lower bound](../../projects/nc-c-minimax-tight-complexity/#deterministic-and-stochastic-zero-respecting-lower-bounds) must also match oracle and initialization assumptions; this entry does not declare the stochastic setting fully resolved.
 
 ## Remaining scope
 
