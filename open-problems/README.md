@@ -6,7 +6,7 @@ Mathematical status, AI provenance, and benchmark eligibility are recorded separ
 
 | Directory | Question | Status |
 | --- | --- | --- |
-| [`stochastic-bilevel`](stochastic-bilevel/) | Tight lower bounds for fully first-order stochastic bilevel optimization | Partially resolved: bounded-variance $\epsilon^{-6}$ lower bound by [Gu, Wu, and Yang (2026)](https://arxiv.org/abs/2609.21905); stochastic-smoothness $\epsilon^{-4}$ branch remains open; [project](../projects/stochastic-bilevel-first-order-lower-bound/) |
+| [`stochastic-bilevel`](stochastic-bilevel/) | Tight lower bounds for fully first-order stochastic bilevel optimization | Resolved for the standard bounded-variance oracle by [Gu, Wu, and Yang (2026)](https://arxiv.org/abs/2609.21905); [project](../projects/stochastic-bilevel-first-order-lower-bound/) |
 | [`finite-sum-nonconvex`](finite-sum-nonconvex/) | Polynomial finite-sum dependence in nonconvex lower bounds | Resolved by Peng, Tang, and Jia (2026); author-disclosed AI assistance; solution predates benchmark entry; [project](../projects/finite-sum-nonconvex-tight-complexity/) |
 | [`nonconvex-concave-minimax`](nonconvex-concave-minimax/) | Tight deterministic NC--C minimax complexity | Resolved for deterministic methods; [project](../projects/nc-c-minimax-tight-complexity/) records disclosed AI assistance; [related stochastic methods](nonconvex-concave-minimax/#related-stochastic-methods) recorded separately, AI involvement unknown |
 | [`pl-minimax`](pl-minimax/) | Tight two-sided PL--PL minimax complexity | Open |

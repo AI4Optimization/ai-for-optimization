@@ -43,7 +43,6 @@ The following problems are recorded as open research questions. They have not be
 
 | Open problem | Setting | Target | Status |
 | --- | --- | --- | --- |
-| [Fully first-order stochastic bilevel optimization](../open-problems/stochastic-bilevel/) | Stochastic bilevel; globally unbiased first-order oracle | $\Omega(\epsilon^{-6})$ or $\Omega(\epsilon^{-4})$, depending on stochastic smoothness | **Partially resolved:** $\epsilon^{-6}$ by [Gu, Wu, and Yang (2026)](https://arxiv.org/abs/2609.21905); stochastic-smoothness branch open |
 | [Minimax optimization under two-sided PL conditions](../open-problems/pl-minimax/) | Deterministic two-sided PL--PL minimax | Match the $\widetilde O(\kappa_x\kappa_y)$ upper bound | **Open; not solved by AI** |
 | [Zero-order nonsmooth nonconvex stochastic optimization](../open-problems/zeroth-order-nonsmooth-nonconvex/) | Noisy function-value oracle; $(\delta,\epsilon)$ stationarity | $\Omega(d\delta^{-1}\epsilon^{-3})$ | **Open; not solved by AI** |
 | [Stochastic bandit convex optimization](../open-problems/bandit-convex-regret/) | Lipschitz losses; bandit feedback | Close $d^{4/3}$ versus $d^{3/2}$ regret gap | **Open; not solved by AI** |
@@ -57,6 +56,8 @@ The [nonconvex--concave minimax problem](../open-problems/nonconvex-concave-mini
 The [finite-sum nonconvex problem](../open-problems/finite-sum-nonconvex/) is resolved by [Peng, Tang, and Jia's external work](finite-sum-nonconvex-tight-complexity/), whose authors disclose AI assistance. Its public solution predates the benchmark entry, so it is retained for historical reference and excluded from benchmark success/failure counts.
 
 The [deterministic/noiseless nonsmooth nonconvex problem](../open-problems/deterministic-nonsmooth-nonconvex/) is now resolved in the zero-respecting first-order framework by [Kornowski's AI-assisted work](nonsmooth-nonconvex-stationarity/); its original problem page is retained as a historical record.
+
+The [fully first-order stochastic bilevel problem](../open-problems/stochastic-bilevel/) is resolved for the standard bounded-variance oracle by [Gu, Wu, and Yang (2026)](stochastic-bilevel-first-order-lower-bound/). Its original page is retained as a historical record and distinguishes the separate stochastic-smoothness variant.
 
 ## Starting a new project
 

@@ -2,7 +2,7 @@
 
 ## Status
 
-**Partially resolved.** [Gu, Wu, and Yang (2026)](https://arxiv.org/abs/2609.21905) prove the $\epsilon^{-6}$ lower-bound exponent for the standard globally unbiased bounded-variance first-order oracle, even against adaptive randomized algorithms. The separate $\epsilon^{-4}$ target under additional stochastic smoothness is not established by that theorem. This page originated from Conjecture 1 of Kwon, Kwon, and Lyu (2024).
+**Resolved for the standard bounded-variance first-order oracle.** [Gu, Wu, and Yang (2026)](https://arxiv.org/abs/2609.21905) prove the $\epsilon^{-6}$ lower-bound exponent for globally unbiased stochastic gradients, even against adaptive randomized algorithms. This was the principal open gap recorded here from Conjecture 1 of Kwon, Kwon, and Lyu (2024). The stronger stochastic-smoothness variant is distinguished below rather than attributed to this theorem.
 
 ## Problem definition
 
@@ -27,9 +27,9 @@ $$
 
 In the noise-dominated regime this is $\Omega(\Delta\sigma^2\kappa_y^8\epsilon^{-6})$. Their oracle supplies globally unbiased gradients with variance at most $\sigma^2$; unlike the earlier $y^*(x)$-aware construction, it does not reveal a near-optimal lower-level solution. The exponent matches the known bounded-variance first-order upper bound. See the [result project](../../projects/stochastic-bilevel-first-order-lower-bound/).
 
-## Remaining open scope
+## Scope of the resolution
 
-Conjecture 1 also asks for an $\Omega(\epsilon^{-4})$ lower bound **under additional stochastic smoothness** with the globally reliable oracle. The 2026 bounded-variance theorem does not by itself settle that strengthened-oracle branch. Matching the dependence on $\kappa_y$ is also open. Earlier $\epsilon^{-6}$ and $\epsilon^{-4}$ bounds for a $y^*(x)$-aware oracle have reliability radius $r_\epsilon=\Theta(\epsilon)$ and should not be conflated with the globally unbiased model.
+The resolved status refers to the standard **bounded-variance** oracle and its tight $\epsilon^{-6}$ accuracy exponent. Conjecture 1 also discusses an $\Omega(\epsilon^{-4})$ lower bound **under additional stochastic smoothness**; the 2026 theorem does not establish that distinct strengthened-oracle statement. Matching the dependence on $\kappa_y$ is another separate question. Earlier $\epsilon^{-6}$ and $\epsilon^{-4}$ bounds for a $y^*(x)$-aware oracle have reliability radius $r_\epsilon=\Theta(\epsilon)$ and should not be conflated with the globally unbiased model.
 
 ## Reference
 
