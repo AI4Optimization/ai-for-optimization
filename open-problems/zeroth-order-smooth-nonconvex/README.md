@@ -8,23 +8,23 @@
 
 Minimize a differentiable, possibly nonconvex function
 
-$$
+```math
 f:\mathbb R^d\to\mathbb R,
-$$
+```
 
 assuming that $f$ is bounded below, its gradient is $L$-Lipschitz, and the initial point satisfies
 
-$$
+```math
 f(x_0)-\inf_x f(x)\leq\Delta.
-$$
+```
 
 The algorithm must return a point $\widehat x$ satisfying
 
-$$
+```math
 \mathbb E\|\nabla f(\widehat x)\|\leq\epsilon
-$$
+```
 
-or, equivalently up to the chosen success convention, $\|\nabla f(\widehat x)\|\leq\epsilon$ with constant probability.
+or, equivalently up to the chosen success convention, $`\|\nabla f(\widehat x)\|\leq\epsilon`$ with constant probability.
 
 ## Oracle model
 
@@ -38,9 +38,9 @@ Because an exact real value can contain unbounded information, a valid lower bou
 
 For smooth nonconvex optimization, standard first-order lower bounds give
 
-$$
+```math
 \Omega\!\left(\frac{L\Delta}{\epsilon^2}\right)
-$$
+```
 
 gradient-oracle calls. Zeroth-order methods generally spend order $d$ function evaluations to reconstruct one gradient-scale direction, suggesting an additional dimension factor. However, multiplying a first-order lower bound by $d$ is not automatic because exact function values and adaptive queries define a different information model.
 
@@ -48,15 +48,15 @@ gradient-oracle calls. Zeroth-order methods generally spend order $d$ function e
 
 Prove that every adaptive randomized exact-value zeroth-order algorithm requires
 
-$$
+```math
 \Omega\!\left(\frac{dL\Delta}{\epsilon^2}\right)
-$$
+```
 
 function evaluations in an appropriate nontrivial parameter regime. Under the normalization $L=\Delta=1$, this is
 
-$$
+```math
 \Omega(d\epsilon^{-2}).
-$$
+```
 
 The statement should specify the necessary relation among $d$, $L$, $\Delta$, and $\epsilon$, together with whether the guarantee is in expectation or with constant success probability.
 

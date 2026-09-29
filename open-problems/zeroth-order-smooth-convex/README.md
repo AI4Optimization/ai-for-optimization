@@ -16,9 +16,9 @@ An exact-value zeroth-order oracle returns the scalar $f(x)$ at any adaptively c
 
 Recent near-optimal $\Omega(d\epsilon^{-2})$-type lower bounds cover Lipschitz convex functions that may be nonsmooth. For the smooth class, Wu et al. prove that every **deterministic adaptive** exact-value method with bounded queries needs
 
-$$
+```math
 \Omega\!\left(d\min\left\{\sqrt{\frac{LR^2}{\epsilon}},\left(\frac{d}{\log(ed)}\right)^{1/3}\right\}\right)
-$$
+```
 
 queries. This matches their $O(d\sqrt{LR^2/\epsilon})$ upper bound when $LR^2(\log(ed)/d)^{2/3}\leq\epsilon\leq cLR^2$ for a universal constant $c>0$. At higher accuracy the proved lower bound saturates. See the [deterministic result project](../../projects/zeroth-order-smooth-convex-deterministic-lower-bound/).
 

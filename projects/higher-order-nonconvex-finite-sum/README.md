@@ -8,19 +8,19 @@
 
 Consider
 
-$$
+```math
 F(x)=\frac{1}{n}\sum_{i=1}^n f_i(x),
-$$
+```
 
-with initial gap $F(0)-\inf F\leq\Delta$. For a fixed integer $p\geq2$, every component has an $L_p$-Lipschitz $p$th derivative. The goal is to output $\widehat x$ satisfying $\|\nabla F(\widehat x)\|\leq\epsilon$ with constant success probability.
+with initial gap $F(0)-\inf F\leq\Delta$. For a fixed integer $p\geq2$, every component has an $L_p$-Lipschitz $p$th derivative. The goal is to output $\widehat x$ satisfying $`\|\nabla F(\widehat x)\|\leq\epsilon`$ with constant success probability.
 
 ## Oracle model
 
 One exact component query selects an arbitrary index $i$ and point $x$ and returns the complete $p$-jet
 
-$$
+```math
 \bigl(f_i(x),\nabla f_i(x),\ldots,\nabla^p f_i(x)\bigr).
-$$
+```
 
 Algorithms may be adaptive and randomized, query unbounded points, and use unrestricted internal computation. The lower bound imposes no span or zero-respecting restriction. The upper result also holds under the weaker mean-squared $p$th-derivative increment condition. Complexity counts complete component-jet queries, including initialization and verification calls.
 
@@ -28,11 +28,11 @@ Algorithms may be adaptive and randomized, query unbounded points, and use unres
 
 For every fixed $p\geq2$, Theorem 3.2 establishes the minimax complexity
 
-$$
+```math
 \Theta_p\!\left(
 n+\Delta L_p^{1/p}n^{1-1/(2p)}\epsilon^{-(p+1)/p}
 \right).
-$$
+```
 
 The constants depend only on the fixed order $p$, and the worst case ranges over all finite dimensions. The lower bound holds for unrestricted adaptive randomized algorithms. The upper bound succeeds with fixed constant probability and removes the prior fixed-confidence logarithmic loss. For example, the nontrivial terms are $\Delta L_3^{1/3}n^{5/6}\epsilon^{-4/3}$ for $p=3$ and $\Delta L_4^{1/4}n^{7/8}\epsilon^{-5/4}$ for $p=4$.
 

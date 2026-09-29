@@ -12,17 +12,17 @@ See the [joint project record](../../projects/nc-c-minimax-tight-complexity/) fo
 
 Consider $\min_{x\in\mathbb R^{d_x}}\max_{y\in\mathcal Y} f(x,y)$, where $f$ is jointly $L$-smooth, may be nonconvex in $x$, is concave in $y$ with no positive strong-concavity parameter assumed, and $\mathcal Y$ is nonempty, compact, and convex. Write
 
-$$
+```math
 \Phi(x):=\max_{y\in\mathcal Y}f(x,y),\qquad
 \operatorname{diam}(\mathcal Y)\leq D_{\mathcal Y},\qquad
 \Phi(0)-\inf_x\Phi(x)\leq\Delta.
-$$
+```
 
-The target is $\|\nabla\Phi_{1/(2L)}(x)\|\leq\epsilon$, where
+The target is $`\|\nabla\Phi_{1/(2L)}(x)\|\leq\epsilon`$, where
 
-$$
+```math
 \Phi_{1/(2L)}(x):=\min_z\{\Phi(z)+L\|z-x\|^2\}.
-$$
+```
 
 This is the Moreau-envelope stationarity criterion in Lin, Jin, and Jordan, Appendix A. It is also called optimization stationarity in the new preprints. For a constrained primal domain $\mathcal X$, the corresponding envelope is that of $\Phi+\iota_{\mathcal X}$, where the indicator is zero on $\mathcal X$ and $+\infty$ elsewhere.
 
@@ -36,30 +36,30 @@ The original target was $\Omega(\epsilon^{-3})$, or at least $\Omega(\epsilon^{-
 
 **Pan, Zheng, and Li, Theorems 3.2 and 3.3.** For $L,D_{\mathcal Y},\Delta>0$ and
 
-$$
+```math
 0<\epsilon\leq c\min\{LD_{\mathcal Y},\sqrt{L\Delta}\},
-$$
+```
 
 where $c>0$ is universal, the worst-case deterministic first-order oracle complexity is
 
-$$
+```math
 \Theta\!\left(\frac{L^2D_{\mathcal Y}\Delta}{\epsilon^3}\right).
-$$
+```
 
 The lower-bound instances have $\mathcal X=\mathbb R^{d_x}$ and a bounded dual ball, so they directly address the original domain. Tracked-FOAM attains the upper bound without logarithmic factors. For every $\epsilon>0$, its full bound is
 
-$$
+```math
 O\!\left(\left(\frac{L\Delta}{\epsilon^2}+1\right)
 \max\left\{1,\frac{LD_{\mathcal Y}}{\epsilon}\right\}\right).
-$$
+```
 
 **Wu, Gu, and Yang, Theorem 4.1.** They obtain $\Omega(L^2D_{\mathcal Y}\Delta/\epsilon^3)$ in the same small-accuracy regime for deterministic zero-respecting methods. Their hard instance constrains auxiliary primal variables; this result alone is not a lower bound for the original unconstrained-primal, arbitrary-deterministic model. Their Theorem 5.5 additionally proves an additive deterministic-plus-stochastic lower bound with an $\epsilon^{-6}$ noise term; see the [project](../../projects/nc-c-minimax-tight-complexity/).
 
 **Zhang and Xu, Theorem 5.1.** They prove
 
-$$
+```math
 \Omega\!\left(\frac{L^2D_{\mathcal Y}\Delta_\phi}{\epsilon^3}\right)
-$$
+```
 
 for optimization stationarity over projected zero-respecting first-order methods, allowing randomized output rules at a fixed query budget. Their warm-started projected damped extragradient method achieves a matching leading upper bound, up to an additive lower-order warm-up cost. Thus this work independently certifies the $\epsilon^{-3}$ exponent in its stated oracle class; unlike Pan, Zheng, and Li, it does not extend the lower bound to arbitrary deterministic methods.
 

@@ -16,6 +16,20 @@ Before marking a result as verified, record:
 
 Prefer a short project README that points to a separate manuscript over pasting a long raw transcript. Preserve raw AI traces by stable link or archival file, but do not present them as the canonical proof.
 
+## Math formatting on GitHub
+
+Use fenced `math` blocks for display equations. For inline expressions containing Markdown-sensitive characters, use a dollar sign and a backtick at each end, as in [GitHub's math-formatting documentation](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions):
+
+````markdown
+A stationarity criterion is $`\|\nabla f(x)\|\leq\epsilon`$.
+
+```math
+\Psi(x,w)=\max_{i\in[N]}\left\{h_i(x)-\rho b_i^\top w\right\}.
+```
+````
+
+These forms preserve TeX commands such as `\!`, `\{`, `\|`, and matrix row breaks (`\\`), and prevent `*` or `_` from becoming Markdown emphasis. Keep the usual TeX backslashes inside the protected expressions; do not double them to compensate for Markdown escaping. In table cells, use `\lVert` and `\rVert` for norms so that pipe characters do not interfere with column separators.
+
 ## Suggested layout
 
 ```text

@@ -8,21 +8,21 @@
 
 For smooth convex $f:\mathbb R^d\to\mathbb R$, plain gradient descent follows
 
-$$
+```math
 x_{t+1}=x_t-\eta_t\nabla f(x_t).
-$$
+```
 
 Fix a horizon $T$ and any predetermined nonnegative schedule $(\eta_0,\ldots,\eta_{T-1})$. Let
 
-$$
+```math
 p_\star=\sqrt{2+\sqrt3}\approx1.9319.
-$$
+```
 
-Ma and Chen prove that, for every $p\in(p_\star,2)$, there is a smooth convex hard instance in dimension at most $T+1$ with $\|x_0-x_\star\|=R$ such that
+Ma and Chen prove that, for every $p\in(p_\star,2)$, there is a smooth convex hard instance in dimension at most $T+1$ with $`\|x_0-x_\star\|=R`$ such that
 
-$$
+```math
 f(x_T)-f(x_\star)\geq c_pLR^2(T+1)^{-p}.
-$$
+```
 
 Thus predetermined stepsizes alone cannot attain the optimal general first-order $O(T^{-2})$ rate.
 
@@ -31,7 +31,7 @@ Thus predetermined stepsizes alone cannot attain the optimal general first-order
 - **Problem class:** unconstrained convex objectives with $L$-Lipschitz gradients and at least one minimizer.
 - **Algorithm:** plain GD; no momentum or auxiliary iterates.
 - **Schedule:** deterministic, nonadaptive, and chosen before the objective and dimension. The original theorem permits arbitrary nonnegative magnitudes and ordering, but fixes the horizon in advance.
-- **Initialization:** $\|x_0-x_\star\|=R$.
+- **Initialization:** $`\|x_0-x_\star\|=R`$.
 - **Output criterion:** last-iterate objective error $f(x_T)-f(x_\star)$.
 - **Cost convention:** one gradient evaluation per iteration.
 - **Non-anytime versus anytime:** a non-anytime schedule may depend on $T$; an anytime result requires one infinite schedule to work uniformly over stopping times.

@@ -8,17 +8,17 @@
 
 Let $\mathcal F(G,\rho,\Delta)$ be the class of globally $G$-Lipschitz, $\rho$-weakly convex functions $f:\mathbb R^d\to\mathbb R$ satisfying $f(0)-\inf f\leq\Delta$. For sufficiently small $\epsilon$, every deterministic first-order algorithm requires
 
-$$
+```math
 \Omega\!\left(
 \frac{G^2\min\{\rho\Delta,G^2\}}{\epsilon^4}
 \right)
-$$
+```
 
-oracle calls to find $x$ with $\|\nabla f_{1/(2\rho)}(x)\|\leq\epsilon$. In the small-gap regime $\Delta\leq G^2/\rho$, this becomes
+oracle calls to find $x$ with $`\|\nabla f_{1/(2\rho)}(x)\|\leq\epsilon`$. In the small-gap regime $\Delta\leq G^2/\rho$, this becomes
 
-$$
+```math
 \Omega\!\left(\frac{\rho G^2\Delta}{\epsilon^4}\right),
-$$
+```
 
 matching the best deterministic and stochastic first-order upper bounds up to universal constants.
 
@@ -26,10 +26,10 @@ matching the best deterministic and stochastic first-order upper bounds up to un
 
 - **Problem class:** unconstrained minimization of a possibly nonsmooth, globally $G$-Lipschitz, $\rho$-weakly convex function.
 - **Initialization:** $x^0=0$ and $f(0)-\inf f\leq\Delta$.
-- **Stationarity:** $\|\nabla f_{1/(2\rho)}(x)\|\leq\epsilon$, where $f_{1/(2\rho)}$ is the Moreau envelope.
+- **Stationarity:** $`\|\nabla f_{1/(2\rho)}(x)\|\leq\epsilon`$, where $f_{1/(2\rho)}$ is the Moreau envelope.
 - **Oracle model:** each query returns the pair $(f(x),\partial f(x))$, including the entire subdifferential set rather than an oracle-selected subgradient.
 - **Algorithm class:** arbitrary deterministic adaptive first-order algorithms; the final output may be any deterministic function of the transcript.
-- **Accuracy regime:** $\epsilon^2\leq c_0\min\{G^2,\rho\Delta\}$ for a universal constant $c_0>0$.
+- **Accuracy regime:** $`\epsilon^2\leq c_0\min\{G^2,\rho\Delta\}`$ for a universal constant $c_0>0$.
 
 ## Proof architecture
 

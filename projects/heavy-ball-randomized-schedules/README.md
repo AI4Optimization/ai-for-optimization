@@ -8,10 +8,10 @@
 
 Consider Heavy Ball with zero initial velocity,
 
-$$
+```math
 x_{k+1}=x_k-\eta_k\nabla f(x_k)+\beta_k(x_k-x_{k-1}),
 \qquad x_{-1}=x_0,
-$$
+```
 
 where $f$ is convex and $L$-smooth and the initial distance to a minimizer is at most $R$. The parameter schedule is sampled independently of oracle observations: it is randomized but predefined rather than gradient-adaptive. Performance is measured by the last-iterate objective gap.
 
@@ -23,10 +23,10 @@ The paper separates two levels of randomization.
 
 When gradient-evaluation times are randomized within intervals whose boundaries remain deterministic, the paper constructs both fixed-time and anytime schedules satisfying
 
-$$
+```math
 f(x_T)-f(x^\star)
 =O\left(\frac{LR^2}{T^{4/3}}\right).
-$$
+```
 
 The guarantee is in expectation; the anytime schedule also achieves the same asymptotic rate almost surely.
 
@@ -34,10 +34,10 @@ The guarantee is in expectation; the anytime schedule also achieves the same asy
 
 When the interval boundaries are randomized as well, the rate improves to
 
-$$
+```math
 f(x_T)-f(x^\star)
 =O\left(\frac{LR^2}{T^{3/2}}\right)
-$$
+```
 
 both in expectation and almost surely.
 

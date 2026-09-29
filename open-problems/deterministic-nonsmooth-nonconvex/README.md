@@ -16,9 +16,9 @@ At an adaptive query point, the deterministic and noiseless first-order oracle r
 
 O2NC attains $O(\delta^{-1}\epsilon^{-3})$ calls, and the earlier work proves a matching stochastic lower bound. Kornowski (2026) proves that, for an $L$-Lipschitz objective with initial gap at most $\Delta$, finding a $(\delta,\epsilon)$-Goldstein stationary point requires
 
-$$
+```math
 \Omega\!\left(\frac{\Delta L^2}{\delta\epsilon^3}\right)
-$$
+```
 
 first-order queries in the stated parameter regime. This matches the known upper bound up to absolute constants and shows that noiseless gradients do not improve the worst-case rate in this framework.
 
