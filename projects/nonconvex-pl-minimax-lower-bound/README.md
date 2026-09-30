@@ -8,32 +8,32 @@
 
 Consider
 
-$$
+```math
 \min_{x\in\mathbb R^m}\max_{y\in\mathbb R^n} f(x;y),
 \qquad
 \Phi(x):=\max_y f(x;y),
-$$
+```
 
 where $f$ is jointly $\ell$-smooth, $f(x;\cdot)$ satisfies the $\mu$-PL inequality for every $x$, and $\Phi(0)-\inf_x\Phi(x)\leq\Delta$. Let $\kappa=\ell/\mu$. For $\kappa$ bounded below by a universal constant and $0<\epsilon^2\lesssim\ell\Delta$, every deterministic first-order method requires
 
-$$
+```math
 \Omega\!\left(\frac{\ell\Delta\kappa}{\epsilon^2}\right)
-$$
+```
 
-oracle queries in the worst case to find $x$ satisfying $\|\nabla\Phi(x)\|\leq\epsilon$. This matches the known $O(\ell\Delta\kappa/\epsilon^2)$ upper bound in all principal parameters.
+oracle queries in the worst case to find $x$ satisfying $`\|\nabla\Phi(x)\|\leq\epsilon`$. This matches the known $O(\ell\Delta\kappa/\epsilon^2)$ upper bound in all principal parameters.
 
 ## Setting and assumptions
 
 - **Problem class:** smooth nonconvex--PL minimax optimization; the primal value function may be nonconvex.
 - **Smoothness:** $f$ is jointly $\ell$-smooth in $(x,y)$.
 - **Dual PL condition:** for every fixed $x$, the maximization problem has a finite attained optimum and
-  $$
+  ```math
   \frac12\|\nabla_y f(x;y)\|^2\geq\mu\bigl(\Phi(x)-f(x;y)\bigr).
-  $$
+  ```
 - **Condition number:** $\kappa=\ell/\mu$.
 - **Initialization:** the primal value-function gap satisfies $\Phi(0)-\inf_x\Phi(x)\leq\Delta$.
 - **Oracle model:** a deterministic first-order saddle oracle returns $(f(x;y),\nabla_x f(x;y),\nabla_y f(x;y))$.
-- **Output criterion:** find a primal point $x$ with $\|\nabla\Phi(x)\|\leq\epsilon$.
+- **Output criterion:** find a primal point $x$ with $`\|\nabla\Phi(x)\|\leq\epsilon`$.
 - **Algorithm class:** arbitrary deterministic adaptive first-order methods, not only zero-respecting or linear-span algorithms.
 
 ## Proof architecture

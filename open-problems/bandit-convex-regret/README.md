@@ -7,9 +7,9 @@
 ## Problem definition
 
 For rounds $t=1,\ldots,T$, an algorithm chooses $x_t$ in the $d$-dimensional Euclidean unit ball, incurs a convex $1$-Lipschitz loss $f_t(x_t)$, and seeks to minimize expected regret
-$$
+```math
 \mathbb E\left[\sum_{t=1}^T f_t(x_t)-\min_x\sum_{t=1}^T f_t(x)\right].
-$$
+```
 The stochastic loss distribution and geometric assumptions should match the cited lower- and upper-bound results.
 
 ## Oracle model

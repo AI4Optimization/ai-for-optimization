@@ -10,27 +10,27 @@ The checked claim is the deterministic $\Omega(N\Delta L\epsilon^{-2})$ componen
 
 For $N\geq2$, $L,\Delta>0$, and sufficiently small $\epsilon=O(\sqrt{\Delta L})$, there is an unconstrained discrete minimax problem
 
-$$
+```math
 \min_{x\in\mathbb R^d,\,w\in\mathbb R^{N-1}}
 \Psi(x,w),
 \qquad
 \Psi(x,w)=\max_{i\in[N]}
 \left\{h_i(x)-\rho b_i^\top w\right\},
-$$
+```
 
 whose components are $L$-smooth and whose initial gap satisfies
 
-$$
+```math
 \Psi(0,0)-\inf_{x,w}\Psi(x,w)\leq\Delta,
-$$
+```
 
 such that every deterministic incremental first-order algorithm requires
 
-$$
+```math
 \Omega\!\left(N\Delta L\epsilon^{-2}\right)
-$$
+```
 
-component-oracle queries to find a point with $\|\nabla\Psi_L(x,w)\|\leq\epsilon$, where $\Psi_L$ denotes the Moreau envelope under the convention used in the source discussion. For $N=1$, the statement reduces to the classical $\Omega(\Delta L\epsilon^{-2})$ smooth nonconvex lower bound.
+component-oracle queries to find a point with $`\|\nabla\Psi_L(x,w)\|\leq\epsilon`$, where $\Psi_L$ denotes the Moreau envelope under the convention used in the source discussion. For $N=1$, the statement reduces to the classical $\Omega(\Delta L\epsilon^{-2})$ smooth nonconvex lower bound.
 
 The bound matches the $O(N\Delta L\epsilon^{-2})$ deterministic complexity targeted by the motivating DMO upper bound.
 
@@ -38,29 +38,29 @@ The bound matches the $O(N\Delta L\epsilon^{-2})$ deterministic complexity targe
 
 Start from a deterministic finite-sum hard instance
 
-$$
+```math
 H(x)=\frac1N\sum_{i=1}^N h_i(x)
-$$
+```
 
-for which finding $\|\nabla H(x)\|\leq\epsilon$ requires $\Omega(N\Delta L\epsilon^{-2})$ incremental first-order queries. Use a bounded-gradient version with $\|\nabla h_i(x)\|\leq G$, and shift component constants so that $h_i(0)=H(0)$ for every $i$.
+for which finding $`\|\nabla H(x)\|\leq\epsilon`$ requires $\Omega(N\Delta L\epsilon^{-2})$ incremental first-order queries. Use a bounded-gradient version with $`\|\nabla h_i(x)\|\leq G`$, and shift component constants so that $h_i(0)=H(0)$ for every $i$.
 
 Let $B\in\mathbb R^{N\times(N-1)}$ have orthonormal columns spanning $\mathbf1^\perp$:
 
-$$
+```math
 B^\top B=I,
 \qquad
 B^\top\mathbf1=0,
 \qquad
 BB^\top=I-\frac1N\mathbf1\mathbf1^\top.
-$$
+```
 
 Set $b_i=B^\top e_i$ and define
 
-$$
+```math
 f_i(x,w)=h_i(x)-\rho b_i^\top w,
 \qquad
 \Psi(x,w)=\max_i f_i(x,w).
-$$
+```
 
 The added term is linear, so it does not change component smoothness. It is also public information: querying $f_i$ reveals exactly one finite-sum component value and gradient plus the known vector $-\rho b_i$.
 
@@ -70,16 +70,16 @@ The added term is linear, so it does not change component smoothness. It is also
 
 For every fixed $x$,
 
-$$
+```math
 \min_w\Psi(x,w)=H(x).
-$$
+```
 
 The lower bound follows from max being at least the average. Equality is achieved by taking
 
-$$
+```math
 w^*(x)=\rho^{-1}B^\top
 \left(h_1(x)-H(x),\ldots,h_N(x)-H(x)\right),
-$$
+```
 
 which makes every shifted component equal to $H(x)$. Consequently, the augmented max problem has the same infimum and initial gap as the finite-sum problem.
 
@@ -87,36 +87,36 @@ which makes every shifted component equal to $H(x)$. Consequently, the augmented
 
 At a prox point $(\widehat x,\widehat w)$, a Clarke subgradient of the max has the form
 
-$$
+```math
 \left(
 \sum_{i=1}^N\lambda_i\nabla h_i(\widehat x),
 -\rho B^\top\lambda
 \right),
 \qquad \lambda\in\Delta_N,
-$$
+```
 
 with $\lambda$ supported on the active components. The main obstruction in a direct max construction is that an arbitrary convex combination of active gradients may cancel. Here the $w$ block removes that freedom. Since
 
-$$
+```math
 \|B^\top\lambda\|
 =\left\|\lambda-\frac1N\mathbf1\right\|,
-$$
+```
 
 small $w$-stationarity forces $\lambda$ to be close to the uniform distribution.
 
 If the full residual is at most $\eta$, then
 
-$$
+```math
 \left\|\lambda-\frac1N\mathbf1\right\|
 \leq\frac{\eta}{\rho}
-$$
+```
 
 and, using the bounded component gradients,
 
-$$
+```math
 \|\nabla H(\widehat x)\|
 \leq \eta+G\sqrt N\,\frac{\eta}{\rho}.
-$$
+```
 
 Choosing $\rho\geq4G\sqrt N$ makes this at most $5\eta/4$. The Moreau-envelope prox relation and $L$-smoothness of $H$ then transfer stationarity back to the algorithm's output $x$, changing only a numerical constant.
 
@@ -124,11 +124,11 @@ Choosing $\rho\geq4G\sqrt N$ makes this at most $5\eta/4$. The Moreau-envelope p
 
 One query to the $i$th DMO component returns
 
-$$
+```math
 f_i(x,w)=h_i(x)-\rho b_i^\top w,
 \qquad
 \nabla f_i(x,w)=\left(\nabla h_i(x),-\rho b_i\right).
-$$
+```
 
 The linear terms are known. Hence a finite-sum algorithm can simulate the entire transcript of any deterministic DMO algorithm using exactly one finite-sum component query per DMO query. A faster DMO algorithm would therefore contradict the finite-sum lower bound.
 
@@ -153,9 +153,9 @@ The first property preserves function values and the initial gap. The second pre
 
 The discussion also proposes a noisy value-equalization gadget and a possible sequential construction targeting a function-value-noise term of order
 
-$$
+```math
 \Omega\!\left(N\Delta L^3\sigma_F^2\epsilon^{-6}\right).
-$$
+```
 
 It further explains why the same uniform-weight reduction does not automatically yield an $N$ factor in the stochastic-gradient-noise term. These ideas remain conjectural proof-search material and should not be cited as established results.
 

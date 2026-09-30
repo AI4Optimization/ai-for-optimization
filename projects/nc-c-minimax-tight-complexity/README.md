@@ -20,26 +20,26 @@ Use $L$ for joint smoothness, $D_Y$ for the dual-diameter bound, and $\Delta$ fo
 
 PZL, Theorem 3.2: there exist universal constants $c_0,c_1>0$ such that, for every $L,D_Y,\Delta>0$ and
 
-$$
+```math
 0<\epsilon\leq c_0\min\left\lbrace LD_Y,\sqrt{L\Delta}\right\rbrace,
-$$
+```
 
 every deterministic adaptive first-order method has a finite-dimensional instance requiring at least
 
-$$
+```math
 c_1\frac{L^2D_Y\Delta}{\epsilon^3}
-$$
+```
 
 joint oracle calls in the worst case to return an $\epsilon$-optimization-stationary point. The hard instance has an unconstrained primal domain and a dual Euclidean ball. Theorem 3.1 first proves the zero-respecting case; Theorem 3.2 extends it to arbitrary deterministic methods. Remark 3.1 covers an arbitrary deterministic output computed from the transcript by appending one query.
 
 PZL, Theorem 3.3: for every $L,D_Y,\Delta>0$, every admissible instance, and every $\epsilon>0$, **Tracked-FOAM** returns such a point using
 
-$$
+```math
 O\left(
 \left(\frac{L\Delta}{\epsilon^2}+1\right)
 \max\left\lbrace 1,\frac{LD_Y}{\epsilon}\right\rbrace
 \right)
-$$
+```
 
 calls. Thus the optimal complexity in the lower-bound regime is $\Theta(L^2D_Y\Delta/\epsilon^3)$. These bounds hide only universal constants, with no logarithmic, dimension, or additional initialization factors.
 
@@ -51,10 +51,10 @@ WGY, Theorem 4.1, proves $\Omega(L^2D_Y\Delta/\epsilon^3)$ for deterministic zer
 
 WGY, Theorem 5.5, states that there exist universal constants $c_0,c_d,c_n>0$ such that, for every $L,D_Y,\Delta>0$, $\sigma\geq0$, and $0<\epsilon\leq c_0\min\left\lbrace LD_Y,\sqrt{L\Delta}\right\rbrace$, an admissible instance and unbiased stochastic oracle of variance at most $\sigma^2$ force every adaptive stochastic zero-respecting method to use at least
 
-$$
+```math
 c_d\frac{L^2D_Y\Delta}{\epsilon^3}
 +c_n\frac{L^3D_Y^2\Delta\sigma^2}{\epsilon^6}
-$$
+```
 
 calls to return a point satisfying expected envelope-gradient norm at most $\epsilon$. The deterministic term remains when $\sigma=0$. Corollaries 4.2 and 5.6 replace $\Delta$ by a budget $\mathcal G_0$ on $\max_y f(0,y)-\inf_x f(x,0)$; the two gaps agree on their hard instances. These results use constrained auxiliary primal variables and impose zero-respecting behavior on both queries and final outputs.
 
@@ -64,9 +64,9 @@ WGY compares the noise-dominated $\epsilon^{-6}$ rate with SAPD+ (Zhang, Aybat, 
 
 ZX, Theorem 5.1, proves
 
-$$
+```math
 \Omega\left(\frac{L^2D_Y\Delta_\phi}{\epsilon^3}\right)
-$$
+```
 
 for projected zero-respecting first-order methods, including randomized output rules at a fixed query budget. Its lower bound matches the leading warm-started optimization-stationarity complexity of its single-loop algorithm. The same paper also gives the best-known $O(L^{3/2}D_Y^{1/2}\Delta_\phi/\epsilon^{5/2})$ single-loop upper bound for game stationarity; it does not claim a matching game-stationarity lower bound.
 
@@ -74,15 +74,15 @@ for projected zero-respecting first-order methods, including randomized output r
 
 The dual-diameter convention is
 
-$$
+```math
 \mathrm{diam}\left(\mathcal{Y}\right)\leq D_Y.
-$$
+```
 
 - **Problem class:** $\min_{x\in\mathcal{X}}\max_{y\in\mathcal{Y}}f(x,y)$, jointly $L$-smooth on $\mathcal{X}\times\mathcal{Y}$, with $f(x,\cdot)$ concave and no convexity assumption in $x$. No fixed positive dual strong-concavity modulus is assumed.
 - **Domains:** $\mathcal{X}$ is nonempty, closed, and convex; $\mathcal{Y}$ is compact and convex, contains the origin, and satisfies the displayed diameter convention. PZL's lower bound already holds for $\mathcal{X}=\mathbb{R}^{d_x}$; its upper bound allows general such $\mathcal{X}$. WGY uses a product of an unconstrained state space and a ball constraining auxiliary primal variables.
 - **Initialization:** $(x^0,y^0)=(0,0)$ and $\Phi(0)-\inf_{\mathcal{X}}\Phi\leq\Delta$, where $\Phi(x)=\max_y f(x,y)$. No initial dual optimality is required for PZL's upper bound.
-- **Stationarity:** write $\varphi=\Phi+\iota_{\mathcal{X}}$, with $\iota_{\mathcal{X}}$ zero on $\mathcal{X}$ and $+\infty$ outside. An output must satisfy $\|\nabla\varphi_{1/(2L)}(x)\|\leq\epsilon$. WGY's stochastic criterion is $\mathbb{E}\|\nabla\varphi_{1/(2L)}(x)\|\leq\epsilon$, not an assertion about every realization.
-- **Oracle:** one feasible query returns $(f,\nabla_x f,\nabla_y f)$. WGY's stochastic oracle returns the exact value and an unbiased joint gradient estimate with $\mathbb E\|\widehat\nabla f-\nabla f\|^2\leq\sigma^2$. No mean-square smoothness of the sample gradients is assumed.
+- **Stationarity:** write $\varphi=\Phi+\iota_{\mathcal{X}}$, with $\iota_{\mathcal{X}}$ zero on $\mathcal{X}$ and $+\infty$ outside. An output must satisfy $`\|\nabla\varphi_{1/(2L)}(x)\|\leq\epsilon`$. WGY's stochastic criterion is $`\mathbb{E}\|\nabla\varphi_{1/(2L)}(x)\|\leq\epsilon`$, not an assertion about every realization.
+- **Oracle:** one feasible query returns $(f,\nabla_x f,\nabla_y f)$. WGY's stochastic oracle returns the exact value and an unbiased joint gradient estimate with $`\mathbb E\|\widehat\nabla f-\nabla f\|^2\leq\sigma^2`$. No mean-square smoothness of the sample gradients is assumed.
 - **Cost:** count joint saddle-oracle calls. Arithmetic and Euclidean projections onto the known domains are free in this accounting. PZL implements its inner solves with first-order queries and projections (Appendix B); exact dual maximization or exact proximal optimization of the unknown objective is not a free primitive.
 - **Output:** PZL's upper bound selects an iterate using a computable step-and-error certificate (Algorithm 1); it is not a last-iterate guarantee.
 - **Dimension:** the lower bounds range over finite dimensions that can grow with the parameters and query horizon; they are not bounds for a fixed prescribed dimension.

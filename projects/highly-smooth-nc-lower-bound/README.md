@@ -21,17 +21,17 @@ The chronological and technical relationship is:
 
 Let $p\geq1$. Consider unconstrained minimization of a possibly nonconvex function $f:\mathbb R^d\to\mathbb R$ such that its $q$th derivative is $L_q$-Lipschitz for $q=1,\ldots,p$. The initial point is the origin and
 
-$$
+```math
 f(0)-\inf_x f(x)\leq\Delta.
-$$
+```
 
-A deterministic first-order algorithm observes function values and gradients. Its goal is to return an $\epsilon$-stationary point, $\|\nabla f(x)\|\leq\epsilon$. The dimension is allowed to scale with the required chain length; the stated lower bounds are dimension-free in the sense that they contain no explicit dimension factor.
+A deterministic first-order algorithm observes function values and gradients. Its goal is to return an $\epsilon$-stationary point, $`\|\nabla f(x)\|\leq\epsilon`$. The dimension is allowed to scale with the required chain length; the stated lower bounds are dimension-free in the sense that they contain no explicit dimension factor.
 
 ## Main result
 
 For every integer $p\geq1$ and sufficiently small $\epsilon>0$, there is a $p$th-order smooth nonconvex function on which every deterministic first-order method requires at least
 
-$$
+```math
 \begin{cases}
 \Omega\!\left(\Delta L_1\epsilon^{-2}\right), & p=1,\\[3pt]
 \Omega\!\left(\Delta L_1^{1/2}L_2^{1/4}\epsilon^{-7/4}\right), & p=2,\\[3pt]
@@ -42,7 +42,7 @@ $$
 \epsilon^{-5/3}
 \right), & p\geq4
 \end{cases}
-$$
+```
 
 first-order oracle calls. Thus the construction recovers the sharp $\epsilon^{-7/4}$ exponent under Lipschitz Hessians and the sharp $\epsilon^{-5/3}$ exponent under third- and higher-order smoothness, matching known upper bounds up to logarithmic factors where applicable.
 
@@ -50,38 +50,38 @@ first-order oracle calls. Thus the construction recovers the sharp $\epsilon^{-7
 
 Partition the variables into outer scalars $\bar x_1,\ldots,\bar x_{T+1}$ and $T$ inner bridges $\underline{x}^{(i)}\in\mathbb R^m$. Define
 
-$$
+```math
 \widehat f^{\mathrm{hs\text{-}nc}}_{\nu,r}(x)
 =\frac{\nu}{2}(1-\bar x_1)^2
 +\frac12\sum_{i=1}^T
 \widehat Q_m(\bar x_i,\underline{x}^{(i)},\bar x_{i+1})
 +\nu\sum_{i=1}^T\Upsilon_r(\bar x_i),
-$$
+```
 
 where
 
-$$
+```math
 \widehat Q_m(x_-,z,x_+)
 =\frac1m(z_1-\theta x_-)^2
 +\sum_{j=1}^{m-1}(z_{j+1}-z_j)^2
 +\frac1m(z_m-\theta x_+)^2,
 \qquad
 \nu=\frac{\theta^2}{3m-1}.
-$$
+```
 
 The proof uses three structural facts:
 
 1. **Exact reduction.** Minimizing an inner bridge gives
-   $$
+   ```math
    \min_z\widehat Q_m(x_-,z,x_+)=\nu(x_--x_+)^2,
-   $$
+   ```
    so partial minimization exactly recovers the classical scalar nonconvex zero-chain, scaled by $\nu$.
 2. **Sequential revelation.** A zero-respecting first-order method must traverse all $m$ inner coordinates before information can pass from $\bar x_i$ to $\bar x_{i+1}$.
 3. **Stationarity transfer.** Under $\theta\sqrt m\leq1$, the full gradient controls the gradient of the partially minimized outer chain:
-   $$
+   ```math
    \|\nabla\widehat f^{\mathrm{hs\text{-}nc}}_{\nu,r}(x)\|
    \geq\frac12\|\nabla F(\bar x)\|.
-   $$
+   ```
 
 After calibrating the bridge length, chain length, nonconvex regularizer, and global scaling against $L_1,\ldots,L_p$, $\Delta$, and $\epsilon$, these facts yield the theorem above.
 
@@ -95,7 +95,7 @@ The nested-chain proof preserves the same essential delayed-revelation idea but 
 
 Section 4.2 of arXiv:2511.22331 replaces every scalar coordinate in the nested single-level hard instance by an inverse-endpoint-amplified strongly-convex quadratic lower-level chain. The induced hyper-objective becomes a rescaled copy of the single-level nested chain. With $\alpha=\Theta(\kappa_y)$, Theorem 4.2 obtains
 
-$$
+```math
 \begin{cases}
 \Omega\!\left(\kappa_y^{9/4}\Delta L_1^{1/2}L_2^{1/4}\epsilon^{-7/4}\right), & p=2,\\[3pt]
 \Omega\!\left(\kappa_y^{13/6}\Delta L_1^{1/2}L_3^{1/6}\epsilon^{-5/3}\right), & p=3,\\[3pt]
@@ -105,7 +105,7 @@ $$
 \epsilon^{-5/3}
 \right), & p\geq4.
 \end{cases}
-$$
+```
 
 These bounds apply to the paper's deterministic first-order and HVP-based algorithm classes on nonconvex--quadratic bilevel problems.
 

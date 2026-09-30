@@ -8,23 +8,23 @@
 
 Write $L=L_{\max}$ in the paper's notation. [Theorem 3.1 and Corollary 3.2](https://arxiv.org/html/2609.00045v2#S3) give the worst-case randomized incremental first-order oracle (IFO) complexity
 
-$$
+```math
 \Theta\!\left(n+\frac{\sqrt n\,L\Delta}{\epsilon^2}\right).
-$$
+```
 
-More precisely, there are universal constants $c_0,c_1>0$ such that, for every integer $n\geq1024$, every $L,\Delta>0$, and $0<\epsilon^2\leq c_0L\Delta$, every randomized algorithm using at most $c_1(n+\sqrt n\,L\Delta/\epsilon^2)$ calls has a finite-dimensional admissible instance on which its output $\widehat x$ satisfies
+More precisely, there are universal constants $c_0,c_1>0$ such that, for every integer $n\geq1024$, every $L,\Delta>0$, and $0<\epsilon^2\leq c_0L\Delta$, every randomized algorithm using at most $`c_1(n+\sqrt n\,L\Delta/\epsilon^2)`$ calls has a finite-dimensional admissible instance on which its output $\widehat x$ satisfies
 
-$$
+```math
 \Pr\!\left(\|\nabla F(\widehat x)\|\geq4\epsilon\right)\geq\frac{11}{16}.
-$$
+```
 
-This is the fixed-budget statement in Appendix C. Appendix F extends the rate to worst-case expected call budgets with $\mathbb E\|\nabla F(\widehat x)\|\leq\epsilon$. Appendix G.1 covers $1\leq n<1024$ by replication of a single hard function and a change of universal constants. PAGE and SPIDER supply the matching upper bound. All rate constants are universal; no logarithmic factors are suppressed.
+This is the fixed-budget statement in Appendix C. Appendix F extends the rate to worst-case expected call budgets with $`\mathbb E\|\nabla F(\widehat x)\|\leq\epsilon`$. Appendix G.1 covers $1\leq n<1024$ by replication of a single hard function and a change of universal constants. PAGE and SPIDER supply the matching upper bound. All rate constants are universal; no logarithmic factors are suppressed.
 
 The result supplies the original target's missing $\sqrt n$ factor in the accuracy-dependent term, together with the additive $n$ cost.
 
 ## Setting and assumptions
 
-- **Objective:** $F(x)=n^{-1}\sum_{i=1}^n f_i(x)$ on $\mathbb R^d$, with $\|\nabla f_i(x)-\nabla f_i(y)\|\leq L\|x-y\|$ for every component and every $x,y$. Neither convexity nor a PL condition is required.
+- **Objective:** $F(x)=n^{-1}\sum_{i=1}^n f_i(x)$ on $\mathbb R^d$, with $`\|\nabla f_i(x)-\nabla f_i(y)\|\leq L\|x-y\|`$ for every component and every $x,y$. Neither convexity nor a PL condition is required.
 - **Initialization:** $F(x_0)-\inf F\leq\Delta$; translating coordinates gives the paper's $x_0=0$.
 - **Oracle and cost:** one query $(i,x)$ returns the exact pair $(f_i(x),\nabla f_i(x))$. Count component calls; internal computation is free. A full gradient costs $n$ calls. The lower bound also applies when only component gradients are returned.
 - **Algorithms and output:** both query choices may depend on the full transcript and private randomness. Repeated indices, arbitrary query points, random stopping, and an arbitrary output computed from the transcript are allowed. No span or zero-respecting assumption is used.

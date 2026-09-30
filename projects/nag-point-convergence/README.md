@@ -8,26 +8,26 @@
 
 Let $f:\mathbb R^n\to\mathbb R$ be convex and $L$-smooth with $\arg\min f\neq\varnothing$. Consider
 
-$$
+```math
 \begin{aligned}
 x_{k+1}&=y_k-\frac1L\nabla f(y_k),\\
 y_{k+1}&=x_{k+1}+\frac{t_k-1}{t_{k+1}}(x_{k+1}-x_k),
 \end{aligned}
-$$
+```
 
 initialized with $x_0=y_0$, where $t_0=1$, $t_k\to\infty$, and
 
-$$
+```math
 t_{k+1}^2-t_{k+1}\leq t_k^2.
-$$
+```
 
 Then there exists $x_\infty\in\arg\min f$ such that
 
-$$
+```math
 x_k\to x_\infty,
 \qquad
 y_k\to x_\infty.
-$$
+```
 
 Thus the acceleration of objective values does not come at the cost of iterate convergence for the standard critical NAG schedules, including the classical recursive choice and $t_k=(k+2)/2$.
 
@@ -45,13 +45,13 @@ Thus the acceleration of objective values does not come at the cost of iterate c
 
 1. First study the critical Nesterov ODE $\ddot X+(3/t)\dot X+\nabla f(X)=0$.
 2. For each minimizer $z$, use the standard energy
-   $$
+   ```math
    \mathcal E_z(t)=t^2(f(X)-f_\star)+\frac12\|t\dot X+2(X-z)\|^2.
-   $$
+   ```
 3. Compare two possible cluster points $z_1,z_2$. Subtracting $\mathcal E_{z_1}$ and $\mathcal E_{z_2}$ cancels the difficult common terms and yields a scalar linear ODE for the difference of squared distances.
 4. Show that this distance difference has a limit; evaluating it along subsequences converging to $z_1$ and $z_2$ forces $z_1=z_2$.
 5. Transfer the same idea to discrete time using NAG's equivalent $(x_k,y_k,z_k)$ representation and its standard energy $\mathcal E_k(x_\star)$.
-6. Apply a scalar sequence lemma to the difference $\|x_k-x_\star\|^2-\|x_k-\widetilde x_\star\|^2$, obtaining uniqueness of cluster points and hence convergence. Finally, $\|y_k-x_k\|\to0$ gives the same limit for $y_k$.
+6. Apply a scalar sequence lemma to the difference $`\|x_k-x_\star\|^2-\|x_k-\widetilde x_\star\|^2`$, obtaining uniqueness of cluster points and hence convergence. Finally, $`\|y_k-x_k\|\to0`$ gives the same limit for $y_k$.
 
 ## Verification record
 

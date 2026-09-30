@@ -8,24 +8,24 @@
 
 Let $Q_{\mathrm{val}}^{\det}(d,R,L,\epsilon)$ denote the worst-case number of exact function-value queries needed by a deterministic algorithm to minimize a convex $L$-Lipschitz function on the Euclidean ball $B_d(R)$ to objective error at most $\epsilon$. There are universal constants $c,\epsilon_0>0$ and $d_0\in\mathbb N$ such that, for every $d\geq d_0$,
 
-$$
+```math
 Q_{\mathrm{val}}^{\det}\!\left(d,R,L,\frac{\epsilon_0LR}{\sqrt d}\right)
 \geq c\frac{d^2}{\log(d+1)}.
-$$
+```
 
 Together with Protasov's exact-value upper bound, this gives
 
-$$
+```math
 Q_{\mathrm{val}}^{\det}\!\left(d,\frac{\epsilon_0}{\sqrt d}\right)
 =\widetilde\Theta(d^2),
-$$
+```
 
 closing a polynomial oracle-complexity gap dating to 1996. A mixed-integer lifting gives $\widetilde\Theta(2^n d^2)$ queries for $n$ binary and $d$ continuous variables under the paper's fiberwise Lipschitz assumptions.
 
 ## Setting and assumptions
 
 - **Problem class:** minimize $f\in\mathcal F_d(R,L)$, where $f:B_d(R)\to\mathbb R$ is convex, $L$-Lipschitz in Euclidean norm, and normalized by $f(0)=0$.
-- **Domain:** $B_d(R)=\{x\in\mathbb R^d:\|x\|_2\leq R\}$.
+- **Domain:** $`B_d(R)=\{x\in\mathbb R^d:\|x\|_2\leq R\}`$.
 - **Regularity:** no differentiability, smoothness, strict convexity, strong convexity, polyhedrality, or finite representation is assumed.
 - **Oracle model:** a deterministic algorithm adaptively queries $x_t\in B_d(R)$ and receives only the exact real value $f(x_t)$. It receives no gradient, subgradient, separating hyperplane, comparison bit, or stochastic estimate.
 - **Algorithm class:** unrestricted deterministic sequential algorithms with unlimited computation, memory, and exact real arithmetic; query and output maps may be discontinuous.
@@ -35,9 +35,9 @@ closing a polynomial oracle-complexity gap dating to 1996. A mixed-integer lifti
 ## Proof architecture
 
 1. Split $d=2m$ coordinates as $(x,z)$ and use the max-affine hard family
-   $$
+   ```math
    f_W(x,z)=\max_{i\in[m]}\{a x_i+\langle w_i,z\rangle\},
-   $$
+   ```
    with each unknown row $w_i$ in a small Euclidean ball.
 2. Build an exact resisting oracle that maintains a compact convex uncertainty set for every row while preserving the complete value transcript.
 3. Show that fewer than order $m^2/\log m$ queries leave linearly many row sets high-dimensional and with large volume radius.

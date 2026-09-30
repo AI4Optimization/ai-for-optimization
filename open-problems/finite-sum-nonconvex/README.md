@@ -12,7 +12,7 @@ See the [project record](../../projects/finite-sum-nonconvex-tight-complexity/) 
 
 ## Problem definition
 
-Minimize $F(x)=n^{-1}\sum_{i=1}^n f_i(x)$ over $x\in\mathbb R^d$, where $F$ may be nonconvex, every component $f_i$ has an $L$-Lipschitz gradient, and $F(x_0)-\inf F\leq\Delta$. The output criterion is $\mathbb E\|\nabla F(x)\|\leq\epsilon$.
+Minimize $F(x)=n^{-1}\sum_{i=1}^n f_i(x)$ over $x\in\mathbb R^d$, where $F$ may be nonconvex, every component $f_i$ has an $L$-Lipschitz gradient, and $F(x_0)-\inf F\leq\Delta$. The output criterion is $`\mathbb E\|\nabla F(x)\|\leq\epsilon`$.
 
 ## Oracle model
 
@@ -20,13 +20,13 @@ At each adaptive query $(i,x)$, an incremental first-order oracle returns $(f_i(
 
 ## Original gap and resolution
 
-The original target was $\Omega(n^\delta\epsilon^{-2})$ for some $0<\delta\leq1/2$, ideally $\delta=1/2$, with full $L$ and $\Delta$ dependence. The page compared SPIDER's $O(\sqrt n\,\epsilon^{-2})$ accuracy-dependent term with a lower bound lacking polynomial $n$ dependence in that term.
+The original target was $\Omega(n^\delta\epsilon^{-2})$ for some $0<\delta\leq1/2$, ideally $\delta=1/2$, with full $L$ and $\Delta$ dependence. The page compared SPIDER's $`O(\sqrt n\,\epsilon^{-2})`$ accuracy-dependent term with a lower bound lacking polynomial $n$ dependence in that term.
 
 **Peng, Tang, and Jia, Theorem 3.1 and Corollary 3.2.** With the paper's $L_{\max}=L$, for $L,\Delta>0$ and $0<\epsilon^2\leq cL\Delta$, where $c>0$ is universal, the worst-case randomized IFO complexity is
 
-$$
+```math
 \Theta\!\left(n+\frac{\sqrt n\,L\Delta}{\epsilon^2}\right).
-$$
+```
 
 The theorem is stated for $n\geq1024$; Appendix G.1 explains the extension to smaller positive $n$ by adjusting universal constants. Appendix F covers expected gradient norm and expected oracle cost, matching the original output criterion. The matching upper bound comes from PAGE and SPIDER. The bound hides no logarithmic factors, and the worst-case dimension may grow with the parameters and query budget.
 

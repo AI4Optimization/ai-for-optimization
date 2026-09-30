@@ -6,15 +6,15 @@
 
 ## Setting and oracle
 
-The objective is globally $L$-smooth and convex on $\mathbb R^d$, with a unique minimizer inside $B_2(R/2)$. An adaptive deterministic algorithm may query only points in $B_2(R)$ and receives exact scalar function values; its output is also in $B_2(R)$. It must return $\hat x$ with $f(\hat x)-f^*\leq\epsilon$. The cost is the number of exact-value queries.
+The objective is globally $L$-smooth and convex on $\mathbb R^d$, with a unique minimizer inside $B_2(R/2)$. An adaptive deterministic algorithm may query only points in $B_2(R)$ and receives exact scalar function values; its output is also in $B_2(R)$. It must return $\hat x$ with $`f(\hat x)-f^*\leq\epsilon`$. The cost is the number of exact-value queries.
 
 ## Result
 
 Theorem 3.5 proves
 
-$$
+```math
 \Omega\!\left(d\min\left\{\sqrt{\frac{LR^2}{\epsilon}},\left(\frac{d}{\log(ed)}\right)^{1/3}\right\}\right)
-$$
+```
 
 queries. An $O(d\sqrt{LR^2/\epsilon})$ upper bound matches it, up to constants, for $LR^2(\log(ed)/d)^{2/3}\leq\epsilon\leq cLR^2$ with a universal $c>0$. The fixed smooth hard instance uses a Moreau-smoothed chain, exact transcript shielding, and delayed rotations.
 

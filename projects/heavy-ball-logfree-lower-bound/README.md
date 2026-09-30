@@ -8,17 +8,17 @@
 
 For a horizon $T$, consider the Heavy Ball iteration
 
-$$
+```math
 x_{t+1}=x_t-\eta_t\nabla f(x_t)+\beta_t(x_t-x_{t-1}),
 \qquad x_{-1}=x_0,
-$$
+```
 
 where the schedule is fixed before the adversarial objective is selected and satisfies
 
-$$
+```math
 \eta_t\geq0,
 \qquad 0\leq\beta_t<1.
-$$
+```
 
 The schedule may depend on $T$, $L$, and $R$, but may not adapt to observed gradients. The objective is convex and $L$-smooth, the initial distance to a minimizer is at most $R$, and performance is measured at the actual last iterate $x_T$.
 
@@ -26,11 +26,11 @@ The schedule may depend on $T$, $L$, and $R$, but may not adapt to observed grad
 
 Ma and Zhang (2026) prove that every such predetermined schedule has a worst-case instance satisfying
 
-$$
+```math
 f(x_T)-f(x^\star)
 \geq
 c\frac{LR^2}{T^{(1+\sqrt{5})/2}\log T}
-$$
+```
 
 for a universal constant $c>0$. Thus arbitrary nonstationary, horizon-dependent tuning cannot guarantee Nesterov's $O(T^{-2})$ rate for classical Heavy Ball on all smooth convex objectives.
 
@@ -38,11 +38,11 @@ for a universal constant $c>0$. Thus arbitrary nonstationary, horizon-dependent 
 
 The later note *An $\Omega(T^{-3/2})$ lower bound for heavy ball* improves the Ma--Zhang result to
 
-$$
+```math
 f(x_T)-f(x^\star)
 \geq
 c'\frac{LR^2}{T^{3/2}},
-$$
+```
 
 again in dimension at most $T+1$ and for the same class of predetermined schedules. The note is attributed to GPT-6 Astra, prompted by Wenzhi Gao, and explicitly builds on Ma and Zhang's static one-sided Huber chain and momentum-removal lemma.
 

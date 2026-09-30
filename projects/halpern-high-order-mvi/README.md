@@ -6,17 +6,17 @@
 
 ## Problem and oracle model
 
-Find $x^*\in\mathcal X$ satisfying $0\in F(x^*)+N_{\mathcal X}(x^*)$, where $\mathcal X\subseteq\mathbb R^d$ is nonempty, compact, and convex, $F$ is monotone, and $D^{p-1}F$ is $L_p$-Lipschitz. An order-$p$ oracle returns $F(x),DF(x),\ldots,D^{p-1}F(x)$ at a query point. The output is a last-iterate graph point $u$ with $v\in F(u)+N_{\mathcal X}(u)$ and $\|v\|\leq\epsilon$. The complexity counts these oracle calls; solving the regularized Taylor-model VI is an internal computational primitive, so the bound is not a bound on all arithmetic work.
+Find $`x^*\in\mathcal X`$ satisfying $`0\in F(x^*)+N_{\mathcal X}(x^*)`$, where $\mathcal X\subseteq\mathbb R^d$ is nonempty, compact, and convex, $F$ is monotone, and $D^{p-1}F$ is $L_p$-Lipschitz. An order-$p$ oracle returns $F(x),DF(x),\ldots,D^{p-1}F(x)$ at a query point. The output is a last-iterate graph point $u$ with $v\in F(u)+N_{\mathcal X}(u)$ and $`\|v\|\leq\epsilon`$. The complexity counts these oracle calls; solving the regularized Taylor-model VI is an internal computational primitive, so the bound is not a bound on all arithmetic work.
 
 ## Current result
 
 For an integer $p\geq2$, Theorem 3.1 gives
 
-$$
+```math
 O\!\left(\left(\frac{L_pD^p}{\epsilon}\right)^{2/(3p-1)}\right)
-$$
+```
 
-order-$p$ oracle calls, where $D=\|x_0-x^*\|$. Equivalently, Theorem 5.1 gives a last-iterate residual of $O(L_pD^p/T^{(3p-1)/2})$ using $O(T)$ total calls. For $p=2$, the rate is $O(T^{-5/2})$ and the oracle complexity is $O(\epsilon^{-2/5})$ after normalizing $L_2D^2$. The accuracy exponent matches the lower bound cited in the paper, without a multiplicative logarithm.
+order-$p$ oracle calls, where $`D=\|x_0-x^*\|`$. Equivalently, Theorem 5.1 gives a last-iterate residual of $O(L_pD^p/T^{(3p-1)/2})$ using $O(T)$ total calls. For $p=2$, the rate is $O(T^{-5/2})$ and the oracle complexity is $O(\epsilon^{-2/5})$ after normalizing $L_2D^2$. The accuracy exponent matches the lower bound cited in the paper, without a multiplicative logarithm.
 
 The method uses an **inexact accelerated Halpern outer iteration**. A projected predictor approximates the next resolvent point, and an adaptive Anchored Tensor Method (ATM) solves each regularized subproblem. The warm-start and amortized analysis keep the total inner oracle cost at $O(T)$.
 

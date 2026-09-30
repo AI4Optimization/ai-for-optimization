@@ -14,9 +14,9 @@ The result was subsequently written into [Chen, Ji, and Zhang, *On the Condition
 
 Consider the unconstrained bilevel problem
 
-$$
+```math
 \min_{x\in\mathbb R^{d_x}} F(x)=f(x,y^\ast(x)), y^\ast(x)=\arg\min_{y\in\mathbb R^{d_y}}g(x,y).
-$$
+```
 
 For the main lower bound, $f$ is smooth and may be nonconvex, while $g$ is a jointly quadratic function whose Hessian in $y$ is positive definite. The relevant parameters are:
 
@@ -25,15 +25,15 @@ For the main lower bound, $f$ is smooth and may be nonconvex, while $g$ is a joi
 - $\kappa_y=L_1/\mu_y$: the lower-level condition number;
 - $\Delta$: an upper bound on $F(0)-\inf_x F(x)$.
 
-Algorithms start from zero and access either the deterministic first-order oracle for $(f,g)$ or the paper's HVP oracle, which additionally returns $\nabla^2_{xy}g(x,y)v$ and $\nabla^2_{yy}g(x,y)v$. On quadratic lower-level instances, HVP queries can be simulated using differences of first-order queries, so the two deterministic algorithm classes have the same lower-bound complexity. The output criterion is an $\epsilon$-stationary point satisfying $\|\nabla F(x)\|\leq\epsilon$.
+Algorithms start from zero and access either the deterministic first-order oracle for $(f,g)$ or the paper's HVP oracle, which additionally returns $\nabla^2_{xy}g(x,y)v$ and $\nabla^2_{yy}g(x,y)v$. On quadratic lower-level instances, HVP queries can be simulated using differences of first-order queries, so the two deterministic algorithm classes have the same lower-bound complexity. The output criterion is an $\epsilon$-stationary point satisfying $`\|\nabla F(x)\|\leq\epsilon`$.
 
 ## Main result
 
 There is a numerical constant $a_0\in(0,1)$ such that, for every $L_1,\Delta>0$ and $\mu_y\in(0,a_0L_1]$, one can construct a smooth nonconvex--quadratic bilevel problem for which every deterministic first-order or HVP-based algorithm requires at least
 
-$$
+```math
 \Omega\!\left(\kappa_y^{5/2}L_1\Delta\epsilon^{-2}\right)
-$$
+```
 
 oracle calls to find an $\epsilon$-stationary point. Suppressing $L_1$ and $\Delta$, this is the $\Omega(\kappa_y^{5/2}\epsilon^{-2})$ lower bound highlighted in the paper.
 
@@ -43,7 +43,7 @@ This improves the $\Omega(\sqrt{\kappa_y}\epsilon^{-2})$ condition-number depend
 
 The hard instance combines a nonconvex zero-chain in the outer variable with a nested quadratic chain in the lower-level variable. Its key linear-algebraic component is the tridiagonal matrix
 
-$$
+```math
 A_n=
 \begin{bmatrix}
 \omega & -q & & & 0\\
@@ -55,14 +55,14 @@ A_n=
 \qquad
 q=\frac1{\sqrt{n-1}},\quad
 \omega=\frac{n}{(n-1)^2}.
-$$
+```
 
 The construction has two simultaneous properties:
 
 1. $I/(2(n-1)^2)\preceq A_n\preceq5I$, so choosing $n=\Theta(\sqrt{\kappa_y})$ realizes the desired lower-level condition number;
-2. the endpoint entries of $A_n^{-1}$ are amplified to order $n^2$: $(A_n^{-1})_{11}=2(n-1)^2/3$ and $(A_n^{-1})_{1n}=(n-1)^2/3$.
+2. the endpoint entries of $A_n^{-1}$ are amplified to order $n^2$: $`(A_n^{-1})_{11}=2(n-1)^2/3`$ and $`(A_n^{-1})_{1n}=(n-1)^2/3`$.
 
-The amplified inverse endpoints make the implicit solution $y^*(x)$ stretch the effective outer zero-chain by $\alpha=\Theta(n^2)=\Theta(\kappa_y)$. A zero-respecting algorithm can reveal only one new chain coordinate per oracle call. After rescaling the instance to meet the smoothness and initial-gap constraints, the chain length needed before the gradient can fall below $\epsilon$ yields the $\kappa_y^{5/2}L_1\Delta\epsilon^{-2}$ bound. The paper supplies the resisting-oracle/rotation argument extending the zero-respecting construction to all deterministic algorithms in the stated class.
+The amplified inverse endpoints make the implicit solution $`y^*(x)`$ stretch the effective outer zero-chain by $\alpha=\Theta(n^2)=\Theta(\kappa_y)$. A zero-respecting algorithm can reveal only one new chain coordinate per oracle call. After rescaling the instance to meet the smoothness and initial-gap constraints, the chain length needed before the gradient can fall below $\epsilon$ yields the $\kappa_y^{5/2}L_1\Delta\epsilon^{-2}$ bound. The paper supplies the resisting-oracle/rotation argument extending the zero-respecting construction to all deterministic algorithms in the stated class.
 
 ## Further results in the paper
 

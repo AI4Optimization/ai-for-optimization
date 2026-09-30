@@ -10,50 +10,50 @@ A publication-ready version still needs a fully quantified theorem, explicit num
 
 For $\gamma\in[0,1]$, define the function class
 
-$$
+```math
 \mathcal F_\gamma(L,H,\Delta)
 =\left\{
 f:\ f(0)-\inf f\leq\Delta,
 \ \operatorname{Lip}(\nabla f)\leq L,
 \ H_\gamma(f)\leq H
 \right\},
-$$
+```
 
 where
 
-$$
+```math
 H_\gamma(f)
 =\sup_{x\neq y}
 \frac{\|\nabla^2f(x)-\nabla^2f(y)\|}{\|x-y\|^\gamma}.
-$$
+```
 
 For fixed $L,H,\Delta>0$ and sufficiently small $\epsilon$, there is a numerical constant $c>0$ and a function $f\in\mathcal F_\gamma(L,H,\Delta)$ such that Universal Heavy Ball requires at least
 
-$$
+```math
 c\min\left\{
 \frac{\Delta L}{\epsilon^2},
 \frac{\Delta\sqrt L\,H^{1/(2+2\gamma)}}
 {\epsilon^{(4+3\gamma)/(2+2\gamma)}}
 \right\}
-$$
+```
 
-gradient evaluations to find $x$ satisfying $\|\nabla f(x)\|\leq\epsilon$.
+gradient evaluations to find $x$ satisfying $`\|\nabla f(x)\|\leq\epsilon`$.
 
 The admissible small-accuracy regime can be written, up to numerical constants, as
 
-$$
+```math
 \epsilon^2
 \lesssim
 \Delta\min\left\{L,(H\epsilon^\gamma)^{1/(1+\gamma)}\right\}.
-$$
+```
 
 For $L=H=\Delta=1$, the bound is
 
-$$
+```math
 \Omega\!\left(
 \epsilon^{-(4+3\gamma)/(2+2\gamma)}
 \right).
-$$
+```
 
 It recovers $\Omega(\epsilon^{-2})$ at $\gamma=0$ and $\Omega(\epsilon^{-7/4})$ at $\gamma=1$, matching the interpolation in the Universal Heavy Ball upper bound for every $\gamma\in(0,1)$.
 
@@ -67,37 +67,37 @@ The construction below controls the entire Hessian Hölder profile simultaneousl
 
 Use the highly-smooth nonconvex nested chain from [Chen et al. (2026, Section 3.3)](https://arxiv.org/abs/2511.22331). Let $\bar x=(\bar x_1,\ldots,\bar x_{T+1})$ be the outer variables and let $x^{(i)}\in\mathbb R^m$ be the inner bridge blocks. Define
 
-$$
+```math
 Q_m(u,x,v)
 =\frac1m(x_1-\theta u)^2
 +\sum_{j=1}^{m-1}(x_{j+1}-x_j)^2
 +\frac1m(x_m-\theta v)^2,
-$$
+```
 
 and
 
-$$
+```math
 \Phi_{\rho,m,T}(\bar x,x)
 =\frac\rho2(1-\bar x_1)^2
 +\frac12\sum_{i=1}^T
 Q_m(\bar x_i,x^{(i)},\bar x_{i+1})
 +\rho\sum_{i=1}^T\Upsilon(\bar x_i),
-$$
+```
 
 where $\Upsilon$ is the bounded, globally smooth nonconvex zero-chain regularizer of the source construction. Choose
 
-$$
+```math
 m=\left\lfloor\frac1{3\rho}\right\rfloor,
 \qquad
 \theta=\sqrt{\rho(3m-1)}.
-$$
+```
 
 The springs-in-series identity gives
 
-$$
+```math
 \min_{x\in\mathbb R^m}Q_m(u,x,v)
 =\rho(u-v)^2.
-$$
+```
 
 Consequently, minimizing the inner bridge variables reduces the construction exactly to the standard scalar nonconvex zero-chain, and the source stationarity-transfer inequality relates the full gradient to the gradient of that reduced chain.
 
@@ -105,77 +105,77 @@ Consequently, minimizing the inner bridge variables reduces the construction exa
 
 Order the variables as
 
-$$
+```math
 \bar x_1,x_1^{(1)},\ldots,x_m^{(1)},
 \bar x_2,x_1^{(2)},\ldots,x_m^{(2)},\ldots,
 \bar x_{T+1}.
-$$
+```
 
 Under this ordering, $\Phi_{\rho,m,T}$ is a first-order zero-chain. Before $m(T-1)$ sequential gradient queries, a zero-respecting method cannot reveal the terminal outer coordinates. The reduced scalar chain then supplies a constant gradient obstruction, so the full gradient remains bounded away from zero.
 
 For vertical scale $\delta$ and horizontal scale $s$, define
 
-$$
+```math
 f(z)=\delta s^2\Phi_{\rho,m,T}(z/s),
 \qquad
 a:=\delta\rho.
-$$
+```
 
 Choose $s=16\epsilon/a$ and $\delta=L/8$. The chain length and bridge length scale as
 
-$$
+```math
 T=\Theta\!\left(\frac{\Delta a}{\epsilon^2}\right),
 \qquad
 m=\Theta\!\left(\sqrt{\frac La}\right).
-$$
+```
 
 Thus the number of hidden gradient queries is
 
-$$
+```math
 m(T-1)
 =\Theta\!\left(
 \frac{\Delta\sqrt{La}}{\epsilon^2}
 \right).
-$$
+```
 
 ## Fractional Hölder profile
 
 The quadratic bridges have constant Hessian and therefore disappear from Hessian differences. Only the scaled outer regularizers contribute. Since $\Upsilon''$ is both globally bounded and globally Lipschitz,
 
-$$
+```math
 |\Upsilon''(u)-\Upsilon''(v)|
 \leq C\min\{1,|u-v|\}
 \leq C|u-v|^q
-$$
+```
 
 for every $q\in[0,1]$. The scaled hard instance therefore satisfies
 
-$$
+```math
 H_q(f)=\Theta(as^{-q})
 =\Theta(a^{1+q}\epsilon^{-q})
 \qquad\text{simultaneously for every }q\in[0,1].
-$$
+```
 
 The matching lower estimate follows by comparing two points separated by exactly $s$ in one regularized outer coordinate, using the nonzero change of $\Upsilon''$ between the selected scalar inputs.
 
 Substituting this profile into each branch of the Universal Heavy Ball upper bound gives
 
-$$
+```math
 \Delta\sqrt L\,
 H_q(f)^{1/(2+2q)}
 \epsilon^{-(4+3q)/(2+2q)}
 =\Theta\!\left(
 \frac{\Delta\sqrt{La}}{\epsilon^2}
 \right)
-$$
+```
 
 for every $q\in[0,1]$. Hence the infimum over $q$ cannot escape the hard instance.
 
 To enforce the prescribed $\gamma$-Hölder constant, choose
 
-$$
+```math
 a=c_0\min\left\{L,(H\epsilon^\gamma)^{1/(1+\gamma)}\right\}
-$$
+```
 
 for a sufficiently small numerical constant $c_0$. Substitution into the chain length yields the stated lower bound.
 

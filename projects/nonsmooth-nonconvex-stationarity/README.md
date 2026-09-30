@@ -8,15 +8,15 @@
 
 Let $f:\mathbb R^d\to\mathbb R$ be an $L$-Lipschitz, possibly nonsmooth and nonconvex function satisfying
 
-$$
+```math
 f(0)-\inf_x f(x)\leq\Delta.
-$$
+```
 
 The goal is to find a $(\delta,\epsilon)$-Goldstein stationary point $x$, meaning
 
-$$
+```math
 \operatorname{dist}\!\left(0,\partial_\delta f(x)\right)\leq\epsilon,
-$$
+```
 
 where $\partial_\delta f(x)$ is the convex hull of Clarke subgradients at points within distance $\delta$ of $x$.
 
@@ -30,27 +30,27 @@ The theorem covers adaptive, possibly randomized **zero-respecting** algorithms:
 
 For a universal constant $c>0$ and parameters satisfying
 
-$$
+```math
 \epsilon\leq c\min\!\left\{L,\frac{\delta L^2}{\Delta},\frac{\Delta}{\delta}\right\},
-$$
+```
 
 there is an $L$-Lipschitz objective in dimension
 
-$$
+```math
 d=\Theta\!\left(\frac{\Delta L^2}{\delta\epsilon^3}\right)
-$$
+```
 
 such that no zero-respecting first-order algorithm reaches a $(\delta,\epsilon)$-Goldstein stationary iterate before
 
-$$
+```math
 T=\Omega\!\left(\frac{\Delta L^2}{\delta\epsilon^3}\right)
-$$
+```
 
 queries. Together with known upper bounds, this establishes the tight complexity
 
-$$
+```math
 \Theta\!\left(\frac{\Delta L^2}{\delta\epsilon^3}\right).
-$$
+```
 
 In the normalized regime, this is $\Theta(\delta^{-1}\epsilon^{-3})$. Thus the optimal rate agrees with the stochastic rate: under Goldstein stationarity, noiseless gradients do not improve the worst-case query complexity in this algorithmic framework.
 
@@ -62,9 +62,9 @@ The hard instance is a double-loop zero chain. It has $\Omega(\Delta L/(\delta\e
 
 The paper also proves a tight lower bound of
 
-$$
+```math
 \Omega\!\left(\frac{\Delta L^2\sqrt\lambda}{\epsilon^{7/2}}\right)
-$$
+```
 
 for the relaxed $(\lambda,\epsilon)$-stationarity notion considered there.
 

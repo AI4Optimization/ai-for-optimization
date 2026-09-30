@@ -14,9 +14,9 @@ The AI trace is retained as provenance, not as the canonical long-term proof. A 
 
 - Lin, Jin, and Jordan's [*Near-Optimal Algorithms for Minimax Optimization*](https://arxiv.org/abs/2002.02417) gives, in Appendix Theorem A.7, a deterministic first-order NC-SC guarantee with leading dependence $\sqrt\kappa L\Delta/\epsilon^2$ multiplied by accuracy- and parameter-dependent logarithmic factors (a squared logarithm in that statement).
 - Zhang, Yang, Guzmán, Kiyavash, and He's [*The Complexity of Nonconvex-Strongly-Concave Minimax Optimization*](https://arxiv.org/abs/2103.15888) establishes the lower bound
-  $$
+  ```math
   \Omega\!\left(\frac{\sqrt\kappa L\Delta}{\epsilon^2}\right)
-  $$
+  ```
   under its stated algorithmic restrictions and gives a nearly matching upper bound. Its warm-start/relative-accuracy analysis removes the earlier repeated polylogarithmic dependence on $1/\epsilon$, but parameter-dependent logarithmic factors remain.
 - The strongly-convex-strongly-concave subproblems are solved using ideas from Kovalev and Gasnikov's [*The First Optimal Algorithm for Smooth and Strongly-Convex-Strongly-Concave Minimax Optimization*](https://proceedings.neurips.cc/paper_files/paper/2022/hash/5e2ed801f62102f531d109d7c6e1b62f-Abstract-Conference.html), referred to as FOAM in the proof discussion.
 
@@ -26,32 +26,32 @@ Thus, before the present argument, the optimal polynomial main term was known, a
 
 Consider
 
-$$
+```math
 \Phi(x)=\max_{y\in Y} f(x,y), \qquad \kappa=\frac{L}{\mu},
-$$
+```
 
 where $f$ is jointly $L$-smooth, is $\mu$-strongly concave in $y$, and is nonconvex in $x$. Let $\Delta=\Phi(x_0)-\inf_x\Phi(x)$.
 
 The verified draft gives a deterministic first-order method whose dominant complexity for finding $\widehat x$ with
 
-$$
+```math
 \mathbb E\|\nabla\Phi(\widehat x)\|^2\le \epsilon^2
-$$
+```
 
 is
 
-$$
+```math
 O\!\left(\frac{\sqrt\kappa\,L\Delta}{\epsilon^2}\right),
-$$
+```
 
 with no logarithm multiplying the $\epsilon^{-2}$ term. The complete bound in the source discussion also contains one-time initialization and final-refinement costs of the form
 
-$$
+```math
 O\!\left(
 \sqrt\kappa\log(2+\kappa)
 +\sqrt\kappa\log\!\left(1+\frac{B_0}{\Delta}\right)
 \right),
-$$
+```
 
 where $B_0$ is an explicit, gradient-computable initialization bound defined in the source proof.
 
@@ -79,11 +79,11 @@ The amortized outer analysis removes the logarithm from the leading $\sqrt\kappa
 
 [Zhang and Xu, arXiv:2609.17973](https://arxiv.org/abs/2609.17973) also study the **nonconvex--strongly-concave (NC--SC)** setting. Their single-loop projected damped-extragradient scheme, preceded by a fixed-center warm start, allows a closed convex primal domain and a compact convex dual domain. For a jointly $L$-smooth objective that is $\mu$-strongly concave in $y$, their Theorems 4.2--4.3 and Corollary 4.2 give both optimization-stationarity and game-stationarity guarantees. Writing $\kappa=L/\mu$ and $\Delta_\phi=\phi(x_0)-\inf\phi$, the warm-started oracle bound is
 
-$$
+```math
 O\!\left(\sqrt\kappa\left[\frac{L\Delta_\phi}{\epsilon^2}+1+\log\!\left(1+\frac{L\bar H_\mu}{\epsilon^2}\right)\right]\right),
-$$
+```
 
-where $\bar H_\mu$ is the initialization quantity defined in their paper. The main $\epsilon^{-2}$ term has no multiplicative logarithm. Their optimization-stationarity output satisfies $\mathbb E\|\nabla\phi_{2L}(z_{\mathrm{out}})\|^2\leq\epsilon^2$ for a Moreau-envelope stationarity measure; a different output rule gives a game-stationarity residual at most $\epsilon$.
+where $\bar H_\mu$ is the initialization quantity defined in their paper. The main $\epsilon^{-2}$ term has no multiplicative logarithm. Their optimization-stationarity output satisfies $`\mathbb E\|\nabla\phi_{2L}(z_{\mathrm{out}})\|^2\leq\epsilon^2`$ for a Moreau-envelope stationarity measure; a different output rule gives a game-stationarity residual at most $\epsilon$.
 
 This is an independently published NC--SC result, not a write-up of the AI-assisted draft above. In particular, Moreau-envelope stationarity and the draft's $\nabla\Phi$ stationarity are different output criteria; their bounds should not be identified without an additional conversion argument. The separate [SC--SC single-loop project](../sc-sc-single-loop-extragradient/) records Zhang and Xu's other paper, arXiv:2609.20327.
 

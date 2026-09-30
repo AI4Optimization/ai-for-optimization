@@ -8,48 +8,48 @@
 
 Following [arXiv v2](https://arxiv.org/abs/2609.09152v2), consider plain gradient descent
 
-$$
+```math
 x_k=x_{k-1}-h_k\nabla f(x_{k-1}),\qquad h_k\geq0,
-$$
+```
 
 and define its normalized worst-case last-iterate error by
 
-$$
+```math
 \mathcal R_n(H):=
 \sup_{d\geq1}\ \sup_{f\in\mathcal F_L(\mathbb R^d)}
 \sup_{x_*\in\arg\min f}\ \sup_{x_0\neq x_*}
 \frac{f(x_n)-f(x_*)}{(L/2)\|x_0-x_*\|^2},
-$$
+```
 
 where $\mathcal F_L$ denotes convex $L$-smooth functions with a minimizer and $H=(h_1,\ldots,h_n)$. Set
 
-$$
+```math
 p_{\mathrm{sil}}=\log_2(1+\sqrt2)\approx1.271553,
 \qquad
 p_{\mathrm{any}}=\frac{2p_{\mathrm{sil}}}{1+p_{\mathrm{sil}}}\approx1.119545.
-$$
+```
 
 **Non-anytime (Theorem 1.1).** There is an absolute constant $C>0$ such that, for all sufficiently large $n$ and every predetermined nonnegative $n$-step schedule $H$,
 
-$$
+```math
 \mathcal R_n(H)\geq
 n^{-\left(p_{\mathrm{sil}}+C\sqrt{\frac{\log\log n}{\log n}}\right)}.
-$$
+```
 
 Together with the $O(n^{-p_{\mathrm{sil}}})$ [silver-schedule upper bound](https://doi.org/10.1007/s10107-024-02164-2), this gives
 
-$$
+```math
 \inf_{H\in[0,\infty)^n}\mathcal R_n(H)
 =n^{-p_{\mathrm{sil}}+o(1)}.
-$$
+```
 
-**Anytime (Theorem 1.2).** There is an absolute constant $C>0$ such that every predetermined infinite nonnegative schedule $H=(h_k)_{k\geq1}$ has infinitely many horizons $n$ with
+**Anytime (Theorem 1.2).** There is an absolute constant $C>0$ such that every predetermined infinite nonnegative schedule $`H=(h_k)_{k\geq1}`$ has infinitely many horizons $n$ with
 
-$$
+```math
 \mathcal R_n(H_n)\geq
 n^{-\left(p_{\mathrm{any}}+C\sqrt{\frac{\log\log n}{\log n}}\right)},
 \qquad H_n=(h_1,\ldots,h_n).
-$$
+```
 
 The [anytime upper bound of Zhang, Lee, Du, and Chen](https://proceedings.mlr.press/v291/zhang25a.html) achieves $O(n^{-p_{\mathrm{any}}})$ at every stopping time. Thus no single infinite nonnegative schedule has a uniform $O(n^{-q})$ guarantee for any $q>p_{\mathrm{any}}$.
 
@@ -58,7 +58,7 @@ The [anytime upper bound of Zhang, Lee, Du, and Chen](https://proceedings.mlr.pr
 - **Problem class:** unconstrained convex objectives on $\mathbb R^d$, with an $L$-Lipschitz gradient, $L>0$, and a minimizer; dimension is unrestricted in the worst case.
 - **Algorithm and schedule:** plain GD with deterministic nonnegative stepsizes fixed before observing the objective or oracle responses; no momentum or auxiliary iterates.
 - **Horizon:** the non-anytime schedule may depend on $n$; an anytime schedule must use the same infinite sequence at every horizon.
-- **Initialization and scaling:** the error is normalized by $(L/2)\|x_0-x_*\|^2$ as in the paper. At distance $R$, the corresponding unnormalized bounds carry an $LR^2$ factor.
+- **Initialization and scaling:** the error is normalized by $`(L/2)\|x_0-x_*\|^2`$ as in the paper. At distance $R$, the corresponding unnormalized bounds carry an $LR^2$ factor.
 - **Oracle and output:** one exact gradient evaluation per update; the output is $x_n$, assessed by objective error.
 
 ## Proof architecture
