@@ -6,6 +6,8 @@
 
 The checked scope is the zero-respecting, bounded-variance stochastic first-order oracle model. This status does not cover unrestricted randomized algorithms, mean-squared-smooth stochastic oracles, finite-sum/component-gradient oracles, or sample gradients required to arise from individually smooth sample functions.
 
+Three independent public preprints posted shortly afterward establish and extend the central linear-$\kappa$ stochastic lower bound under different models. They are recorded in [Concurrent follow-up works](#concurrent-follow-up-works); their publication status does not retroactively turn this AI-assisted draft into their proof.
+
 ## Result
 
 For smooth nonconvex--strongly-concave minimax problems with joint smoothness $L$, dual condition number $\kappa=L/\mu$, initial primal gap at most $\Delta$, and an unbiased stochastic first-order oracle with variance at most $\sigma^2$, the construction targets the lower bound
@@ -171,6 +173,57 @@ the gate cost is
 
 Taking the harder of this stochastic instance and the existing deterministic instance gives the stated combined lower bound.
 
+## Concurrent follow-up works
+
+The following three works independently develop the stochastic NC--SC lower-bound direction. Their assumptions, stationarity criteria, and algorithm classes differ, so the results should not be treated as identical.
+
+### Wu et al. (arXiv:2610.00229)
+
+[Wu et al., *Sharp Fresh-Gradient Complexity of Nonconvex-Strongly-Concave Minimax Optimization*](https://arxiv.org/abs/2610.00229) characterize the fresh-gradient complexity, up to logarithmic factors, on unconstrained Euclidean domains for **arbitrary adaptive randomized algorithms**. Given primal gap $\Delta$, initial dual residual at most $G$, and fixed-budget success probability at least $2/3$, their bound is
+
+```math
+\widetilde\Theta\!\left(
+\frac{\sqrt\kappa L\Delta}{\epsilon^2}
++\frac{\kappa L\Delta\sigma^2}{\epsilon^4}
++\frac{\kappa^2\sigma^2}{\epsilon^2}
++\sqrt\kappa\log_+\!\frac{G}{\epsilon\sqrt\kappa}
+\right).
+```
+
+Beyond the shared linear-$\kappa$ global stochastic term, this work identifies a separate $\kappa^2\sigma^2/\epsilon^2$ **statistical refinement cost**, proves that dual initialization contributes only additively through a logarithm, and shows that without any control of the initial dual residual there is no finite dimension-free complexity bound, even with exact gradients. Its lower bounds are not restricted to zero-respecting algorithms.
+
+### Zhou (arXiv:2609.30877)
+
+[Zhou, *Tight Stochastic Condition-Number Dependence in Nonconvex-Strongly-Concave Minimax Optimization*](https://arxiv.org/abs/2609.30877) proves tightness for **zero-respecting algorithms** under the same Moreau-envelope stationarity criterion and primal--dual initialization gap used by SAPD+. In the stated regime $\sigma\geq\epsilon$, the complexity is
+
+```math
+\Theta\!\left(\frac{\kappa LG\sigma^2}{\epsilon^4}\right).
+```
+
+The hard class permits a bounded dual box and a general unbiased bounded-variance oracle. In addition, the construction yields the combined primal-gradient lower bound
+
+```math
+\Omega\!\left(L\Delta\left[\frac{\sqrt\kappa}{\epsilon^2}+\frac{\kappa\sigma^2}{\epsilon^4}\right]\right),
+```
+
+and gives a matching primal-gradient comparison under controlled cross derivatives. The author reports using GPT-6 Astra and Claude Science with Opus 5.5 for drafting assistance and states that all proofs were verified by the author.
+
+### Zhang, Wu, and Yang (arXiv:2609.35206)
+
+[Zhang, Wu, and Yang, *Tight Lower Bounds for Stochastic Nonconvex-Strongly-Concave Minimax Optimization*](https://arxiv.org/abs/2609.35206) give lower bounds for zero-respecting algorithms on **fully unconstrained** NC--SC problems. Under bounded variance they prove the same stochastic term
+
+```math
+\Omega\!\left(\frac{\kappa L\Delta\sigma^2}{\epsilon^4}\right).
+```
+
+Their additional result treats an **averaged-smooth stochastic oracle**, proving the first lower bound of
+
+```math
+\Omega\!\left(\frac{\kappa^{3/2}\bar L\Delta\sigma}{\epsilon^3}\right),
+```
+
+which matches the corresponding upper bound in $\kappa$ and $\epsilon$. A unified quadratic lifting transfers stochastic nonconvex-minimization hardness to the minimax problem; both bounds also extend to Moreau-envelope stationarity. The paper provides a Lean formalization of key components and discloses ChatGPT assistance in construction search, proof refinement, literature review, and drafting, followed by independent author verification.
+
 ## Cleanup required
 
 - Write the coordinate-support induction with exact indexing and oracle-call timing.
@@ -186,4 +239,7 @@ Taking the harder of this stochastic instance and the existing deterministic ins
 - [Li, Tian, Zhang, and Jadbabaie: published NC-SC lower bounds](https://arxiv.org/abs/2104.08708)
 - [Zhang, Aybat, and Gürbüzbalaban: SAPD+ upper bound](https://arxiv.org/abs/2205.15084)
 - [Arjevani et al.: stochastic zero-chain lower-bound framework](https://arxiv.org/abs/1912.02365)
+- [Wu et al.: sharp fresh-gradient complexity, arbitrary randomized algorithms](https://arxiv.org/abs/2610.00229)
+- [Zhou: tight SAPD+-matched stochastic condition-number dependence](https://arxiv.org/abs/2609.30877)
+- [Zhang, Wu, and Yang: bounded-variance and averaged-smoothness lower bounds](https://arxiv.org/abs/2609.35206)
 - Project bibliography: [`references.bib`](references.bib)
