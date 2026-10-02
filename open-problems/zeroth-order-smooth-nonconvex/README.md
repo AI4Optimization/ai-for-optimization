@@ -64,8 +64,15 @@ The statement should specify the necessary relation among $d$, $L$, $\Delta$, an
 
 The sibling [smooth convex exact-value problem](../zeroth-order-smooth-convex/) asks for an $\Omega(d\epsilon^{-1/2})$ lower bound under convexity and a bounded domain. The present problem drops convexity, uses gradient-norm stationarity instead of objective suboptimality, and targets the characteristic $\epsilon^{-2}$ dependence of smooth nonconvex optimization.
 
+## Related stochastic bounded-domain lower bound
+
+[Zhang et al. (2026), Theorem 4.1](https://arxiv.org/abs/2610.00275v1) report a smooth nonconvex lower bound of $`\Omega(dL_0^2H\Delta/\eta^4)`$ for gradient tolerance $`\eta`$, with population gradient Lipschitz constant $`H`$ and sample-Lipschitz second moment at most $`L_0^2`$. It uses stochastic reusable sample-function values, a local objective gap, and a constructed query ball of radius $`\Theta(\Delta/\eta)`$ containing a stationary point. See the [project record](../../projects/zeroth-order-nonconvex-ball-lower-bound/) for the parameter regime and verification status.
+
+This result does not resolve the present exact-value question: its observations are values of stochastic sample functions rather than exact values of the population objective, and its hard family has global infimum $`-\infty`$. The globally bounded-gap, unrestricted exact-value target remains open.
+
 ## References
 
 - [Carmon, Duchi, Hinder, and Sidford, *Lower Bounds for Finding Stationary Points I*](https://arxiv.org/abs/1710.11606)
 - [Carmon, Duchi, Hinder, and Sidford, *Lower Bounds for Finding Stationary Points II: First-Order Methods*](https://arxiv.org/abs/1711.00841)
 - [Related open problem: exact-value zeroth-order smooth convex optimization](../zeroth-order-smooth-convex/)
+- [Zhang et al., *Joint Lower Bounds for Zeroth-Order Nonconvex Optimization on Euclidean Balls*, v1, 2026](https://arxiv.org/abs/2610.00275v1)
