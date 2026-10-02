@@ -2,7 +2,7 @@
 
 ## Status
 
-**Resolved in the Euclidean-query-ball formulation; the original global-gap, unrestricted-query variant remains open.** [Zhang et al. (2026)](https://arxiv.org/abs/2610.00275v1) report an AI-assisted joint lower bound on a constructed Euclidean query ball with a local gap and a stationary-point existence promise. See the [project and scope assessment](../../projects/zeroth-order-nonconvex-ball-lower-bound/).
+**Partially resolved.** [Zhang et al. (2026)](https://arxiv.org/abs/2610.00275v1) solve the Euclidean query-ball formulation with a local gap and a stationary-point existence promise. The original global-gap, unrestricted-query variant remains open. See the [project and scope assessment](../../projects/zeroth-order-nonconvex-ball-lower-bound/).
 
 ## Problem definition
 
