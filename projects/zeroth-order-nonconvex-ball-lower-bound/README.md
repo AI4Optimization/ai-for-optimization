@@ -26,9 +26,9 @@ An adaptive randomized algorithm may retain independently drawn sample handles a
 The Goldstein residual is the ambient residual
 
 ```math
-\partial_\delta f(x)=\operatorname{cl}\operatorname{conv}
+\partial_\delta f(x)=\mathrm{cl}\,\mathrm{conv}\,
 \bigcup_{\|y-x\|_2\leq\delta}\partial^C f(y),
-\qquad G_\delta(f,x)=\operatorname{dist}(0,\partial_\delta f(x)).
+\qquad G_\delta(f,x)=\mathrm{dist}(0,\partial_\delta f(x)).
 ```
 
 The neighborhood may extend outside $`X`$; this is not a constrained normal-cone stationarity criterion. Success means $`G_\delta(f,x_{\mathrm{out}})\leq\epsilon`$ with probability at least $`1/2`$, over the algorithm's randomness and sampled functions. Every hard instance is promised to contain an ambient stationary point in $`X`$; its location is unknown to the algorithm.

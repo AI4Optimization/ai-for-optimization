@@ -15,7 +15,7 @@ f(0)-\inf_x f(x)\leq\Delta.
 The goal is to find a $(\delta,\epsilon)$-Goldstein stationary point $x$, meaning
 
 ```math
-\operatorname{dist}\!\left(0,\partial_\delta f(x)\right)\leq\epsilon,
+\mathrm{dist}\left(0,\partial_\delta f(x)\right)\leq\epsilon,
 ```
 
 where $\partial_\delta f(x)$ is the convex hull of Clarke subgradients at points within distance $\delta$ of $x$.

@@ -30,6 +30,8 @@ A stationarity criterion is $`\|\nabla f(x)\|\leq\epsilon`$.
 
 These forms preserve TeX commands such as `\!`, `\{`, `\|`, and matrix row breaks (`\\`), and prevent `*` or `_` from becoming Markdown emphasis. Keep the usual TeX backslashes inside the protected expressions; do not double them to compensate for Markdown escaping. In table cells, use `\lVert` and `\rVert` for norms so that pipe characters do not interfere with column separators.
 
+Use `\mathrm{...}` for named operators, such as `\mathrm{dist}` or `\mathrm{Bernoulli}`. GitHub rejects the `operatorname` macro. Add explicit thin spaces between adjacent operator names, as in `\mathrm{cl}\,\mathrm{conv}`.
+
 ## Suggested layout
 
 ```text

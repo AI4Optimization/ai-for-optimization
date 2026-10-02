@@ -14,7 +14,7 @@ Consider $\min_{x\in\mathbb R^{d_x}}\max_{y\in\mathcal Y} f(x,y)$, where $f$ is 
 
 ```math
 \Phi(x):=\max_{y\in\mathcal Y}f(x,y),\qquad
-\operatorname{diam}(\mathcal Y)\leq D_{\mathcal Y},\qquad
+\mathrm{diam}(\mathcal Y)\leq D_{\mathcal Y},\qquad
 \Phi(0)-\inf_x\Phi(x)\leq\Delta.
 ```
 

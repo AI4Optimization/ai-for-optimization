@@ -14,7 +14,7 @@ For $\gamma\in[0,1]$, define the function class
 \mathcal F_\gamma(L,H,\Delta)
 =\left\{
 f:\ f(0)-\inf f\leq\Delta,
-\ \operatorname{Lip}(\nabla f)\leq L,
+\ \mathrm{Lip}(\nabla f)\leq L,
 \ H_\gamma(f)\leq H
 \right\},
 ```

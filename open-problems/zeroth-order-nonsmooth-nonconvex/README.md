@@ -16,8 +16,8 @@ The output is an ambient $`(\delta,\epsilon)`$-Goldstein stationary point:
 
 ```math
 G_\delta(f,\widehat x)
-=\operatorname{dist}\!\left(0,
-\operatorname{cl}\operatorname{conv}
+=\mathrm{dist}\!\left(0,
+\mathrm{cl}\mathrm{conv}
 \bigcup_{\|y-\widehat x\|_2\leq\delta}\partial^C f(y)\right)
 \leq\epsilon.
 ```
