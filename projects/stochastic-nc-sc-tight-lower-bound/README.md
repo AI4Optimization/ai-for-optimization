@@ -2,7 +2,7 @@
 
 ## Status
 
-**Verified draft; cleanup needed.** The scalar-gate construction and its parameter scaling have been checked at the draft level. A publication-ready proof still needs the fixed-oracle definition, support induction, gate-counting argument, domain constants, and quantifiers written in full detail.
+**Verified AI-assisted draft.** The scalar-gate construction and its parameter scaling have been checked at the draft level. The proof-completion notes below record details that would be needed for a standalone publication-ready treatment.
 
 The checked scope is the zero-respecting, bounded-variance stochastic first-order oracle model. This status does not cover unrestricted randomized algorithms, mean-squared-smooth stochastic oracles, finite-sum/component-gradient oracles, or sample gradients required to arise from individually smooth sample functions.
 
@@ -109,7 +109,7 @@ For a query $w$, let $r(w)$ be its largest nonzero coordinate and $j(w)=r(w)+1$.
 & \text{otherwise},
 \end{cases}
 \qquad
-\xi\sim\operatorname{Bernoulli}(p).
+\xi\sim\mathrm{Bernoulli}(p).
 ```
 
 Choose
@@ -224,7 +224,7 @@ Their additional result treats an **averaged-smooth stochastic oracle**, proving
 
 which matches the corresponding upper bound in $\kappa$ and $\epsilon$. A unified quadratic lifting transfers stochastic nonconvex-minimization hardness to the minimax problem; both bounds also extend to Moreau-envelope stationarity. The paper provides a Lean formalization of key components and discloses ChatGPT assistance in construction search, proof refinement, literature review, and drafting, followed by independent author verification.
 
-## Cleanup required
+## Proof-completion notes
 
 - Write the coordinate-support induction with exact indexing and oracle-call timing.
 - State all domain radii and verify that every unconstrained dual maximizer lies in the chosen compact dual box.

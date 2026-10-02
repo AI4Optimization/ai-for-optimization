@@ -79,18 +79,38 @@ See Sections 2--4 and Appendices A--C of the paper for the proof.
 
 This entry records a public preprint and a source-level check; it does not certify a new independent proof verification.
 
+## Strongly convex follow-up
+
+[Liu and Ye (2026)](https://arxiv.org/abs/2609.26873) extend the silver-rate optimality result to smooth strongly convex objectives. For plain GD with predetermined nonnegative stepsizes, condition number $\kappa$, and
+
+```math
+p_{\mathrm{sil}}=\log_2(1+\sqrt2),
+```
+
+they prove the iteration lower bound
+
+```math
+\Omega\!\left(
+\kappa^{1/p_{\mathrm{sil}}-o(1)}
+\log\frac1\delta
+\right)
+```
+
+for both relative squared distance and relative function error, uniformly over $0<\delta<1$ and all sufficiently large $\kappa$. This matches the polynomial exponent in $\kappa$ of the strongly convex silver-stepsize upper bound of Altschuler and Parrilo (2025). The follow-up therefore settles the corresponding exponent question for predetermined nonnegative schedules, up to the subpolynomial loss.
+
 ## Limitations and open questions
 
 - **Exponent optimality:** the loss $n^{-C\sqrt{\log\log n/\log n}}$ remains. The result does not give a constant-factor matching $\Omega(n^{-p_{\mathrm{sil}}})$ bound; reducing or removing this loss remains open.
 - **Sign restriction:** the silver-exponent lower bounds concern nonnegative schedules. Extending them to schedules allowing negative steps remains open.
 - **Anytime quantifiers:** the lower bound holds at infinitely many horizons, not necessarily every sufficiently large horizon. The worst-case function may depend on the horizon.
-- **Algorithmic scope:** these theorems do not settle adaptive stepsizes, randomized schedules, alternative output criteria, or the corresponding strongly convex problem.
+- **Algorithmic scope:** these theorems do not settle adaptive stepsizes, randomized schedules, or alternative output criteria. The corresponding strongly convex exponent question for predetermined nonnegative schedules is addressed by the follow-up above.
 
 ## Provenance and references
 
 - **Authors:** Yuhan Ye and Kaizhao Liu.
 - **Earlier public write-up:** [*The Silver Rate Is (Almost) Tight*](https://yeyuhanyyh.github.io/gd-silver-rate/), posted September 7, 2026, 17:50 GMT-4. Retain this link as the earlier public record.
 - **Manuscript:** [*Silver Rate Is (Almost) Optimal for Gradient Descent*](https://arxiv.org/abs/2609.09152v2), arXiv:2609.09152, v2. This entry uses the manuscript's statements and normalization; the blog uses a different constant normalization.
+- **Strongly convex follow-up:** Kaizhao Liu and Yuhan Ye, [*Silver Rate Is (Almost) Optimal for Gradient Descent: The Strongly Convex Case*](https://arxiv.org/abs/2609.26873), arXiv:2609.26873.
 - **AI contribution, as reported by the authors:** the authors proposed bending the local trajectory, then developed the construction and analysis through repeated interactions with ChatGPT-6 Astra / Astra Ultra. See the AI Disclosure in the paper and blog.
 - **Original AI trace:** no standalone conversation transcript is linked in the reviewed sources; the available record is the authors' AI Disclosure.
 - **Preceding construction:** Jung, Cho, and Yun, [*Stronger Lower Bounds for (Non-)Anytime Acceleration of Gradient Descent*](https://arxiv.org/abs/2609.04032).

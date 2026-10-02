@@ -2,7 +2,7 @@
 
 ## Status
 
-**Open in the original global-gap, unrestricted-query model.** [Zhang et al. (2026)](https://arxiv.org/abs/2610.00275v1) report an AI-assisted joint lower bound on a constructed Euclidean query ball with a local gap and a stationary-point existence promise. This is related progress, not a resolution of this benchmark; see the [project and scope assessment](../../projects/zeroth-order-nonconvex-ball-lower-bound/).
+**Resolved in the Euclidean-query-ball formulation; the original global-gap, unrestricted-query variant remains open.** [Zhang et al. (2026)](https://arxiv.org/abs/2610.00275v1) report an AI-assisted joint lower bound on a constructed Euclidean query ball with a local gap and a stationary-point existence promise. See the [project and scope assessment](../../projects/zeroth-order-nonconvex-ball-lower-bound/).
 
 ## Problem definition
 
@@ -28,7 +28,7 @@ Use a fixed constant success probability, such as $`1/2`$. The known expected-re
 
 The algorithm observes scalar sample-function values $`F(x;\xi)`$ and receives no gradients. Queries and output may be anywhere in $`\mathbb R^d`$. Common-sample evaluations, including the two-point estimator in the cited algorithm, are allowed; each scalar observation costs one unit, so a pair costs two. The noise assumption is the sample-Lipschitz second-moment bound above, rather than an unspecified additive-noise variance bound. A lower-bound statement must specify adaptivity, randomization, and any limits on sample reuse.
 
-## Known bounds and open target
+## Known upper bound and target
 
 Kornowski and Shamir give an upper bound of
 
