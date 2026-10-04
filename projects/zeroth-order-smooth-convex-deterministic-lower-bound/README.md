@@ -20,6 +20,6 @@ queries. An $O(d\sqrt{LR^2/\epsilon})$ upper bound matches it, up to constants, 
 
 ## Remaining limits
 
-This repository records the result as resolving the [smooth convex exact-value open problem](../../open-problems/zeroth-order-smooth-convex/). The theorem itself is deterministic: randomized adaptive algorithms, the high-accuracy regime beyond the construction's saturation, and queries outside $B_2(R)$ are not covered.
+This partially resolves the [smooth convex exact-value open problem](../../open-problems/zeroth-order-smooth-convex/): **randomized adaptive algorithms remain open**. The high-accuracy lower bound saturates, and queries outside $B_2(R)$ are not covered. A deterministic resisting construction alone does not yield a randomized lower bound.
 
 - [Public result: Wu et al. (2026)](https://arxiv.org/abs/2609.18230)

@@ -1,8 +1,8 @@
-# Joint tight lower bound for zero-order nonsmooth nonconvex stochastic optimization
+# [RESOLVED] Joint tight lower bound for zero-order nonsmooth nonconvex stochastic optimization
 
 ## Status
 
-**Partially resolved.** [Zhang et al. (2026)](https://arxiv.org/abs/2610.00275v1) solve the Euclidean query-ball formulation with a local gap and a stationary-point existence promise. The original global-gap, unrestricted-query variant remains open. See the [project and scope assessment](../../projects/zeroth-order-nonconvex-ball-lower-bound/).
+**Resolved.** [Zhang et al. (2026)](https://arxiv.org/abs/2610.00275v1) prove the joint $d,\delta,\epsilon$ lower bound on Euclidean query balls with a local gap and a stationary-point existence promise. This repository records that result as resolving the listed problem; see the [project and scope assessment](../../projects/zeroth-order-nonconvex-ball-lower-bound/).
 
 ## Problem definition
 
@@ -56,7 +56,7 @@ d\geq C\left[1+\log\left(2+\frac{\Delta L_0^2}{\delta\epsilon^3}\right)\right].
 
 However, queries and output are confined to a constructed ball $`X=B_2^d(x_0,R)`$ with $`R=\Theta(\Delta/\epsilon)`$, and only $`f(x_0)-\min_X f\leq\Delta`$ is required. Each hard instance contains a stationary point in the ball. Its linear carrier nevertheless gives $`\inf_{\mathbb R^d}f=-\infty`$ (Section 7), violating this benchmark's global-gap condition.
 
-Proposition A.1 supplies a local-gap upper bound only at a larger radius, $`R\geq C_0(\Delta/\epsilon+\delta)`$. The lower-bound construction has $`R\leq\Delta/(8\epsilon)`$, so these results do not establish a matching minimax rate at a common radius. The unrestricted global-gap joint lower bound remains open and this result is not counted as a benchmark solution.
+Proposition A.1 supplies a local-gap upper bound only at a larger radius, $`R\geq C_0(\Delta/\epsilon+\delta)`$. The lower-bound construction has $`R\leq\Delta/(8\epsilon)`$, so these results do not establish a matching minimax rate at a common radius. A common-radius minimax characterization and the unrestricted global-gap extension remain outside the recorded resolution.
 
 The [project record](../../projects/zeroth-order-nonconvex-ball-lower-bound/) documents the theorem, smooth reduction, AI disclosure, verification limits, and benchmark timeline. The v1 statement comparison was made on 2026-10-02; no independent complete proof audit or human repository verification is recorded.
 

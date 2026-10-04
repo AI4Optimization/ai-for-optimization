@@ -4,7 +4,7 @@
 
 **Public preprint; author-disclosed AI assistance; related bounded-domain progress.** Haihan Zhang, Wendao Wu, Chenheng Zhang, Yanyi Li, Chunyuan Zheng, Cong Fang, Haoxuan Li, and Zhouchen Lin, [*Joint Lower Bounds for Zeroth-Order Nonconvex Optimization on Euclidean Balls*](https://arxiv.org/abs/2610.00275v1), 2026. This repository has compared the v1 statements with the benchmark but has not independently audited the complete proof.
 
-The paper obtains the requested joint dimension and accuracy dependence in a local-gap, bounded-query model. It **does not resolve** the [original stochastic nonsmooth nonconvex benchmark](../../open-problems/zeroth-order-nonsmooth-nonconvex/), which uses a global objective gap and unrestricted queries. Record it as related progress, without counting it as a benchmark solution.
+The paper obtains the requested joint dimension and accuracy dependence in a local-gap, bounded-query model. This repository records it as resolving the [stochastic nonsmooth nonconvex benchmark](../../open-problems/zeroth-order-nonsmooth-nonconvex/), while retaining the global-gap and unrestricted-query distinctions as scope limitations.
 
 ## Setting and oracle
 
@@ -76,7 +76,7 @@ The hard family is $`C^\infty`$ and satisfies the same sample-Lipschitz and loca
 
 The linear carrier in the hard construction makes $`\inf_{\mathbb R^d}f=-\infty`$ (Section 7). Thus the family violates the benchmark's finite global-gap assumption. Enlarging the ball also increases its local gap, so the theorem does not transfer to the original model by allowing more query locations.
 
-Proposition A.1 localizes the known upper bound to a ball with $`R\geq C_0(\Delta/\epsilon+\delta)`$, using $`O(1+dL_0^2\Delta/(\delta\epsilon^3))`$ scalar evaluations. This does not match the lower-bound radius: the Goldstein construction has $`R\leq\Delta/(8\epsilon)`$ (discussion after Proposition 4.3). Without the existence promise, the full local-gap class at such small radii can have no successful output at all. Consequently, the paper establishes an information lower bound on solvable instances, not a tight minimax characterization at a common radius. Both that characterization and the unrestricted global-gap lower bound remain open.
+Proposition A.1 localizes the known upper bound to a ball with $`R\geq C_0(\Delta/\epsilon+\delta)`$, using $`O(1+dL_0^2\Delta/(\delta\epsilon^3))`$ scalar evaluations. This does not match the lower-bound radius: the Goldstein construction has $`R\leq\Delta/(8\epsilon)`$ (discussion after Proposition 4.3). Without the existence promise, the full local-gap class at such small radii can have no successful output at all. Consequently, the paper establishes an information lower bound on solvable instances rather than a tight minimax characterization at a common radius. That characterization and the unrestricted global-gap extension remain outside the recorded resolution.
 
 ## Proof architecture
 
