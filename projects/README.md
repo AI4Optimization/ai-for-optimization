@@ -54,8 +54,6 @@ The [deterministic/noiseless nonsmooth nonconvex problem](../open-problems/deter
 
 The bounded-domain formulation of the [zeroth-order nonsmooth nonconvex stochastic problem](../open-problems/zeroth-order-nonsmooth-nonconvex/) is resolved by [Zhang et al. (2026)](zeroth-order-nonconvex-ball-lower-bound/). The original unrestricted-query, global-gap benchmark remains open.
 
-The [exact-value zeroth-order smooth convex problem](../open-problems/zeroth-order-smooth-convex/) is recorded as resolved by [Wu et al. (2026)](zeroth-order-smooth-convex-deterministic-lower-bound/); its original page is retained as a historical record of the question and theorem scope.
-
 The [fully first-order stochastic bilevel problem](../open-problems/stochastic-bilevel/) is resolved for the standard bounded-variance oracle by [Gu, Wu, and Yang (2026)](stochastic-bilevel-first-order-lower-bound/). Its original page is retained as a historical record and distinguishes the separate stochastic-smoothness variant.
 
 ## Starting a new project
