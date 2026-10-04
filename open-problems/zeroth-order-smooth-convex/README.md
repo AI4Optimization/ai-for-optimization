@@ -1,4 +1,4 @@
-# Tight lower bound for exact-value zeroth-order smooth convex optimization
+# [RESOLVED] Tight lower bound for exact-value zeroth-order smooth convex optimization
 
 ## Status
 
