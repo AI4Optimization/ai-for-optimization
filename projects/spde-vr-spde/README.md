@@ -15,10 +15,10 @@ Consider the stochastic minimax problem
 f(x,y)=\mathbb E_\xi[F(x,y;\xi)],
 ```
 
-where $\mathcal X$ is closed and convex, $\mathcal Y$ is compact and convex, and $f$ is smooth but may be nonconvex in $x$. The paper treats:
+where $`\mathcal X`$ is closed and convex, $`\mathcal Y`$ is compact and convex, and $`f`$ is smooth but may be nonconvex in $`x`$. The paper treats:
 
-- **NC--C:** $f(x,\cdot)$ is concave;
-- **NC--SC:** $f(x,\cdot)$ is $\mu$-strongly concave, with $\kappa=L/\mu$.
+- **NC--C:** $`f(x,\cdot)`$ is concave;
+- **NC--SC:** $`f(x,\cdot)`$ is $`\mu`$-strongly concave, with $`\kappa=L/\mu`$.
 
 SPDE assumes an unbiased stochastic gradient oracle with uniformly bounded variance. VR-SPDE additionally assumes common-sample paired evaluations and mean-square Lipschitz stochastic gradients.
 
@@ -29,18 +29,18 @@ The paper gives separate guarantees for two notions:
 - **Game stationarity (GS):** the joint projected/normal-cone residual in both primal and dual variables.
 - **Optimization stationarity (OS):** the gradient of a Moreau envelope of the constrained value function.
 
-Each theorem controls the expected squared stationarity measure by $\epsilon^2$. A sample-gradient evaluation counts as one stochastic first-order oracle call; a common-sample paired difference costs two calls.
+Each theorem controls the expected squared stationarity measure by $`\epsilon^2`$. A sample-gradient evaluation counts as one stochastic first-order oracle call; a common-sample paired difference costs two calls.
 
 ## Complexity results
 
-With the remaining problem data fixed and in the small-$\epsilon$ regime, the reported stochastic first-order oracle complexities are:
+With the remaining problem data fixed and in the small-$`\epsilon`$ regime, the reported stochastic first-order oracle complexities are:
 
 | Method | Setting | Game stationarity | Optimization stationarity |
 | --- | --- | --- | --- |
-| SPDE | Stochastic NC--C | $O(\epsilon^{-5})$ | $O(\epsilon^{-6})$ |
-| VR-SPDE | Stochastic NC--C | $O(\epsilon^{-9/2})$ | $O(\epsilon^{-6})$ |
-| SPDE | Stochastic NC--SC | $O(\kappa\epsilon^{-4})$ | $O(\kappa\epsilon^{-4})$ |
-| VR-SPDE | Stochastic NC--SC | $O(\kappa^{3/2}\epsilon^{-3})$ | $O(\kappa^{3/2}\epsilon^{-3})$ |
+| SPDE | Stochastic NC--C | $`O(\epsilon^{-5})`$ | $`O(\epsilon^{-6})`$ |
+| VR-SPDE | Stochastic NC--C | $`O(\epsilon^{-9/2})`$ | $`O(\epsilon^{-6})`$ |
+| SPDE | Stochastic NC--SC | $`O(\kappa\epsilon^{-4})`$ | $`O(\kappa\epsilon^{-4})`$ |
+| VR-SPDE | Stochastic NC--SC | $`O(\kappa^{3/2}\epsilon^{-3})`$ | $`O(\kappa^{3/2}\epsilon^{-3})`$ |
 
 The OS guarantees match the best-known bounds of multi-loop methods while retaining a single-loop implementation. The paper reports the best-known SFO bounds among single-loop stochastic first-order methods for the respective settings and stationarity notions.
 
@@ -50,8 +50,8 @@ SPDE uses projected damped extragradient updates with stochastic gradients. VR-S
 
 ## Scope and comparison notes
 
-- The compact-domain, initialization, and noise quantities in the full theorems remain visible in the non-asymptotic bounds; the table records only the leading $\epsilon$ and $\kappa$ dependence.
-- The NC--C game-stationarity rates do not improve the $O(\epsilon^{-6})$ optimization-stationarity rate.
+- The compact-domain, initialization, and noise quantities in the full theorems remain visible in the non-asymptotic bounds; the table records only the leading $`\epsilon`$ and $`\kappa`$ dependence.
+- The NC--C game-stationarity rates do not improve the $`O(\epsilon^{-6})`$ optimization-stationarity rate.
 - The results are upper bounds and do not establish matching lower bounds for unrestricted randomized stochastic first-order methods.
 - Comparisons with deterministic or stochastic lower-bound projects must match the oracle, domain, initialization, and stationarity definitions.
 
