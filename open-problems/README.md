@@ -13,7 +13,7 @@ Mathematical status, AI provenance, and benchmark eligibility are recorded separ
 | [`zeroth-order-nonsmooth-nonconvex`](zeroth-order-nonsmooth-nonconvex/) | Joint $`d,\delta,\epsilon`$ lower bound with stochastic values | **Partially resolved:** Euclidean query-ball formulation solved by [Zhang et al. (2026)](../projects/zeroth-order-nonconvex-ball-lower-bound/); unrestricted-query, global-gap variant remains open |
 | [`deterministic-nonsmooth-nonconvex`](deterministic-nonsmooth-nonconvex/) | Deterministic/noiseless Goldstein-stationarity lower bound | Resolved by the AI-assisted proof of [Kornowski (2026)](https://arxiv.org/abs/2609.17780) |
 | [`bandit-convex-regret`](bandit-convex-regret/) | Tight dimension dependence in bandit convex regret | Open |
-| [`zeroth-order-smooth-convex`](zeroth-order-smooth-convex/) | Smooth exact-value zeroth-order lower bound | Partially resolved: deterministic bounded-query moderate-accuracy case by [Wu et al. (2026)](https://arxiv.org/abs/2609.18230); randomized algorithms remain open; [project](../projects/zeroth-order-smooth-convex-deterministic-lower-bound/) |
+| [`zeroth-order-smooth-convex`](zeroth-order-smooth-convex/) | Smooth exact-value zeroth-order lower bound | **Resolved** by [Wu et al. (2026)](https://arxiv.org/abs/2609.18230); [project](../projects/zeroth-order-smooth-convex-deterministic-lower-bound/) |
 | [`zeroth-order-smooth-nonconvex`](zeroth-order-smooth-nonconvex/) | Smooth nonconvex exact-value zeroth-order lower bound | Open |
 
 An open-problem page should specify the objective class, domain and regularity assumptions, oracle, admissible algorithms, output criterion, cost convention, known upper and lower bounds, and the exact gap to close.

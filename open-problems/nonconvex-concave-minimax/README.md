@@ -65,7 +65,7 @@ for optimization stationarity over projected zero-respecting first-order methods
 
 ## Related stochastic methods
 
-**External public preprint; AI involvement unknown.** Huiling Zhang, Minhao Zhang, and Zi Xu's [SPDE and VR-SPDE paper (arXiv:2609.21747v1; PDF)](https://arxiv.org/pdf/2609.21747v1) records single-loop stochastic methods for NC--C and NC--SC minimax optimization. The PDF is the method record; no separate project or AI benchmark success is assigned. This repository has not independently audited the proofs.
+**External public preprint; AI involvement unknown.** Huiling Zhang, Minhao Zhang, and Zi Xu's [SPDE and VR-SPDE paper (arXiv:2609.21747v1; PDF)](https://arxiv.org/pdf/2609.21747v1) records single-loop stochastic methods for NC--C and NC--SC minimax optimization. It is now recorded as a [separate project](../../projects/spde-vr-spde/). This repository has not independently audited the proofs.
 
 The population objective is smooth, with a closed convex primal domain and a compact convex dual domain. SPDE assumes unbiased gradients with uniformly bounded variance. VR-SPDE additionally requires common-sample paired evaluations and mean-square Lipschitz gradients (Assumption 4).
 
