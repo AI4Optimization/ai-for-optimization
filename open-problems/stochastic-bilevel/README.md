@@ -31,7 +31,20 @@ In the noise-dominated regime this is $\Omega(\Delta\sigma^2\kappa_y^8\epsilon^{
 
 The resolved status refers to the standard **bounded-variance** oracle and its tight $\epsilon^{-6}$ accuracy exponent. Conjecture 1 also discusses an $\Omega(\epsilon^{-4})$ lower bound **under additional stochastic smoothness**; the 2026 theorem does not establish that distinct strengthened-oracle statement. Matching the dependence on $\kappa_y$ is another separate question. Earlier $\epsilon^{-6}$ and $\epsilon^{-4}$ bounds for a $`y^*(x)`$-aware oracle have reliability radius $r_\epsilon=\Theta(\epsilon)$ and should not be conflated with the globally unbiased model.
 
+## Finite-order smoothness follow-up
+
+[Pan and Yang (2026)](https://arxiv.org/abs/2610.01843v1) study the same NC--SC bilevel structure under a globally unbiased bounded-variance stochastic first-order oracle and an order-$`p`$ smoothness condition, for any fixed finite integer $`p\geq1`$, on lower-level derivatives with respect to the lower variable.
+
+Their single-loop MRT-FD method tracks the upper variable, lower solution, and implicit-differentiation response simultaneously. Order-$`p`$ finite differences approximate the required second-order derivative actions using only stochastic gradient queries. They prove matching upper and lower bounds
+
+```math
+\Theta\!\left(\epsilon^{-4-2/p}\right).
+```
+
+Thus $`p=1`$ recovers the $`\epsilon^{-6}`$ accuracy exponent, while every fixed finite smoothness order has an optimal interpolating exponent strictly above four. The result approaches $`\epsilon^{-4}`$ as $`p`$ grows but does not identify a fixed finite $`p`$ with an exact $`\epsilon^{-4}`$ rate. This repository records the paper as a follow-up rather than replacing the original bounded-variance resolution. No AI-use disclosure was located in the reviewed v1 source, and the complete proof has not been independently audited here.
+
 ## Reference
 
 - [Kwon, Kwon, and Lyu, *On the Complexity of First-Order Methods in Stochastic Bilevel Optimization*, Conjecture 1 (2024)](https://arxiv.org/abs/2402.07101)
 - [Gu, Wu, and Yang, *An $\Omega(\kappa_y^8\epsilon^{-6})$ Lower Bound for Stochastic NC-SC Bilevel Optimization with First-order Oracles* (2026)](https://arxiv.org/abs/2609.21905)
+- [Pan and Yang, *Optimal Stochastic Bilevel Optimization with First-Order Oracles* (2026)](https://arxiv.org/abs/2610.01843v1)
