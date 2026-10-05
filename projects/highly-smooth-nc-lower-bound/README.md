@@ -4,6 +4,8 @@
 
 **Checked; public preprint; sharp bounds first discovered in [arXiv:2606.05438](https://arxiv.org/abs/2606.05438).** Zhou's block-chain work first discovered and proved the sharp lower bounds. We subsequently checked the simpler nested-chain construction developed in the [*Highly-Smooth NC Optimization* discussion](https://chatgpt.com/share/6a954295-d7e8-83ee-9e41-e67c81d533ea). A cleaned version appears in Section 3.3 and Theorem 3.1 of [*On the Condition Number Dependency in Bilevel Optimization*](https://arxiv.org/abs/2511.22331); Section 4.2 then nests this construction with a strongly-convex quadratic lower-level chain to obtain highly-smooth bilevel lower bounds.
 
+**Randomized $p=2$ follow-up.** [Zhang et al. (2026)](https://arxiv.org/abs/2610.00245) extend the sharp Hessian-Lipschitz lower bound from deterministic methods to arbitrary adaptive randomized first-order methods. Thus randomization does not improve the optimal $`\epsilon^{-7/4}`$ dependence in this oracle model.
+
 This construction is a simpler nested-chain reformulation of the sharp lower-bound mechanism first discovered by Zhou in [*Sharp First-Order Lower Bounds for Higher-Order Smooth Nonconvex Optimization*](https://arxiv.org/abs/2606.05438). Zhou's work introduced the block-chain and first proved the sharp exponents. The present project does not claim priority for those exponents.
 
 ## AI use and provenance
@@ -25,7 +27,7 @@ Let $p\geq1$. Consider unconstrained minimization of a possibly nonconvex functi
 f(0)-\inf_x f(x)\leq\Delta.
 ```
 
-A deterministic first-order algorithm observes function values and gradients. Its goal is to return an $\epsilon$-stationary point, $`\|\nabla f(x)\|\leq\epsilon`$. The dimension is allowed to scale with the required chain length; the stated lower bounds are dimension-free in the sense that they contain no explicit dimension factor.
+A first-order algorithm observes exact function values and gradients. The original results below concern deterministic algorithms; the randomized follow-up covers arbitrary adaptive randomized algorithms for $p=2$. The goal is to return an $\epsilon$-stationary point, $`\|\nabla f(x)\|\leq\epsilon`$. The dimension is allowed to scale with the required chain length; the stated lower bounds are dimension-free in the sense that they contain no explicit dimension factor.
 
 ## Main result
 
@@ -45,6 +47,18 @@ For every integer $p\geq1$ and sufficiently small $\epsilon>0$, there is a $p$th
 ```
 
 first-order oracle calls. Thus the construction recovers the sharp $\epsilon^{-7/4}$ exponent under Lipschitz Hessians and the sharp $\epsilon^{-5/3}$ exponent under third- and higher-order smoothness, matching known upper bounds up to logarithmic factors where applicable.
+
+## Randomized Hessian-Lipschitz follow-up
+
+[Zhang et al. (2026)](https://arxiv.org/abs/2610.00245) consider the $p=2$ class with initial gap at most $\Delta$, $L_1$-Lipschitz gradient, and $L_2$-Lipschitz Hessian. For arbitrary adaptive randomized algorithms using the exact value-and-gradient oracle, they prove the lower bound
+
+```math
+\Omega\!\left(\Delta L_1^{1/2}L_2^{1/4}\epsilon^{-7/4}\right)
+```
+
+for producing an $\epsilon$-stationary point with success probability at least $2/3$, maximizing over finite dimensions. The theorem is stated in the regime $`\epsilon\lesssim L_1^2/L_2`$ and $`\Delta L_2^{1/2}\epsilon^{-3/2}\gtrsim1`$. It matches the deterministic restarted accelerated-gradient upper bound and the earlier sharp deterministic lower bound, thereby closing the randomized first-order gap for Hessian-Lipschitz nonconvex optimization.
+
+The construction keeps quadratic curvature visible while revealing forcing directions sequentially; large eigenspaces prevent a randomized method from learning the hidden directions through preprocessing, and a scheduled-disclosure coupling supports the reduction via Yao's principle. The paper reports that nearly the entire research pipeline used an internal GPT-5.6 Sol auto-research system together with a Lean-backed article audit, followed by author review and approval. This repository has checked the statement and scope against the public preprint but has not independently audited the proof.
 
 ## Simplified nested-chain construction
 
@@ -112,7 +126,7 @@ These bounds apply to the paper's deterministic first-order and HVP-based algori
 
 ## Limitations
 
-- The result is a worst-case deterministic first-order oracle lower bound; it does not cover every randomized or higher-order oracle model.
+- The randomized extension currently recorded here resolves the exact first-order value-and-gradient model for $p=2$; randomized extensions for the full $p\geq3$ hierarchy and higher-order oracle models are not established by this follow-up.
 - Sufficiently small $\epsilon$ and a dimension large enough to contain the hard chain are required.
 - The phrase “simplified” refers to the construction and proof organization. Priority for the sharp exponents and their first proof belongs to Zhou's block-chain work.
 - The bilevel condition-number factors require the additional lower-level construction and assumptions of arXiv:2511.22331; they do not follow from the single-level theorem alone.
@@ -122,5 +136,6 @@ These bounds apply to the paper's deterministic first-order and HVP-based algori
 - [Original AI-assisted proof discussion: *Highly-Smooth NC Optimization*](https://chatgpt.com/share/6a954295-d7e8-83ee-9e41-e67c81d533ea)
 - [Checked nested-chain proof and bilevel extension (arXiv:2511.22331)](https://arxiv.org/abs/2511.22331)
 - [First sharp block-chain lower bounds (arXiv:2606.05438)](https://arxiv.org/abs/2606.05438)
+- [Matching randomized Hessian-Lipschitz lower bound (Zhang et al., 2026; arXiv:2610.00245)](https://arxiv.org/abs/2610.00245)
 - Project bibliography: [`references.bib`](references.bib)
 
