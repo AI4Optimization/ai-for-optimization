@@ -12,8 +12,8 @@ Mathematical status, AI provenance, and benchmark eligibility are recorded separ
 | [`pl-minimax`](pl-minimax/) | Tight two-sided PL--PL minimax complexity | Resolved by [the matching lower bound](https://openreview.net/forum?id=PlfFyV6wbZ) |
 | [`zeroth-order-nonsmooth-nonconvex`](zeroth-order-nonsmooth-nonconvex/) | Joint $`d,\delta,\epsilon`$ lower bound with stochastic values | Resolved by [Xia and Yuan (2026)](https://arxiv.org/abs/2610.19652) |
 | [`deterministic-nonsmooth-nonconvex`](deterministic-nonsmooth-nonconvex/) | Deterministic/noiseless Goldstein-stationarity lower bound | Resolved by the AI-assisted proof of [Kornowski (2026)](https://arxiv.org/abs/2609.17780) |
-| [`bandit-convex-regret`](bandit-convex-regret/) | Tight dimension dependence in bandit convex regret | Open |
 | [`zeroth-order-smooth-convex`](zeroth-order-smooth-convex/) | Smooth exact-value zeroth-order lower bound | Resolved for adaptive randomized algorithms with unrestricted queries by [Dorn et al. (2026)](https://arxiv.org/abs/2610.00345v1); [project](../projects/zeroth-order-smooth-convex-deterministic-lower-bound/) |
 | [`zeroth-order-smooth-nonconvex`](zeroth-order-smooth-nonconvex/) | Smooth nonconvex exact-value zeroth-order lower bound | Open |
+| [`bandit-convex-regret`](bandit-convex-regret/) | Tight dimension dependence in bandit convex regret | Open |
 
 An open-problem page should specify the objective class, domain and regularity assumptions, oracle, admissible algorithms, output criterion, cost convention, known upper and lower bounds, and the exact gap to close.
