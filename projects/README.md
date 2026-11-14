@@ -43,7 +43,6 @@ The following problems are recorded as open research questions. They have not be
 
 | Open problem | Setting | Target | Status |
 | --- | --- | --- | --- |
-| [Minimax optimization under two-sided PL conditions](../open-problems/pl-minimax/) | Deterministic two-sided PL--PL minimax | Match the $\widetilde O(\kappa_x\kappa_y)$ upper bound | **Open; not solved by AI** |
 | [Stochastic bandit convex optimization](../open-problems/bandit-convex-regret/) | Lipschitz losses; bandit feedback | Close $d^{4/3}$ versus $d^{3/2}$ regret gap | **Open; not solved by AI** |
 | [Exact-value zeroth-order smooth nonconvex optimization](../open-problems/zeroth-order-smooth-nonconvex/) | Smooth nonconvex; exact function values | $\Omega(d\epsilon^{-2})$ in the normalized setting | **Open; not solved by AI** |
 
