@@ -60,7 +60,7 @@ The [exact-value zeroth-order smooth convex problem](../open-problems/zeroth-ord
 
 The [fully first-order stochastic bilevel problem](../open-problems/stochastic-bilevel/) is resolved for the standard bounded-variance oracle by [Gu, Wu, and Yang (2026)](stochastic-bilevel-first-order-lower-bound/). Its original page is retained as a historical record and records [Pan and Yang's finite-order smoothness follow-up](https://arxiv.org/abs/2610.01843v1).
 
-The [two-sided PL--PL minimax problem](../open-problems/pl-minimax/) is resolved by the matching lower bound in [the OpenReview paper](https://openreview.net/forum?id=PlfFyV6wbZ); the original problem page records the result and its relation to the one-sided PL case.
+The [two-sided PL--PL minimax problem](../open-problems/pl-minimax/) is resolved by the matching lower bound in [the ICLR 2027 submission](https://openreview.net/forum?id=PlfFyV6wbZ); the original problem page records the result and its relation to the one-sided PL case.
 
 ## Starting a new project
 
