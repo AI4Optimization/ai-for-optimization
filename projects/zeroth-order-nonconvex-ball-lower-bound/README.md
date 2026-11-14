@@ -2,9 +2,11 @@
 
 ## Status and attribution
 
-**Public preprint; author-disclosed AI assistance; related bounded-domain progress.** Haihan Zhang, Wendao Wu, Chenheng Zhang, Yanyi Li, Chunyuan Zheng, Cong Fang, Haoxuan Li, and Zhouchen Lin, [*Joint Lower Bounds for Zeroth-Order Nonconvex Optimization on Euclidean Balls*](https://arxiv.org/abs/2610.00275v1), 2026. This repository has compared the v1 statements with the benchmark but has not independently audited the complete proof.
+**Benchmark resolved by a subsequent result.** Xia and Yuan's [*On Global Joint Lower Bounds in Zeroth-Order Nonconvex Optimization*](https://arxiv.org/abs/2610.19652) (v2) prove the joint smooth stochastic lower bound $`\Omega(d\epsilon^{-4})`$ and derive $`\Omega(d\delta^{-1}\epsilon^{-3})`$ for nonsmooth Goldstein stationarity against fully adaptive randomized algorithms with unrestricted queries, outputs, and arbitrary sample reuse. This matches the benchmark's full-space upper-bound dependence and resolves the original open problem. Their paper has not been independently audited by this repository.
 
-The paper obtains the requested joint dimension and accuracy dependence in a local-gap, bounded-query model. This repository records it as resolving the [stochastic nonsmooth nonconvex benchmark](../../open-problems/zeroth-order-nonsmooth-nonconvex/), while retaining the global-gap and unrestricted-query distinctions as scope limitations.
+The earlier bounded-domain result by Haihan Zhang, Wendao Wu, Chenheng Zhang, Yanyi Li, Chunyuan Zheng, Cong Fang, Haoxuan Li, and Zhouchen Lin, [*Joint Lower Bounds for Zeroth-Order Nonconvex Optimization on Euclidean Balls*](https://arxiv.org/abs/2610.00275v1), remains useful related progress. Its local-gap and bounded-query formulation is recorded below, along with its author-disclosed AI assistance and verification limitations.
+
+The Zhang et al. paper obtains the requested joint dimension and accuracy dependence in a local-gap, bounded-query model. The benchmark is now resolved by Xia and Yuan's later full-space result; the two models and contributions are recorded separately here.
 
 ## Setting and oracle
 
@@ -98,6 +100,7 @@ The eight authors named above report reviewing and approving the mathematical cl
 
 - **AI disclosure:** the v1 first-page AI Usage statement attributes nearly the entire research pipeline to the authors' internal GPT-5.6 Sol auto-research system and reports a Lean-backed article audit. It says the full audit and system technical reports will be released later; no public trace or audit artifact is supplied in v1.
 - **Timeline:** arXiv records v1 as submitted on 2026-09-24. The benchmark page was first committed on 2026-09-05 ([repository commit](https://github.com/AI4Optimization/ai-for-optimization/commit/494330dc896cedce88ea0ea1960ee105951af40e)). The result postdates listing, but its different domain and gap assumptions prevent counting it as a solution of the original benchmark.
-- **Canonical manuscript:** [arXiv:2610.00275v1](https://arxiv.org/abs/2610.00275v1), [PDF](https://arxiv.org/pdf/2610.00275v1). The supplied v1 PDF was used for this assessment because the online full text was unavailable.
+- **Related bounded-domain manuscript:** [arXiv:2610.00275v1](https://arxiv.org/abs/2610.00275v1), [PDF](https://arxiv.org/pdf/2610.00275v1).
+- **Unrestricted resolution:** Xia and Yuan, [arXiv:2610.19652v2](https://arxiv.org/abs/2610.19652).
 - **Comparison baseline:** [Kornowski and Shamir, JMLR 25(122), 2024](https://jmlr.org/papers/v25/23-1159.html), [arXiv full text](https://arxiv.org/html/2307.04504v3).
 - **Bibliography:** [references.bib](references.bib).

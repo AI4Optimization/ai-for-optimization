@@ -2,7 +2,7 @@
 
 ## Status
 
-**Open; not solved by AI.** The question recorded here is specifically the two-sided PL--PL setting. It is related to the one-sided nonconvex--PL setting resolved by [Pan and Li (2026)](../../projects/nonconvex-pl-minimax-lower-bound/), but that result does not solve the two-sided problem.
+**Resolved.** [OpenReview paper PlfFyV6wbZ](https://openreview.net/forum?id=PlfFyV6wbZ) proves the matching lower bound for the two-sided PL--PL minimax problem. This closes the gap against the $`\widetilde O(\kappa_x\kappa_y)`$ upper bound under the paper's stated first-order oracle and solution criterion. See also the paper's full details at the linked OpenReview record.
 
 ## Problem definition
 
@@ -14,10 +14,11 @@ The setting is deterministic and noiseless. A first-order oracle returns $f(x,y)
 
 ## Known bounds and open target
 
-The two-sided PL--PL upper bound is $\widetilde O(\kappa_x\kappa_y)$. Prove a matching two-sided lower bound, up to logarithmic factors, under the same oracle and regularity assumptions. The tight one-sided $\Theta(\ell\Delta\kappa_y/\epsilon^2)$ complexity proved by Pan and Li provides a closely related lower-bound construction and clarifies that a linear dual-condition-number dependence is unavoidable in the broader NC--PL class.
+The two-sided PL--PL upper bound is $\widetilde O(\kappa_x\kappa_y)$. The linked OpenReview work establishes the matching lower bound and resolves this target. The tight one-sided $\Theta(\ell\Delta\kappa_y/\epsilon^2)$ complexity proved by Pan and Li remains a related result, not the proof of the two-sided claim.
 
 ## References
 
 - [Yang et al., one-sided PL upper bound (2022)](https://arxiv.org/abs/2112.05604)
 - [Chen, Yao, and Luo, PL--PL upper bound (2023)](https://arxiv.org/abs/2307.15868)
 - [Pan and Li, matching one-sided NC--PL lower bounds (2026)](../../projects/nonconvex-pl-minimax-lower-bound/)
+- [Matching two-sided PL--PL lower bound (OpenReview)](https://openreview.net/forum?id=PlfFyV6wbZ)

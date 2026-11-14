@@ -2,7 +2,7 @@
 
 ## Status
 
-**Resolved.** [Zhang et al. (2026)](https://arxiv.org/abs/2610.00275v1) prove the joint $d,\delta,\epsilon$ lower bound on Euclidean query balls with a local gap and a stationary-point existence promise. This repository records that result as resolving the listed problem; see the [project and scope assessment](../../projects/zeroth-order-nonconvex-ball-lower-bound/).
+**Resolved.** [Xia and Yuan (2026)](https://arxiv.org/abs/2610.19652) prove the joint dimension and accuracy lower bounds for stochastic zeroth-order nonconvex optimization against fully adaptive randomized algorithms with unrestricted queries and outputs, including arbitrary sample reuse. In particular, they prove $`\Omega(d\delta^{-1}\epsilon^{-3})`$ for Goldstein stationarity, matching the full-space upper bound. Their work also establishes $`\Omega(d\epsilon^{-4})`$ for smooth stochastic nonconvex optimization. See the [project and scope assessment](../../projects/zeroth-order-nonconvex-ball-lower-bound/).
 
 ## Problem definition
 
@@ -58,9 +58,10 @@ However, queries and output are confined to a constructed ball $`X=B_2^d(x_0,R)`
 
 Proposition A.1 supplies a local-gap upper bound only at a larger radius, $`R\geq C_0(\Delta/\epsilon+\delta)`$. The lower-bound construction has $`R\leq\Delta/(8\epsilon)`$, so these results do not establish a matching minimax rate at a common radius. A common-radius minimax characterization and the unrestricted global-gap extension remain outside the recorded resolution.
 
-The [project record](../../projects/zeroth-order-nonconvex-ball-lower-bound/) documents the theorem, smooth reduction, AI disclosure, verification limits, and benchmark timeline. The v1 statement comparison was made on 2026-10-02; no independent complete proof audit or human repository verification is recorded.
+Xia and Yuan's v2 resolves the unrestricted stochastic Goldstein lower-bound question stated above. The earlier bounded-domain result of Zhang et al. is retained in the [project record](../../projects/zeroth-order-nonconvex-ball-lower-bound/) as related progress, with its model and scope distinguished from the full-space resolution. No independent complete proof audit or human repository verification is recorded here.
 
 ## References
 
 - [Kornowski and Shamir, *An Algorithm with Optimal Dimension-Dependence for Zero-Order Nonsmooth Nonconvex Stochastic Optimization*, JMLR 2024](https://arxiv.org/abs/2307.04504)
 - [Zhang et al., *Joint Lower Bounds for Zeroth-Order Nonconvex Optimization on Euclidean Balls*, v1, 2026](https://arxiv.org/abs/2610.00275v1)
+- [Xia and Yuan, *On Global Joint Lower Bounds in Zeroth-Order Nonconvex Optimization*, v2, 2026](https://arxiv.org/abs/2610.19652)
