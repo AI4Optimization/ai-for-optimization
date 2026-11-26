@@ -16,6 +16,16 @@ Before marking a result as verified, record:
 
 Prefer a short project README that points to a separate manuscript over pasting a long raw transcript. Preserve raw AI traces by stable link or archival file, but do not present them as the canonical proof.
 
+## Catalog placement and attribution
+
+Add each project to the appropriate section of [`projects/README.md`](projects/README.md):
+
+- **Research projects by repository contributors:** a repository contributor is an author or participated in the original proof search or verification. Use the author list and project provenance to establish this connection; citing a contributor's earlier work is insufficient. Keep independent results and external follow-ups attributed separately within the project.
+- **External optimization results:** externally authored optimization or related sampling research, including benchmark resolutions and relevant methods. Record AI involvement only when supported by a disclosure, and distinguish the authors' verification from a repository proof audit.
+- **Selected external AI mathematics results:** external AI mathematics work with a direct, substantial connection to foundational optimization questions. State that connection and link the original manuscript and any formalization scope.
+
+Catalog placement, proof status, AI provenance, and benchmark eligibility are separate records. A public solution predating a benchmark entry is excluded from its success/failure counts. For formalized work, state the covered model and hypotheses, and distinguish reviewing the authors' scope statement from rebuilding or auditing the formal proof.
+
 ## Math formatting on GitHub
 
 Use fenced `math` blocks for display equations. For inline expressions containing Markdown-sensitive characters, use a dollar sign and a backtick at each end, as in [GitHub's math-formatting documentation](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions):

@@ -47,7 +47,9 @@ The repository is intended to serve several complementary roles:
 
 Browse the [project catalog and open-problem benchmark](projects/README.md) for:
 
-- AI-assisted results and external resolutions, with their bounds, status, provenance, and detailed project write-ups;
+- research projects by repository contributors, including AI-assisted proof searches and their verification records;
+- external optimization and related sampling results, with source attribution and result-specific AI disclosures;
+- selected external AI mathematics results on foundational optimization questions;
 - research-level open problems and historical records of resolved benchmark questions;
 - the reusable template for proposing a new project.
 
